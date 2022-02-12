@@ -30,3 +30,23 @@ def _set_coords_square(nnodes_max=20):
         coords[i, 1] = random.uniform(-1, 1)
     return coords
 
+def _set_coords_circle_inside(nnodes_max=20):
+    import random
+    coords = np.empty((nnodes_max, 2), dtype=np.float64)
+    for i in range(0, nnodes_max):
+        coords[i, 0] = random.uniform(-np.pi, np.pi)
+        coords[i, 1] = random.uniform(-np.pi, np.pi)
+        coords[i, 0] = np.cos((coords[i, 0] ))
+        coords[i, 1] = np.sin((coords[i, 1] ))
+    return coords
+
+def _set_coords_circle_bord_with_radius_interval(nnodes_max=20,rmin=1.0):
+    import random
+    coords = np.empty((nnodes_max, 2), dtype=np.float64)
+    for i in range(0, nnodes_max):
+        r=random.uniform(rmin ,1.0)
+        aux=random.uniform(-np.pi, np.pi)
+        coords[i, 0] = r*np.cos(aux)
+        coords[i, 1] = r*np.sin(aux)
+    return coords
+

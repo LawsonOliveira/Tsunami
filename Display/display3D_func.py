@@ -4,10 +4,8 @@ file = Path(__file__).resolve()
 package_root_directory = file.parents[1]  
 sys.path.append(str(package_root_directory))
 
-import sympy as sm
 import numpy as np
-import time
-import random as rd
+from matplotlib import cm
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from Polynomials.polynome4students_v2 import _eval_polynome_numpy
@@ -30,23 +28,23 @@ def _display_surface(poly, N_axis=100, X_bound=1,points_min=None):
 
     ax = Axes3D(fig, auto_add_to_figure=False)
     fig.add_axes(ax)
-
     X = np.linspace(-X_bound, X_bound, N_axis)
     # To be careful about "effet de bord"
     Y = X
 
     # Evaluate
     Z = np.empty((N_axis, N_axis), dtype=np.float64)
-    # Could be optimized (getting rid of "for" loops)
+    # Could be optimized (getting rid of "for" loops)      
     for i in range(N_axis):
         for j in range(N_axis):
             Z[i, j] = _eval_polynome_numpy(poly, X[i], Y[j])
 
     X, Y = np.meshgrid(X, Y)
-    ax.plot_surface(X, Y, Z)
+    ax.plot_surface(X, Y, Z,cmap=cm.coolwarm,linewidth=0, antialiased=False)
     if points_min!=None:
-        ax.scatter(points_min[1],points_min[0],points_min[2],marker="x",c="red")
+        ax.scatter(points_min[1],points_min[0],points_min[2],marker="x",c="black")
     plt.show()
+
 
 
 if __name__ == '__main__':
