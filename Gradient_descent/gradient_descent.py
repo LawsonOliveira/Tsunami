@@ -6,12 +6,13 @@ sys.path.append(str(package_root_directory))
 
 import numpy as np
 import tensorflow as tf
+import math
 import time 
 from Display.display3D_func import _display_surface
 from Polynomials.set_coords import _set_coords_square
 from Polynomials.polynome4students_v2 import _set_polynome_expxpy_numpy_real
 
-coordinates=_set_coords_square()
+coordinates=_set_coords_square(20)
 t0=time.time()
 def _gradient_descent(coords=coordinates):
     # Polynomial definition
@@ -23,9 +24,10 @@ def _gradient_descent(coords=coordinates):
         return expr
 
     # Gradient descent
-    x1, x2 = tf.Variable(0.0), tf.Variable(0.0)
+    xmin,xmax,ymin,ymax=-1,1,-1,1
+    x1, x2 = tf.Variable(0.0,constraint=lambda x1:tf.clip_by_value(x1,xmin,xmax)), tf.Variable(0.0,constraint=lambda x2:tf.clip_by_value(x2,ymin,ymax))
     opt = tf.keras.optimizers.SGD(learning_rate=0.01)
-    for i in range(250):
+    for i in range(150):
         opt.minimize(set_polynome_expxpy_numpy_real_minimize, var_list=[x1, x2])
     t1=time.time()
     return x1,x2,set_polynome_expxpy_numpy_real_minimize(),t1
