@@ -11,7 +11,7 @@ from Display.display3D_func import _display_surface
 from Polynomials.set_coords import _set_coords_circle_bord_with_radius_interval
 from Polynomials.polynome4students_v2 import _set_polynome_expxpy_numpy_real
 
-coordinates=_set_coords_circle_bord_with_radius_interval(100)
+coordinates=_set_coords_circle_bord_with_radius_interval(20)
 t0=time.time()
 def _gradient_descent(coords=coordinates):
     # Polynomial definition
