@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\title{Idées polynomes}
+\author{antieresteban}
+\date{January 2022}
+
+\begin{document}
+\section{Cas en 1D :}
+Dans le cas 1D, on a eu l'idée d'utiliser les polynomes de Vandermonde, avec le problème d'ajouter un point pour ne pas avoir comme solution le polynome nul
+\begin{equation*}
+    \begin{pmatrix}
+    1 & x_0 & \dots & x_{0}^{n} \\
+    \vdots & & \vdots \\
+    1 & x_{n-1} & \dots & x_{n-1}^{n} \\
+    1 & x_b & \dots & x_b^{n-1} 
+    \end{pmatrix}
+    \begin{pmatrix}
+    a_0\\
+    \vdots\\
+    a_{n-1}\\
+    a_{n}
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+    0\\
+    \vdots\\
+    0\\
+    1
+    \end{pmatrix}
+\end{equation*}
+avec $x_b = \frac{1}{n}\sum_{i=0}^{n-1} x_i$\\
+Cela permet d'avoir un système de Vandermonde résolvable en inversant la matrice.
+
+
+\section{Cas en 2D :}
+Les polynômes que nous avons trouvé à la fin de la séance sont :
+
+\subsection{Prosition de Gabriel :}
+\begin{equation*}
+    P_1(x,y) = \prod_{i=0}^{n-1}((x-x_i)^2 + (y-yi)^2)
+\end{equation*}
+
+\subsection{Proposition de Mariem :}
+\begin{equation*}
+    P_2(x,y) = \prod_{i=0}^{n-1}((x-x_i) + i(y-yi))
+\end{equation*}
+Si l'on passe au module $P_2$, on retrouve l'expression de $P_1$, il est plus rapide de trouver les coefficients de $P_2$ mais le calcul de $P_2(x,y)$ après ça demande plus de temps (polynome dans$\mathbb{C}$).\\
+
+\subsection{Proposition matricielle :}
+\subsubsection*{Début d'idée}
+\begin{equation*}
+    P_3(x,y) = \sum_{i,j = 0}^{n} a_{ij}x^iy^j
+\end{equation*}
+\begin{equation*}
+    \begin{pmatrix}
+    1 & x_0 & y_0 & x_0y_0 & \dots & x_{0}^{n}y_{0}^{n} \\
+    \vdots & & & & \vdots \\
+    1 & x_{n-1} & y_{n-1} & x_{n-1}y_{n-1} & \dots & x_{n-1}^{n}y_{n-1}^{n} \\
+    1 & x_{b} & y_{b} & x_{b}y_{b} & \dots & x_{b}^{n}y_{b}^{n} \\
+    \end{pmatrix}
+    \begin{pmatrix}
+    a_0\\
+    \vdots\\
+    a_{n-1}\\
+    a_{n}
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+    0\\
+    \vdots\\
+    0\\
+    1
+    \end{pmatrix}
+\end{equation*}
+Où $x_b$ et $y_b$ sont définis de manière similaire à $x_b$ au début du document. Dans cette méthode il nous faut inverser la matrice, contrairement au cas en 1D avec de vraies matrices de Vandermonde cela n'est pas théoriquement assuré.
+
+\subsubsection*{L'implémentation}
+Soit $(p_i)_{i \in \llbracket chips \rrbracket}$
+La fonction principale est set polynome xpy numpy matrix.
+Elle prend en entrée coords, un array de coordonnées où le polynôme à construire est nul.\\
+
+Etape 1 : Construire matrice avec u
+\begin{equation}
+    \begin{pmatrix}
+    A_{n} = 
+\end{pmatrix}
+\end{equation}
+\end{document}

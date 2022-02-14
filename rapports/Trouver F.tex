@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\title{Idées polynomes}
+\author{antieresteban}
+\date{January 2022}
+
+\begin{document}
+	\section{Trouver F}
+	\subsection{Méthode matricielle}
+	Soit $d\in\mathbb{N}^*$ la dimension dans laquelle on se place.\\
+	Soit $p:=(p_i)_{i\in[1,n]}\in\mathbb{R}^d$ des coordonnées avec $n\in\mathbb{N}^*$.\\
+	On cherche $P\in \mathbb{R}[X,...,X^d]$ un polynôme qui s'annule en $p_i$ pour tout $i\in\mathbb{N}$. On obtient un système d'équations :
+	\begin{align*}
+		P(p_1)&=0\\
+		P(p_2)&=0\\
+		\vdots \\
+		P(p_n)&=0
+	\end{align*}
+	
+	Au départ, on ne sait pas quelle forme le polynôme $P$ aura. On choisit donc ici de considérer tous les termes dont l'exposant maximal est inférieur au nombre de points d'initialisation $n\in\mathbb{N}^*$.\\
+	
+	
+	
+	Ainsi, on note $S^d(n)$ l'ensemble des combinaisons de $d$ éléments à valeurs dans $[1,n]$. $S^d(n)$ est donc l'ensemble des combinaisons considérées des exposants d'un terme de $P$.\\
+	On note les éléments de $S^d(n)$ par $s^j$ avec $j\in [1,n^d]$. Pour tout $j\in [1,n^d]$ et $i\in[1,d]$, $s^j_i$ indique la valeur de l'élément $i$ dans la combinaison $s^j$. \\
+	On cherche $C$ une matrice colonne des coefficients de $P$ tel que pour tout $j\in[1,n^d]$, $C_j$ est le coefficient associé au terme de combinaison $s^j$.\\
+	
+	
+	Pour $d=2$ :\\
+	Pour tout $i\in[1,n]$, posons $(x_i,y_i):=p_i$.
+	Le système d'équation devient :
+	\begin{equation}
+		\begin{pmatrix}
+			1 & x_0 & y_0 & x_0 y_0 & x_0^2 & y_0^2 & x_0^2 y_0 & x_0 y_0^2 & x_0^2 y_0^2\\
+			1 & x_1 & y_1 & x_1 y_1 & x_1^2 & y_1^2 & x_1^2 y_1 & x_1 y_1^2 & x_1^2 y_1^2\\ 
+			\vdots & \vdots &\vdots &\vdots &\vdots &\vdots &\vdots &\vdots &\vdots &\\
+			1 & x_n & y_n & x_n y_n & x_n^2 & y_n^2 & x_n^2 y_n & x_n y_n^2 & x_n^2 y_n^2
+		\end{pmatrix}
+		C = 0
+	\end{equation}  
+	Posons $A$ la première matrice du produit. (On a $AC=0$)
+	
+	On cherche $P$ sous une forme la plus simple possible. On va donc extraire une matrice carrée de taille $n$ inversible de $A$. Notons $J'$ les indices des colonnes conservées. Notons $A_n:=(A_{i,j})_{i\in[1,n],j\in J'}$ et on réduit $C$ à $C_n:=(C_{j})_{j\in J'}$. Avec l'équation $A_n C_n = 0$, on s'assure que $P$ s'annule en chaque point de $p$.\\
+	Pour ne pas retomber sur le polynôme nul, on ajoute n'importe quel terme dont la combinaison $s^{j_0}$ des exposants n'est pas déjà prise dans $A_n$. A ce terme, on fixe le coefficient de $P$ à $1$. On cherche désormais à résoudre:
+	
+	\begin{equation}
+		\begin{bmatrix}
+			A_n & \vdots \\
+			(0)   & 1 \\
+		\end{bmatrix} 
+		\begin{bmatrix}
+			C_n\\
+			1\\
+		\end{bmatrix} = \begin{bmatrix}
+			(0)\\
+			1\\
+		\end{bmatrix}
+	\end{equation}
+	
+	Appelons $A_n'$ et $C_n'$ les deux facteurs du membres de gauche. $A_n'$ est évidemment inversible et nous pouvons en déduire le vecteur $C_n'$. 
+	On en déduit un polynôme $P$ qui vérifie les conditions et conviendrait pour incarner $F$, la fonction de l'article étudié.\\
+	
+	
+	Revenons au cas général : $d\in\mathbb{N}^*$.\\
+	La méthode précédente s'applique de la même manière. La seule différence sera $S^d(n)$ utilisé à la place de $S^2(n)$ utilisé précédemment pour alimenter les colonnes de $A$.
+
+	\subsubsection{Implémentation}
+	Etape 1 : Créer $S^d(n)$\\
+	Etape 2 : Créer $A$\\
+	Etape 3 : Extraire $A_n$\\
+	Etape 4 : Augmenter $A_n$ en $A_n'$\\
+	Etape 5 : Calculer $C_n'$ puis $P$\\
+
+	\section{Trouver A}
+	\subsection{Méthode matricielle}
+	En gardant les notations précédentes et en appelant $G:=(g_j)_{j\in[1,n]}$ les valeurs à prendre sur les points considérés, on se ramène à $AC=G$.\\
+	On applique la même démarche que précédemment en s'arrêtant à $A_n$.
+\end{document}

@@ -1,20 +1,22 @@
-import sys  
-from pathlib import Path  
-file = Path(__file__).resolve()  
-package_root_directory = file.parents[1]  
+from Polynomials.polynome4students_v2 import _eval_polynome_numpy, _set_polynome_expxpy_numpy_real, _set_coords_circle_concat
+from Polynomials.polynomial_matrix_lambdify import _set_polynome_xpy_numpy_matrix, _set_polynome_sinxpy_numpy_matrix, _set_polynome_expxpy_numpy_matrix
+from Polynomials.polynome4students_v2 import _eval_polynome_numpy
+from Polynomials.set_coords import _set_coords_circle_bord_with_radius_interval
+from mpl_toolkits.mplot3d import Axes3D
+import matplotlib.pyplot as plt
+from matplotlib import cm
+import numpy as np
+import sys
+from pathlib import Path
+file = Path(__file__).resolve()
+package_root_directory = file.parents[1]
 sys.path.append(str(package_root_directory))
 
-import numpy as np
-from matplotlib import cm
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-from Polynomials.polynome4students_v2 import _eval_polynome_numpy
+
 # only to show a graph
-from Polynomials.polynomial_matrix_lambdify import _set_polynome_xpy_numpy_matrix, _set_polynome_sinxpy_numpy_matrix, _set_polynome_expxpy_numpy_matrix
-from Polynomials.polynome4students_v2 import _eval_polynome_numpy, _set_polynome_expxpy_numpy_real, _set_coords_circle_concat
 
 
-def _display_surface(poly, N_axis=100, X_bound=1,points_min=None):
+def _display_surface(poly, N_axis=100, X_bound=1, z_cst=0, points_min=None):
     '''
     Plot the surface covered by poly on (X,Y) with X and Y bounded by X_bound
     (poly is defined on R^2)
@@ -34,25 +36,25 @@ def _display_surface(poly, N_axis=100, X_bound=1,points_min=None):
 
     # Evaluate
     Z = np.empty((N_axis, N_axis), dtype=np.float64)
-    # Could be optimized (getting rid of "for" loops)      
+    # Could be optimized (getting rid of "for" loops)
     for i in range(N_axis):
         for j in range(N_axis):
             Z[i, j] = _eval_polynome_numpy(poly, X[i], Y[j])
 
     X, Y = np.meshgrid(X, Y)
-    ax.plot_surface(X, Y, Z,cmap=cm.coolwarm,linewidth=0, antialiased=False)
-    if points_min!=None:
-        ax.scatter(points_min[1],points_min[0],points_min[2],marker="x",c="black")
+    ax.plot_surface(X, Y, Z, cmap=cm.coolwarm, linewidth=0, antialiased=False)
+    if points_min != None:
+        ax.scatter(points_min[1], points_min[0],
+                   points_min[2], marker="x", c="black")
     plt.show()
-
 
 
 if __name__ == '__main__':
     # Set
-    nnodes_max = 20
+    nnodes_max = 6
 
-    coords = _set_coords_circle_concat(nnodes_max)
-
+    coords = _set_coords_circle_bord_with_radius_interval(nnodes_max)
+    print(coords)
     # Plot circle :
     # X_circle = coords[:, 0]
     # Y_circle = coords[:, 1]
@@ -64,4 +66,4 @@ if __name__ == '__main__':
     poly_mat_sin = _set_polynome_sinxpy_numpy_matrix(coords)
     poly_mat_exp = _set_polynome_expxpy_numpy_matrix(coords)
     poly_real = _set_polynome_expxpy_numpy_real(coords)
-    _display_surface(poly_mat_exp)
+    _display_surface(poly_mat)
