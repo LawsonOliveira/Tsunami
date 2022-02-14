@@ -1,20 +1,18 @@
-import sys  
-from pathlib import Path  
-file = Path(__file__).resolve()  
-package_root_directory = file.parents[1]  
-sys.path.append(str(package_root_directory))
-import sympy as sm
-import numpy as np
-
-
-from time import time
-from Polynomials.polynome4students_v2 import _set_coords_circle, _eval_polynome_numpy
-
 import matplotlib.pyplot as plt
+from Polynomials.polynome4students_v2 import _set_coords_circle, _eval_polynome_numpy
+from time import time
+import numpy as np
+import sympy as sm
+import sys
+from pathlib import Path
+file = Path(__file__).resolve()
+package_root_directory = file.parents[1]
+sys.path.append(str(package_root_directory))
+
 
 '''
-DOES NOT work with sympy
-case disjunction with symbolic expression
+DOES NOT work with sympy (for now)
+case disjunction with symbolic expression 
 '''
 
 

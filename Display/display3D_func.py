@@ -26,7 +26,7 @@ def _display_surface(poly, N_axis=100, X_bound=1,points_min=None):
     '''
     fig = plt.figure()
 
-    ax = Axes3D(fig, auto_add_to_figure=False)
+    ax = Axes3D(fig)
     fig.add_axes(ax)
     X = np.linspace(-X_bound, X_bound, N_axis)
     # To be careful about "effet de bord"
@@ -64,4 +64,4 @@ if __name__ == '__main__':
     poly_mat_sin = _set_polynome_sinxpy_numpy_matrix(coords)
     poly_mat_exp = _set_polynome_expxpy_numpy_matrix(coords)
     poly_real = _set_polynome_expxpy_numpy_real(coords)
-    _display_surface(poly_mat_sin)
+    _display_surface(poly_mat_exp)
