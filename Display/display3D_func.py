@@ -14,7 +14,7 @@ from Polynomials.polynomial_matrix_lambdify import _set_polynome_xpy_numpy_matri
 from Polynomials.polynome4students_v2 import _eval_polynome_numpy, _set_polynome_expxpy_numpy_real, _set_coords_circle_concat
 
 
-def _display_surface(poly, N_axis=100, X_bound=1,points_min=None):
+def _display_surface(poly, coords, Z_plan=0,N_axis=100, X_bound=1,points_min=None):
     '''
     Plot the surface covered by poly on (X,Y) with X and Y bounded by X_bound
     (poly is defined on R^2)
@@ -34,15 +34,24 @@ def _display_surface(poly, N_axis=100, X_bound=1,points_min=None):
 
     # Evaluate
     Z = np.empty((N_axis, N_axis), dtype=np.float64)
+    Z2 = np.empty((N_axis, N_axis), dtype=np.float64)
+
     # Could be optimized (getting rid of "for" loops)      
     for i in range(N_axis):
         for j in range(N_axis):
             Z[i, j] = _eval_polynome_numpy(poly, X[i], Y[j])
+            Z2[i, j]=Z_plan
+    # Points au bord
+    for i in range(coords.shape[0]):
+        ax.scatter(coords[i,0],coords[i,1],0,marker="x",c="black",alpha=1,linewidths=3)
 
     X, Y = np.meshgrid(X, Y)
-    ax.plot_surface(X, Y, Z,cmap=cm.coolwarm,linewidth=0, antialiased=False)
+    ax.plot_surface(X, Y, Z,cmap='spring',linewidths=0.3)
+
+    # Minimun point
     if points_min!=None:
-        ax.scatter(points_min[1],points_min[0],points_min[2],marker="x",c="black")
+        ax.scatter(points_min[1],points_min[0],points_min[2],marker="X",c="green",linewidths=3)
+    ax.plot_surface(X, Y,Z2,cmap='Paired',linewidths=0.3)
     plt.show()
 
 
@@ -50,7 +59,6 @@ def _display_surface(poly, N_axis=100, X_bound=1,points_min=None):
 if __name__ == '__main__':
     # Set
     nnodes_max = 20
-
     coords = _set_coords_circle_concat(nnodes_max)
 
     # Plot circle :
@@ -64,4 +72,4 @@ if __name__ == '__main__':
     poly_mat_sin = _set_polynome_sinxpy_numpy_matrix(coords)
     poly_mat_exp = _set_polynome_expxpy_numpy_matrix(coords)
     poly_real = _set_polynome_expxpy_numpy_real(coords)
-    _display_surface(poly_mat_exp)
+    _display_surface(poly_mat_exp,coords,0.5)
