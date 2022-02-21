@@ -1,15 +1,18 @@
-import sys  
-from pathlib import Path  
-import time
-file = Path(__file__).resolve()  
-package_root_directory = file.parents[1]  
+import sys
+file = Path(__file__).resolve()
+package_root_directory = file.parents[1]
 sys.path.append(str(package_root_directory))
-from time import time
-import sympy as sm
-import numpy as np
-import random as rd
 
 from itertools import permutations, combinations_with_replacement, combinations
+import random as rd
+import numpy as np
+import sympy as sm
+from time import time
+
+from pathlib import Path
+import time
+
+
 # Have to look for how to do without this library : 3 functions to code
 
 """
@@ -99,8 +102,10 @@ def sys_matrix(coords):
 
     # Choose the columns to keep
     # Do we want to keep the first column ? Here we do (easy to compute)
+    tol = 10**(-9)
+
     for c in combinations(list(range(1, N_col-1)), n-1):
-        if np.linalg.det(A[:, (0,)+c]):
+        if np.abs(np.linalg.det(A[:, (0,)+c])) > tol:
             # add an arbitrary coefficient and set it to 1
             # this coefficient is here chosen for the next possible combination
             B = A[:, (0,)+c+(c[-1]+1,)]
@@ -130,7 +135,7 @@ def set_polynomial_matrix(coords):
     for i in range(len(chosen_combi)):
         sym_row.append(evaluate(X, chosen_combi[i]))
     expr = np.dot(np.array(sym_row), C)
-    expr = sm.expand(expr)
+    # expr = sm.expand(expr)
     return expr
 
 

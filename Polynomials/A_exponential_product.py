@@ -1,13 +1,15 @@
-import matplotlib.pyplot as plt
-from Polynomials.polynome4students_v2 import _set_coords_circle, _eval_polynome_numpy
-from time import time
-import numpy as np
-import sympy as sm
 import sys
 from pathlib import Path
 file = Path(__file__).resolve()
 package_root_directory = file.parents[1]
 sys.path.append(str(package_root_directory))
+
+import matplotlib.pyplot as plt
+from Polynomials.polynome4students_v2 import _set_coords_circle, _eval_polynome_numpy
+from time import time
+import numpy as np
+import sympy as sm
+
 
 
 '''
@@ -59,7 +61,8 @@ def _set_A_numpy_expproduct(coords, G):
                         ex : coords[i,0] is the first coordonate of point number i
         G (numpy.array): column array of the condition values
     Returns :
-        a polynome in a symbolic way thanks to sympy, such that poly(coords[i]) = G[i]
+        a function in a symbolic way thanks to sympy, such that fct(coords[i]) = G[i]
+        !!! bad idea : does not work with sympy and useless !!!
     '''
     D = coords.shape[1]
 

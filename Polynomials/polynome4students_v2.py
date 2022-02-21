@@ -1,11 +1,17 @@
-import sys  
-from pathlib import Path  
-file = Path(__file__).resolve()  
-package_root_directory = file.parents[1]  
+import sys
+from pathlib import Path
+file = Path(__file__).resolve()
+package_root_directory = file.parents[1]
 sys.path.append(str(package_root_directory))
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # .. note:: Validated 2022.02.01
+
+import numpy
+import sympy as sm
+from time import time
+from Polynomials.polynomial_matrix_lambdify import _set_polynome_xpy_numpy_matrix, _set_polynome_sinxpy_numpy_matrix, _set_polynome_expxpy_numpy_matrix
+
 
 
 __copyright__ = '(c) Magoules Research Group, 1996. All Rights Reserved.'
@@ -14,11 +20,6 @@ __version__ = '0.0.9'
 
 
 # Python packages
-import numpy
-import sympy as sm
-import sys
-from time import time
-from Polynomials.polynomial_matrix_lambdify import _set_polynome_xpy_numpy_matrix, _set_polynome_sinxpy_numpy_matrix, _set_polynome_expxpy_numpy_matrix
 numpy.set_printoptions(threshold=sys.maxsize)
 
 
@@ -100,7 +101,8 @@ def _set_coords_circle(nnodes_max=20):
 
 def _set_coords_circle_concat(nnodes_max=20):
     # Second method (not so useful)
-    theta = numpy.linspace(0, 2*numpy.pi, nnodes_max, dtype=numpy.float64)
+    theta = numpy.linspace(0, 2*numpy.pi, nnodes_max,
+                           endpoint=False, dtype=numpy.float64)
     X = numpy.cos(theta).reshape((nnodes_max, 1))
     Y = numpy.sin(theta).reshape((nnodes_max, 1))
     coords = numpy.concatenate((X, Y), axis=1)
@@ -200,6 +202,7 @@ def _run_eval_polynome():
     for i in range(0, points.shape[0]):
         xi, yi = points[i, 0], points[i, 1]
         val_xpy_real[i] = _eval_polynome(expr_xpy_real, xi, yi)
+        print(val_xpy_real[i])
         time_end = time()
     print("_eval_polynome (xpy_real): ", time_end - time_start)
 
