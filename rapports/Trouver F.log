@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.1.28)  14 FEB 2022 18:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.1.28)  21 FEB 2022 16:55
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**"./Trouver F.tex"
-(Trouver F.tex
+**"c:/Users/Gilles/CS/cours/Pôle projet/Formation recherche/Tsunami/TP/sceance 4/Tsunami/rapports/Trouver F.tex"
+(c:/Users/Gilles/CS/cours/Pôle projet/Formation recherche/Tsunami/TP/sceance 4/Tsunami/rapports/Trouver F.tex
 LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2021-11-22>
-(C:\Program Files\MiKTeX\tex/latex/base\article.cls
+L3 programming layer <2021-11-22> (C:\Program Files\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
 (C:\Program Files\MiKTeX\tex/latex/base\size10.clo
 File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
@@ -22,30 +22,25 @@ File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
-)
-(C:\Program Files\MiKTeX\tex/latex/base\inputenc.sty
+) (C:\Program Files\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
-)
-(C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
+) (C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2021/10/15 v2.17l AMS math features
 \@mathmargin=\skip49
 
 For additional information on amsmath, use the `?' option.
 (C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
-
-(C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty
+ (C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks18
 \ex@=\dimen139
-))
-(C:\Program Files\MiKTeX\tex/latex/amsmath\amsbsy.sty
+)) (C:\Program Files\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen140
-)
-(C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty
+) (C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2021/08/26 v2.02 operator names
 )
 \inf@bad=\count191
@@ -85,21 +80,18 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2938.
 LaTeX Info: Redefining \] on input line 2939.
-)
-(C:\Program Files\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+) (C:\Program Files\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)
-(C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+) (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count269
 \l__pdf_internal_box=\box52
-)
-(Trouver F.aux)
+) (Trouver F.aux)
 \openout1 = `"Trouver F.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -117,14 +109,11 @@ LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 13.
-
  (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
-
-
-(C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
+ (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Underfull \hbox (badness 10000) in paragraph at lines 23--24
@@ -138,9 +127,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--30
 
 
 Overfull \hbox (11.77396pt too wide) in paragraph at lines 63--65
-[]\OT1/cmr/m/n/10 Appelons $\OML/cmm/m/it/10 A[]$ \OT1/cmr/m/n/10 et $\OML/cmm/
-m/it/10 C[]$ \OT1/cmr/m/n/10 les deux fac-teurs du mem-bres de gauche. $\OML/cm
-m/m/it/10 A[]$ \OT1/cmr/m/n/10 est evidemment
+[]\OT1/cmr/m/n/10 Appelons $\OML/cmm/m/it/10 A[]$ \OT1/cmr/m/n/10 et $\OML/cmm/m/it/10 C[]$ \OT1/cmr/m/n/10 les deux fac-teurs du mem-bres de gauche. $\OML/cmm/m/it/10 A[]$ \OT1/cmr/m/n/10 est evidemment
  []
 
 
@@ -157,25 +144,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--76
 
 [2] (Trouver F.aux) ) 
 Here is how much of TeX's memory you used:
- 1260 strings out of 478659
- 19768 string characters out of 2855774
+ 1262 strings out of 478659
+ 20060 string characters out of 2855774
  332839 words of memory out of 3000000
  19409 multiletter control sequences out of 15000+600000
  406647 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 54i,9n,62p,395b,127s stack positions out of 5000i,500n,10000p,200000b,80000s
-<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-bx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:
-/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fil
-es/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmr5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C
-:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fi
-les/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
-lic/amsfonts/symbols/msbm10.pfb>
-Output written on "Trouver F.pdf" (2 pages, 132056 bytes).
+ 54i,9n,62p,489b,127s stack positions out of 5000i,500n,10000p,200000b,80000s
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "Trouver F.pdf" (2 pages, 133458 bytes).
 PDF statistics:
  69 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

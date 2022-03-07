@@ -1,14 +1,14 @@
-import sys  
-from pathlib import Path  
-file = Path(__file__).resolve()  
-package_root_directory = file.parents[1]  
+import sys
+from pathlib import Path
+file = Path(__file__).resolve()
+package_root_directory = file.parents[1]
 sys.path.append(str(package_root_directory))
-import sympy as sm
-import numpy as np
-
-from itertools import combinations
 
 from Polynomials.searching_combinations import f_sort, combi_indep
+from itertools import combinations
+import numpy as np
+import sympy as sm
+from time import time
 
 
 def evaluate_poly_term(coord, combination):
@@ -51,16 +51,23 @@ def sys_augmented_matrix(coords):
 
     # Choose the columns to keep
     # Do we want to keep the first column ? Here we do (easy to compute)
+    # How to choose tol ?
+    tol = 10**(-3)
+    i = 0
     for c in combinations(list(range(1, N_col-1)), n-1):
-        if np.linalg.det(A[:, (0,)+c]):
+        det = np.abs(np.linalg.det(A[:, (0,)+c]))
+        print("det : ", det)
+        i += 1
+        print("i : ", i)
+        if det > tol:
             # add an arbitrary coefficient and set it to 1
             # this coefficient is here chosen for the next possible combination
             B = A[:, (0,)+c+(c[-1]+1,)]
             last_row = np.zeros((1, n+1))
             last_row[0, -1] = 1
             B = np.concatenate((B, last_row), axis=0)
+            print("Picked determinant :", det)
             return B, [l_combi[i] for i in (0,)+c+(c[-1]+1,)]
-
     print("Did not find any invertible matrix")
     return None
 
@@ -137,3 +144,7 @@ def _set_polynome_expxpy_numpy_matrix(coords):
     expr = 1 - sm.exp(-10 * expr**2)
     expr = sm.lambdify(X, expr, 'numpy')
     return expr
+
+
+if __name__ == '__main__':
+    print('rien')
