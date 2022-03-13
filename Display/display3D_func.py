@@ -7,13 +7,14 @@ sys.path.append(str(package_root_directory))
 'import sys' to 'sys.path'... to put in the first lines after each saving
 '''
 
-import numpy as np
-from matplotlib import cm
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-from Polynomials.set_coords import _set_coords_circle_bord_with_radius_interval
-from Polynomials.polynomial_matrix_lambdify import _set_polynome_xpy_numpy_matrix, _set_polynome_sinxpy_numpy_matrix, _set_polynome_expxpy_numpy_matrix
+from Polynomials.pseudo_inverse_SVD import _set_polynome_SVD_xpy_numpy_matrix
 from Polynomials.polynome4students_v2 import _eval_polynome_numpy, _set_polynome_expxpy_numpy_real, _set_coords_circle_concat
+from Polynomials.polynomial_matrix_lambdify import _set_polynome_xpy_numpy_matrix, _set_polynome_sinxpy_numpy_matrix, _set_polynome_expxpy_numpy_matrix
+from Polynomials.set_coords import _set_coords_circle_bord_with_radius_interval
+from mpl_toolkits.mplot3d import Axes3D
+import matplotlib.pyplot as plt
+from matplotlib import cm
+import numpy as np
 
 
 
@@ -66,7 +67,7 @@ def _display_surface(poly, coords, Z_plan=0, N_axis=100, X_bound=1, points_min=N
 if __name__ == '__main__':
     print("Begin computation...")
     # Set
-    nnodes_max = 20
+    nnodes_max = 4
     coords = _set_coords_circle_concat(nnodes_max)
 
     # coords = _set_coords_circle_bord_with_radius_interval(nnodes_max)
@@ -77,12 +78,10 @@ if __name__ == '__main__':
     # ax_proj.plot(X_circle, Y_circle, zs=0, zdir='z', label='circle in (x,y,0)')
 
     # Set poly
-    poly_mat = _set_polynome_xpy_numpy_matrix(coords)
+    poly_mat = _set_polynome_SVD_xpy_numpy_matrix(coords)
     # poly_mat_sin = _set_polynome_sinxpy_numpy_matrix(coords)
     # poly_mat_exp = _set_polynome_expxpy_numpy_matrix(coords)
     # poly_real = _set_polynome_expxpy_numpy_real(coords)
-
-    print("Voici poly")
 
     print("Let's check the behaviour of the set polynome on the boundary :")
     l_check = []
@@ -91,12 +90,12 @@ if __name__ == '__main__':
         epsilon = 10**(-9)
         v = _eval_polynome_numpy(poly_mat, x[0], x[1])
         v_decal = _eval_polynome_numpy(poly_mat, x[0]+epsilon, x[1]+epsilon)
-        print("v_decal:",v_decal)
+        print("v_decal:", v_decal)
         l_check.append(v)
         if v > tol:
             print(tol)
             print(f"{v} is considered too large compare to {tol} !")
-    print("Values of the set polynome :")
+    print("Values of polynome on the coordinates :")
     print(l_check)
 
     _display_surface(poly_mat, coords, 0)

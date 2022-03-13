@@ -72,10 +72,19 @@
 	Etape 2 : Créer $A$\\
 	Etape 3 : Extraire $A_n$\\
 	Etape 4 : Augmenter $A_n$ en $A_n'$\\
-	Etape 5 : Calculer $C_n'$ puis $P$\\
+	Etape 5 : Calculer $C_n'$ puis $P$ en inversant $A_n$\\
 
-	\subsubsection*{Le problème de cette méthode}
-	Le problème majeur est de trouver $A_n$. Cela peut demander beaucoup de temps et beaucoup de zones restent arbitraires.
+	\subsubsection*{Inconvénients}
+	Le problème majeur est de trouver $A_n$. Cela peut demander beaucoup de temps et beaucoup de zones restent arbitraires.\\
+	De plus, pour l'inversion, même en parcourant toutes les combinaisons nous ne sommes pas sûr d'obtenir une matrice inversible.
+
+	\subsubsection*{Comment résoudre ces problèmes ?}
+	Pour ne pas inverser ou ne pas se poser la question de l'inversibilité, on peut penser à la pseudo-inverse de Moore Penroe basée sur une décomposition en valeur singulière (SVD).\\
+	Résultats :
+	\begin{itemize}
+		\item Avanatages : Le polynôme est nul à la frontière. Calcul rapide.
+		\item Inconvénient :  Le polynôme diverge très vite.
+	\end{itemize}
 
 	\section{Trouver A}
 	\subsection{Méthode matricielle}

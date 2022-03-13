@@ -4,11 +4,12 @@ file = Path(__file__).resolve()
 package_root_directory = file.parents[1]
 sys.path.append(str(package_root_directory))
 
-from Polynomials.searching_combinations import f_sort, combi_indep
-from itertools import combinations
-import numpy as np
-import sympy as sm
 from time import time
+import sympy as sm
+import numpy as np
+from itertools import combinations
+from Polynomials.searching_combinations import f_sort, combi_indep
+
 
 
 def evaluate_poly_term(coord, combination):
@@ -55,10 +56,14 @@ def sys_augmented_matrix(coords):
     tol = 10**(-3)
     i = 0
     for c in combinations(list(range(1, N_col-1)), n-1):
+        print("c : ", c)
         det = np.abs(np.linalg.det(A[:, (0,)+c]))
         print("det : ", det)
         i += 1
         print("i : ", i)
+        max_det = -np.infty
+        if det > max_det:
+            max_det = det
         if det > tol:
             # add an arbitrary coefficient and set it to 1
             # this coefficient is here chosen for the next possible combination
@@ -68,7 +73,7 @@ def sys_augmented_matrix(coords):
             B = np.concatenate((B, last_row), axis=0)
             print("Picked determinant :", det)
             return B, [l_combi[i] for i in (0,)+c+(c[-1]+1,)]
-    print("Did not find any invertible matrix")
+    print("Did not find any invertible matrix. \n max_det = :", max_det)
     return None
 
 
