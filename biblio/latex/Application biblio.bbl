@@ -1,0 +1,39 @@
+\begin{thebibliography}{1}
+
+\bibitem{bergounioux}
+{\em Introduction au traitement mathématique des images—méthodes
+  déterministes}.
+
+\bibitem{RF_Thesis}
+Ryan Case.
+\newblock Ramanujan-fourier series and applications.
+\newblock 2013.
+
+\bibitem{SF}
+François de~Marçay.
+\newblock {\em Séries de Fourier - Université de Paris Sud, Département de
+  mathématiques d'Orsay}.
+
+\bibitem{baudoin}
+G.~BAUDOIN et~J.-F.~BERCHER.
+\newblock {\em Transformée de Fourier discrète}.
+
+\bibitem{Malg}
+F.~Malgouyres.
+\newblock {\em Signal, Fourier, Image. Université de Toulouse, 14/03/2021
+  [dernière consultation]. \\Disponible à
+  https://www.math.univ-toulouse.fr/\~fmalgouy/enseignement/downloadSfi/poly\_sfi.pdf}.
+
+\bibitem{ADN_DFT}
+Changchuan Yin, Ying Chen, and Stephen S.-T. Yau.
+\newblock A measure of dna sequence similarity by fourier transform with
+  applications on hierarchical clustering.
+\newblock {\em Journal of Theoretical Biology}, 359:18--28, 2014.
+
+\bibitem{ADN_RF}
+Changchuan Yin and Jiasong Wang.
+\newblock A novel method for comparative analysis of {DNA} sequences by
+  ramanujan-fourier transform.
+\newblock {\em CoRR}, abs/1403.1523, 2014.
+
+\end{thebibliography}

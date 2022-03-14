@@ -1,0 +1,67 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Application biblio.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: plain.bst
+Reallocating 'name_of_file' (item size: 1) to 14 items.
+Database file #1: bilbiographie.bib
+"," immediately follows a field name---line 47 of file bilbiographie.bib
+ :  title = { Transformée de Fourier discrète}, ESIEE
+ :                                                     , date = {Novembre 2001, 14/03/2021 [dernière consultation].},
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "article_RF"
+Warning--I didn't find a database entry for "Vaidyanathan2014"
+Warning--I didn't find a database entry for "Ramanujan_DFT_mixed_basis"
+Warning--to sort, need author, editor, or key in bergounioux
+Warning--empty author and editor in bergounioux
+Warning--empty publisher in bergounioux
+Warning--empty year in bergounioux
+Warning--empty booktitle in RF_Thesis
+Warning--empty publisher in SF
+Warning--empty year in SF
+Warning--empty publisher in baudoin
+Warning--empty year in baudoin
+Warning--empty publisher in Malg
+Warning--empty year in Malg
+You've used 7 entries,
+            2118 wiz_defined-function locations,
+            535 strings with 5024 characters,
+and the built_in function-call counts, 1636 in all, are:
+= -- 135
+> -- 60
+< -- 0
++ -- 27
+- -- 18
+* -- 103
+:= -- 275
+add.period$ -- 16
+call.type$ -- 7
+change.case$ -- 26
+chr.to.int$ -- 0
+cite$ -- 18
+duplicate$ -- 83
+empty$ -- 158
+format.name$ -- 18
+if$ -- 334
+int.to.chr$ -- 0
+int.to.str$ -- 7
+missing$ -- 10
+newline$ -- 33
+num.names$ -- 12
+pop$ -- 59
+preamble$ -- 1
+purify$ -- 23
+quote$ -- 0
+skip$ -- 43
+stack$ -- 0
+substring$ -- 52
+swap$ -- 7
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 20
+warning$ -- 11
+while$ -- 13
+width$ -- 8
+write$ -- 59
+(There was 1 error message)
