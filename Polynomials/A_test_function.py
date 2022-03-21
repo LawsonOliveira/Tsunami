@@ -48,35 +48,36 @@ def Z_calc(X, Y, sample, sample_values, l_square, width):
             mesh[i][j] = A_alt((X[i][j], Y[i][j]), sample, sample_values, l_square, width)
     return mesh
 
-"""
-Test on a circular boundary, uniform sampling, following a sinusoid boundary condition
-"""
-list_theta = np.linspace(0, 2*np.pi, 201, endpoint=False)
-sample = np.array([np.array([np.cos(list_theta[i]), np.sin(list_theta[i])]) for i in range(len(list_theta))])
-sample_values = np.sin(10*list_theta)
+if __name__=='__main__':
+    """
+    Test on a circular boundary, uniform sampling, following a sinusoid boundary condition
+    """
+    list_theta = np.linspace(0, 2*np.pi, 201, endpoint=False)
+    sample = np.array([np.array([np.cos(list_theta[i]), np.sin(list_theta[i])]) for i in range(len(list_theta))])
+    sample_values = np.sin(10*list_theta)
 
-#Computing l:
-l = min([dist_min(sample[i], sample) for i in range(len(sample))])
-l_square = l**2
-width = 4
+    #Computing l:
+    l = min([dist_min(sample[i], sample) for i in range(len(sample))])
+    l_square = l**2
+    width = 4
 
-"""
-Trying to break the function
-"""
-def boundary(sample):
-    results = np.zeros(len(sample))
+    """
+    Trying to break the function
+    """
+    def boundary(sample):
+        results = np.zeros(len(sample))
 
 
-"""
-Plotting the resulting A
-"""
-x = np.linspace(-1.5, 1.5, 100)
-y = np.linspace(-1.5, 1.5, 100)
-X, Y = np.meshgrid(x, y)
-Z = Z_calc(X, Y, sample, sample_values, l_square, width)
+    """
+    Plotting the resulting A
+    """
+    x = np.linspace(-1.5, 1.5, 100)
+    y = np.linspace(-1.5, 1.5, 100)
+    X, Y = np.meshgrid(x, y)
+    Z = Z_calc(X, Y, sample, sample_values, l_square, width)
 
-fig = plt.figure()
-ax = plt.axes(projection='3d')
-ax.contour3D(X, Y, Z, 50, cmap='binary')
-ax.scatter3D(sample[:,0], sample[:,1], sample_values, cmap='Greens')
-plt.show()
+    fig = plt.figure()
+    ax = plt.axes(projection='3d')
+    ax.contour3D(X, Y, Z, 50, cmap='binary')
+    ax.scatter3D(sample[:,0], sample[:,1], sample_values, cmap='Greens')
+    plt.show()
