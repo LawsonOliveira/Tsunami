@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits import mplot3d
 
 def Z_calc(X, Y, A_fct):
+    # Calculates the value of the function A on a mesh given by X and Y coordinates lists
     mesh = np.zeros((len(X), len(Y)))
     for i in range(len(X)):
         for j in range(len(Y)):
