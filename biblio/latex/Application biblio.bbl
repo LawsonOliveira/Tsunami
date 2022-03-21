@@ -1,13 +1,29 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{bergounioux}
 {\em Introduction au traitement mathématique des images—méthodes
   déterministes}.
 
+\bibitem{Psaros-Meta-PINN}
+George Em~Karniadakis Apostolos F~Psaros, Kenji~Kawaguchi.
+\newblock Meta-learning pinn loss functions.
+\newblock 2021.
+
+\bibitem{Lutjens-PCE-PINN}
+Mark Veillette Dava~Newman Björn~Lütjens, Catherine H.~Crawford.
+\newblock Pce-pinns physics-informed nn for uncertainty propagation in ocean
+  modeling.
+\newblock 2021.
+
 \bibitem{RF_Thesis}
 Ryan Case.
 \newblock Ramanujan-fourier series and applications.
 \newblock 2013.
+
+\bibitem{Rao-PINN-laminar-flow}
+Yang~Liu Chengping~Rao, Hao~Sun.
+\newblock Physics-informed deep learning for incompressible laminar flows.
+\newblock 2020.
 
 \bibitem{SF}
 François de~Marçay.
@@ -18,22 +34,64 @@ François de~Marçay.
 G.~BAUDOIN et~J.-F.~BERCHER.
 \newblock {\em Transformée de Fourier discrète}.
 
+\bibitem{Bai-PINN}
+Siddhartha Mishra Roberto~Molinaro Genming~Bai, Ujjwal~Koley.
+\newblock Physics informed neural networks (pinns) for approximating nonlinear
+  dispersive pdes.
+\newblock 2021.
+
+\bibitem{Blechschmidt-three-ways}
+Oliver G.~Ernst Jan~Blechschmidt.
+\newblock Three ways to solve partial differential equations with neural
+  networks -- a review.
+\newblock 2021.
+
 \bibitem{Malg}
 F.~Malgouyres.
 \newblock {\em Signal, Fourier, Image. Université de Toulouse, 14/03/2021
   [dernière consultation]. \\Disponible à
   https://www.math.univ-toulouse.fr/\~fmalgouy/enseignement/downloadSfi/poly\_sfi.pdf}.
 
+\bibitem{markidis_old_new}
+Stefano Markidis.
+\newblock The old and the new: Can physics-informed deep-learning replace
+  traditional linear solvers?
+\newblock 2021.
+
+\bibitem{Raissi-DL-fluid}
+George Em~Karniadakis Maziar~Raissi, Alireza~Yazdani.
+\newblock Hidden fluid mechanics: A navier-stokes informed deep learning
+  framework for assimilating flow visualization data.
+\newblock 2018.
+
+\bibitem{Nabian-efficient-training-PINN}
+Hadi~Meidani Mohammad Amin~Nabian, Rini Jasmine~Gladstone.
+\newblock Efficient training of physics-informed neural networks via importance
+  sampling.
+\newblock 2021.
+
+\bibitem{Chiu-CAN-PINN}
+Chinchun Ooi My Ha Dao Yew-Soon~Ong Pao-Hsiung~Chiu, Jian Cheng~Wong.
+\newblock Can-pinn: A fast physics-informed neural network based on
+  coupled-automatic-numerical differentiation method.
+\newblock 2021.
+
+\bibitem{Cai-PINN-fluid_mech}
+Zhicheng Wang Minglang Yin George Em~Karniadakis Shengze~Cai, Zhiping~Mao.
+\newblock Physics-informed neural networks (pinns) for fluid mechanics: A
+  review.
+\newblock 2021.
+
+\bibitem{Jin-NSFnets}
+Hui Li George Em~Karniadakis Xiaowei~Jin, Shengze~Cai.
+\newblock Nsfnets (navier-stokes flow nets): Physics-informed neural networks
+  for the incompressible navier-stokes equations.
+\newblock 2020.
+
 \bibitem{ADN_DFT}
 Changchuan Yin, Ying Chen, and Stephen S.-T. Yau.
-\newblock A measure of dna sequence similarity by fourier transform with
-  applications on hierarchical clustering.
+\newblock Pce-pinns physics-informed nn for uncertainty propagation in ocean
+  modeling.
 \newblock {\em Journal of Theoretical Biology}, 359:18--28, 2014.
-
-\bibitem{ADN_RF}
-Changchuan Yin and Jiasong Wang.
-\newblock A novel method for comparative analysis of {DNA} sequences by
-  ramanujan-fourier transform.
-\newblock {\em CoRR}, abs/1403.1523, 2014.
 
 \end{thebibliography}

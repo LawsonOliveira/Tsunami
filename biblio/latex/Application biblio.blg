@@ -5,63 +5,100 @@ Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: plain.bst
 Reallocating 'name_of_file' (item size: 1) to 14 items.
 Database file #1: bilbiographie.bib
-"," immediately follows a field name---line 47 of file bilbiographie.bib
+"," immediately follows a field name---line 190 of file bilbiographie.bib
  :  title = { Transformée de Fourier discrète}, ESIEE
  :                                                     , date = {Novembre 2001, 14/03/2021 [dernière consultation].},
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "article_RF"
-Warning--I didn't find a database entry for "Vaidyanathan2014"
-Warning--I didn't find a database entry for "Ramanujan_DFT_mixed_basis"
+Warning--I didn't find a database entry for "ADN_RF"
+Too many commas in name 1 of "Björn Lütjens, Catherine H. Crawford, Mark Veillette, Dava Newman" for entry Lutjens-PCE-PINN
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Genming Bai, Ujjwal Koley, Siddhartha Mishra, Roberto Molinaro" for entry Bai-PINN
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Shengze Cai, Zhiping Mao, Zhicheng Wang, Minglang Yin, George Em Karniadakis" for entry Cai-PINN-fluid_mech
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Shengze Cai, Zhiping Mao, Zhicheng Wang, Minglang Yin, George Em Karniadakis" for entry Cai-PINN-fluid_mech
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Pao-Hsiung Chiu, Jian Cheng Wong, Chinchun Ooi, My Ha Dao, Yew-Soon Ong" for entry Chiu-CAN-PINN
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Pao-Hsiung Chiu, Jian Cheng Wong, Chinchun Ooi, My Ha Dao, Yew-Soon Ong" for entry Chiu-CAN-PINN
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Xiaowei Jin, Shengze Cai, Hui Li, George Em Karniadakis" for entry Jin-NSFnets
+while executing---line 1049 of file plain.bst
 Warning--to sort, need author, editor, or key in bergounioux
 Warning--empty author and editor in bergounioux
 Warning--empty publisher in bergounioux
 Warning--empty year in bergounioux
+Warning--empty journal in Psaros-Meta-PINN
+Too many commas in name 1 of "Björn Lütjens, Catherine H. Crawford, Mark Veillette, Dava Newman" for entry Lutjens-PCE-PINN
+while executing---line 1090 of file plain.bst
+Warning--empty journal in Lutjens-PCE-PINN
 Warning--empty booktitle in RF_Thesis
+Warning--empty journal in Rao-PINN-laminar-flow
 Warning--empty publisher in SF
 Warning--empty year in SF
 Warning--empty publisher in baudoin
 Warning--empty year in baudoin
+Too many commas in name 1 of "Genming Bai, Ujjwal Koley, Siddhartha Mishra, Roberto Molinaro" for entry Bai-PINN
+while executing---line 1090 of file plain.bst
+Warning--empty journal in Bai-PINN
+Warning--empty journal in Blechschmidt-three-ways
 Warning--empty publisher in Malg
 Warning--empty year in Malg
-You've used 7 entries,
+Warning--empty journal in markidis_old_new
+Warning--empty journal in Raissi-DL-fluid
+Warning--empty journal in Nabian-efficient-training-PINN
+Too many commas in name 1 of "Pao-Hsiung Chiu, Jian Cheng Wong, Chinchun Ooi, My Ha Dao, Yew-Soon Ong" for entry Chiu-CAN-PINN
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Pao-Hsiung Chiu, Jian Cheng Wong, Chinchun Ooi, My Ha Dao, Yew-Soon Ong" for entry Chiu-CAN-PINN
+while executing---line 1090 of file plain.bst
+Warning--empty journal in Chiu-CAN-PINN
+Too many commas in name 1 of "Shengze Cai, Zhiping Mao, Zhicheng Wang, Minglang Yin, George Em Karniadakis" for entry Cai-PINN-fluid_mech
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Shengze Cai, Zhiping Mao, Zhicheng Wang, Minglang Yin, George Em Karniadakis" for entry Cai-PINN-fluid_mech
+while executing---line 1090 of file plain.bst
+Warning--empty journal in Cai-PINN-fluid_mech
+Too many commas in name 1 of "Xiaowei Jin, Shengze Cai, Hui Li, George Em Karniadakis" for entry Jin-NSFnets
+while executing---line 1090 of file plain.bst
+Warning--empty journal in Jin-NSFnets
+You've used 17 entries,
             2118 wiz_defined-function locations,
-            535 strings with 5024 characters,
-and the built_in function-call counts, 1636 in all, are:
-= -- 135
-> -- 60
+            570 strings with 6548 characters,
+and the built_in function-call counts, 3625 in all, are:
+= -- 320
+> -- 124
 < -- 0
-+ -- 27
-- -- 18
-* -- 103
-:= -- 275
-add.period$ -- 16
-call.type$ -- 7
-change.case$ -- 26
++ -- 54
+- -- 36
+* -- 178
+:= -- 649
+add.period$ -- 46
+call.type$ -- 17
+change.case$ -- 65
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 83
-empty$ -- 158
-format.name$ -- 18
-if$ -- 334
+cite$ -- 39
+duplicate$ -- 183
+empty$ -- 328
+format.name$ -- 36
+if$ -- 725
 int.to.chr$ -- 0
-int.to.str$ -- 7
-missing$ -- 10
-newline$ -- 33
-num.names$ -- 12
-pop$ -- 59
+int.to.str$ -- 17
+missing$ -- 20
+newline$ -- 83
+num.names$ -- 32
+pop$ -- 122
 preamble$ -- 1
-purify$ -- 23
+purify$ -- 52
 quote$ -- 0
-skip$ -- 43
+skip$ -- 110
 stack$ -- 0
-substring$ -- 52
-swap$ -- 7
+substring$ -- 101
+swap$ -- 6
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 20
-warning$ -- 11
-while$ -- 13
-width$ -- 8
-write$ -- 59
-(There was 1 error message)
+type$ -- 60
+warning$ -- 22
+while$ -- 33
+width$ -- 19
+write$ -- 147
+(There were 15 error messages)
