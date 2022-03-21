@@ -2,3 +2,4 @@ test_perso.py
 pseudo_inverse_SVD.py
 regression_poly.py
 NN_regressor_EDP.py
+__pycache__
