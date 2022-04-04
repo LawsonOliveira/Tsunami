@@ -7,10 +7,10 @@ sys.path.append(str(package_root_directory))
 # -*- coding: utf-8 -*-
 # .. note:: Validated 2022.02.01
 
-import numpy
-import sympy as sm
-from time import time
 from Polynomials.polynomial_matrix_lambdify import _set_polynome_xpy_numpy_matrix, _set_polynome_sinxpy_numpy_matrix, _set_polynome_expxpy_numpy_matrix
+from time import time
+import sympy as sm
+import numpy
 
 
 
@@ -116,6 +116,21 @@ def _set_coords_square(nnodes_max=20):
         coords[i, 0] = random.uniform(-1, 1)
         coords[i, 1] = random.uniform(-1, 1)
     return coords
+
+
+def _set_coords_rectangle(l, L, nnodes_max=20):
+    coords = []
+    elements = numpy.linspace(0, 2*l+2*L, nnodes_max+1, endpoint=False)
+    for el in elements:
+        if el < l:
+            coords.append([el, 0])
+        elif el < l+L:
+            coords.append([l, el - l])
+        elif el < 2*l + L:
+            coords.append([l-(el - (l+L)), L])
+        else:
+            coords.append([0, L-(el - (2*l+L))])
+    return numpy.array(coords)
 
 
 def _set_bnd_dirichlet(coords):
