@@ -17,7 +17,7 @@ if __name__=='__main__':
     list_theta = np.linspace(0, 2*np.pi, 10, endpoint=False)
     sample = np.array([np.array([np.cos(list_theta[i]), np.sin(list_theta[i])]) for i in range(len(list_theta))])
     sample_values = np.sin(list_theta)
-    chosen_A = psi_exp #psi_exp or psi_tanh
+    chosen_A = psi_tanh #psi_exp or psi_tanh
 
     #Computing l:
     l = min([dist_min(sample[i], sample) for i in range(len(sample))])
