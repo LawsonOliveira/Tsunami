@@ -1,16 +1,16 @@
-import numpy as np
 import sys
 from pathlib import Path
 file = Path(__file__).resolve()
 package_root_directory = file.parents[1]
 sys.path.append(str(package_root_directory))
 
+import numpy as np
 
 def _set_coords_circle(nnodes_max=20):
     coords = np.empty((nnodes_max, 2), dtype=np.float64)
     for i in range(0, nnodes_max):
-        coords[i, 0] = np.cos((i/nnodes_max)*2, np.pi)
-        coords[i, 1] = np.sin((i/nnodes_max)*2, np.pi)
+        coords[i, 0] = np.cos((i/nnodes_max)*2*np.pi)
+        coords[i, 1] = np.sin((i/nnodes_max)*2*np.pi)
     return coords
 
 
