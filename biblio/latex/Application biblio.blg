@@ -5,11 +5,6 @@ Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: plain.bst
 Reallocating 'name_of_file' (item size: 1) to 14 items.
 Database file #1: bilbiographie.bib
-"," immediately follows a field name---line 190 of file bilbiographie.bib
- :  title = { Transformée de Fourier discrète}, ESIEE
- :                                                     , date = {Novembre 2001, 14/03/2021 [dernière consultation].},
-I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "ADN_RF"
 Too many commas in name 1 of "Björn Lütjens, Catherine H. Crawford, Mark Veillette, Dava Newman" for entry Lutjens-PCE-PINN
 while executing---line 1049 of file plain.bst
 Too many commas in name 1 of "Genming Bai, Ujjwal Koley, Siddhartha Mishra, Roberto Molinaro" for entry Bai-PINN
@@ -24,26 +19,16 @@ Too many commas in name 1 of "Pao-Hsiung Chiu, Jian Cheng Wong, Chinchun Ooi, My
 while executing---line 1049 of file plain.bst
 Too many commas in name 1 of "Xiaowei Jin, Shengze Cai, Hui Li, George Em Karniadakis" for entry Jin-NSFnets
 while executing---line 1049 of file plain.bst
-Warning--to sort, need author, editor, or key in bergounioux
-Warning--empty author and editor in bergounioux
-Warning--empty publisher in bergounioux
-Warning--empty year in bergounioux
 Warning--empty journal in Psaros-Meta-PINN
 Too many commas in name 1 of "Björn Lütjens, Catherine H. Crawford, Mark Veillette, Dava Newman" for entry Lutjens-PCE-PINN
 while executing---line 1090 of file plain.bst
 Warning--empty journal in Lutjens-PCE-PINN
-Warning--empty booktitle in RF_Thesis
+Warning--empty journal in Mild3
 Warning--empty journal in Rao-PINN-laminar-flow
-Warning--empty publisher in SF
-Warning--empty year in SF
-Warning--empty publisher in baudoin
-Warning--empty year in baudoin
 Too many commas in name 1 of "Genming Bai, Ujjwal Koley, Siddhartha Mishra, Roberto Molinaro" for entry Bai-PINN
 while executing---line 1090 of file plain.bst
 Warning--empty journal in Bai-PINN
 Warning--empty journal in Blechschmidt-three-ways
-Warning--empty publisher in Malg
-Warning--empty year in Malg
 Warning--empty journal in markidis_old_new
 Warning--empty journal in Raissi-DL-fluid
 Warning--empty journal in Nabian-efficient-training-PINN
@@ -52,6 +37,8 @@ while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "Pao-Hsiung Chiu, Jian Cheng Wong, Chinchun Ooi, My Ha Dao, Yew-Soon Ong" for entry Chiu-CAN-PINN
 while executing---line 1090 of file plain.bst
 Warning--empty journal in Chiu-CAN-PINN
+Warning--empty journal in Mild2
+Warning--empty journal in Mild1
 Too many commas in name 1 of "Shengze Cai, Zhiping Mao, Zhicheng Wang, Minglang Yin, George Em Karniadakis" for entry Cai-PINN-fluid_mech
 while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "Shengze Cai, Zhiping Mao, Zhicheng Wang, Minglang Yin, George Em Karniadakis" for entry Cai-PINN-fluid_mech
@@ -60,45 +47,46 @@ Warning--empty journal in Cai-PINN-fluid_mech
 Too many commas in name 1 of "Xiaowei Jin, Shengze Cai, Hui Li, George Em Karniadakis" for entry Jin-NSFnets
 while executing---line 1090 of file plain.bst
 Warning--empty journal in Jin-NSFnets
-You've used 17 entries,
+Warning--empty journal in Mild4
+You've used 16 entries,
             2118 wiz_defined-function locations,
-            570 strings with 6548 characters,
-and the built_in function-call counts, 3625 in all, are:
-= -- 320
-> -- 124
+            568 strings with 6271 characters,
+and the built_in function-call counts, 3478 in all, are:
+= -- 323
+> -- 135
 < -- 0
-+ -- 54
-- -- 36
-* -- 178
-:= -- 649
-add.period$ -- 46
-call.type$ -- 17
-change.case$ -- 65
++ -- 60
+- -- 40
+* -- 155
+:= -- 651
+add.period$ -- 48
+call.type$ -- 16
+change.case$ -- 68
 chr.to.int$ -- 0
-cite$ -- 39
-duplicate$ -- 183
-empty$ -- 328
-format.name$ -- 36
-if$ -- 725
+cite$ -- 31
+duplicate$ -- 161
+empty$ -- 280
+format.name$ -- 40
+if$ -- 683
 int.to.chr$ -- 0
-int.to.str$ -- 17
-missing$ -- 20
+int.to.str$ -- 16
+missing$ -- 16
 newline$ -- 83
 num.names$ -- 32
-pop$ -- 122
+pop$ -- 96
 preamble$ -- 1
 purify$ -- 52
 quote$ -- 0
-skip$ -- 110
+skip$ -- 113
 stack$ -- 0
-substring$ -- 101
-swap$ -- 6
+substring$ -- 99
+swap$ -- 1
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 60
-warning$ -- 22
+type$ -- 64
+warning$ -- 15
 while$ -- 33
-width$ -- 19
-write$ -- 147
-(There were 15 error messages)
+width$ -- 18
+write$ -- 148
+(There were 14 error messages)

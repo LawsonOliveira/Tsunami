@@ -1,0 +1,5 @@
+SeaDataNet Usage Agreement.
+==========================.
+If you use SeaDataNet data in your publications please include the following in the Acknowledgements:
+Data were provided through SeaDataNet Pan-European infrastructure for ocean and marine data management
+(https://www.seadatanet.org)

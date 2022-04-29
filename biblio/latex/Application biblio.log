@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.1.28)  21 MAR 2022 14:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.1.28)  25 APR 2022 15:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -242,7 +242,52 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-LaTeX Warning: Citation `ADN_RF' on page 1 undefined on input line 15.
+LaTeX Warning: Citation `Mild1' on page 1 undefined on input line 15.
+
+
+LaTeX Warning: Citation `Mild2' on page 1 undefined on input line 15.
+
+
+LaTeX Warning: Citation `Mild3' on page 1 undefined on input line 15.
+
+
+LaTeX Warning: Citation `Mild4' on page 1 undefined on input line 15.
+
+
+LaTeX Warning: Citation `markidis_old_new' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation `Lutjens-PCE-PINN' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation `Bai-PINN' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation `Cai-PINN-fluid_mech' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation `Rao-PINN-laminar-flow' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation `Chiu-CAN-PINN' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation `Jin-NSFnets' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation `Nabian-efficient-training-PINN' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation `Blechschmidt-three-ways' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation `Psaros-Meta-PINN' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation `Raissi-DL-fluid' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation `ADN_DFT' on page 1 undefined on input line 16.
 
 No file "Application biblio".bbl.
 [1
@@ -259,9 +304,9 @@ Here is how much of TeX's memory you used:
  21467 multiletter control sequences out of 15000+600000
  414165 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,5n,62p,349b,155s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,5n,62p,485b,155s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on "Application biblio.pdf" (1 page, 22167 bytes).
+Output written on "Application biblio.pdf" (1 page, 23764 bytes).
 PDF statistics:
  17 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

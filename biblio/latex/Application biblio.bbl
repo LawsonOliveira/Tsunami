@@ -1,9 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{bergounioux}
-{\em Introduction au traitement mathématique des images—méthodes
-  déterministes}.
-
 \bibitem{Psaros-Meta-PINN}
 George Em~Karniadakis Apostolos F~Psaros, Kenji~Kawaguchi.
 \newblock Meta-learning pinn loss functions.
@@ -15,24 +11,15 @@ Mark Veillette Dava~Newman Björn~Lütjens, Catherine H.~Crawford.
   modeling.
 \newblock 2021.
 
-\bibitem{RF_Thesis}
-Ryan Case.
-\newblock Ramanujan-fourier series and applications.
-\newblock 2013.
+\bibitem{Mild3}
+P.G Chamberlain and D.~Porter.
+\newblock The modified mild-slope equation.
+\newblock 1995.
 
 \bibitem{Rao-PINN-laminar-flow}
 Yang~Liu Chengping~Rao, Hao~Sun.
 \newblock Physics-informed deep learning for incompressible laminar flows.
 \newblock 2020.
-
-\bibitem{SF}
-François de~Marçay.
-\newblock {\em Séries de Fourier - Université de Paris Sud, Département de
-  mathématiques d'Orsay}.
-
-\bibitem{baudoin}
-G.~BAUDOIN et~J.-F.~BERCHER.
-\newblock {\em Transformée de Fourier discrète}.
 
 \bibitem{Bai-PINN}
 Siddhartha Mishra Roberto~Molinaro Genming~Bai, Ujjwal~Koley.
@@ -45,12 +32,6 @@ Oliver G.~Ernst Jan~Blechschmidt.
 \newblock Three ways to solve partial differential equations with neural
   networks -- a review.
 \newblock 2021.
-
-\bibitem{Malg}
-F.~Malgouyres.
-\newblock {\em Signal, Fourier, Image. Université de Toulouse, 14/03/2021
-  [dernière consultation]. \\Disponible à
-  https://www.math.univ-toulouse.fr/\~fmalgouy/enseignement/downloadSfi/poly\_sfi.pdf}.
 
 \bibitem{markidis_old_new}
 Stefano Markidis.
@@ -76,6 +57,16 @@ Chinchun Ooi My Ha Dao Yew-Soon~Ong Pao-Hsiung~Chiu, Jian Cheng~Wong.
   coupled-automatic-numerical differentiation method.
 \newblock 2021.
 
+\bibitem{Mild2}
+D.~Porter.
+\newblock The mild-slope equations.
+\newblock 2003.
+
+\bibitem{Mild1}
+D.~Porter.
+\newblock The mild-slope equations: a unified theory.
+\newblock 2020.
+
 \bibitem{Cai-PINN-fluid_mech}
 Zhicheng Wang Minglang Yin George Em~Karniadakis Shengze~Cai, Zhiping~Mao.
 \newblock Physics-informed neural networks (pinns) for fluid mechanics: A
@@ -93,5 +84,10 @@ Changchuan Yin, Ying Chen, and Stephen S.-T. Yau.
 \newblock Pce-pinns physics-informed nn for uncertainty propagation in ocean
   modeling.
 \newblock {\em Journal of Theoretical Biology}, 359:18--28, 2014.
+
+\bibitem{Mild4}
+ASU İNAN and LALE BALA.
+\newblock Numerical modeling of mild slope equation with finite volume method.
+\newblock 2008.
 
 \end{thebibliography}
