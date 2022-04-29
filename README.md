@@ -11,7 +11,7 @@ Github du projet de recherche Tsunami : résoudre à l'aide de réseaux neuronau
 - Ruault Gabriel
 
 # Structure du repository
-
+```
 ├───biblio                        -> Ensemble bibliographique et fichiers .bib  
 │   ├───latex                     -> Tests pour les citations via .bib  
 │   ├───mild-slope                -> Recherches sur les équations de Mild-Slope  
@@ -27,3 +27,4 @@ Github du projet de recherche Tsunami : résoudre à l'aide de réseaux neuronau
 │   └───A_not_used                -> Fonction A non utilisées  
 ├───rapports                      -> Rapports en latex des séances  
 └───ScreenShot  
+```
