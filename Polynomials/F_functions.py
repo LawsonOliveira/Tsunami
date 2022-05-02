@@ -99,7 +99,7 @@ class F2D():
     All expr could be set with numpy. It would simplify the script of this class.
     """
 
-    def __init__(self, coords, strfn):
+    def __init__(self, coords, strfn, l_orders=[]):
         """
         Defines the variables used to set F
         - coords: array of coordinates of boundary points (here coords.shape==(nb_points,dimension2))
@@ -135,7 +135,10 @@ class F2D():
         self.reduced_tab_diff = []
 
         self.max_index = 0
+        # ro get an expression of the differentiate order (a,b) => reduced_tab_diff[dico_order_to_index[(a,b)]]
         self.dico_order_to_index = {}
+
+        self.dynamic_diff_2D(l_orders)
 
     def dynamic_diff_2D(self, l_orders):
         '''
@@ -151,11 +154,11 @@ class F2D():
             for i in range(1, a+1):
                 if len(self.tab_diff) <= i:
                     self.tab_diff.append([sm.diff(self.tab_diff[i-1][0], x)])
-                    print(f'differentiation of order {(i,0)} done ')
+                    # print(f'differentiation of order {(i,0)} done ')
             for j in range(1, b+1):
                 if len(self.tab_diff[a]) <= j:
                     self.tab_diff[a].append(sm.diff(self.tab_diff[a][j-1], y))
-                    print(f'differentiation of order {(j,a)} done ')
+                    # print(f'differentiation of order {(j,a)} done ')
 
         self.dico_order_to_index.update(
             {(a, b): self.max_index+i for i, (a, b) in enumerate(l_orders)})
@@ -187,6 +190,7 @@ class F2D():
         - X: vector of coordinates of a point in 2D. X.shape == (2,) or len(X) == 2
 
         Remark: suboptimal with numpy
+                dico_order_to_index only used here...
         """
         (a, b) = t_order
         if t_order in self.dico_order_to_index:
