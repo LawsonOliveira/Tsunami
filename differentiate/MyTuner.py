@@ -37,6 +37,9 @@ first_run = False  # wait that it creates the folder trial_O... first and nothin
 
 overwrite = True  # true = destroy previous results, false = resume search
 
+n_epoch_max = 1
+
+
 #############################################################################
 # Set F here
 
@@ -124,9 +127,12 @@ tf_boundary_coords = tf.convert_to_tensor([tf.constant([x, y], dtype=DTYPE) for 
 
 
 #############################################################################
+class MyTuner(kt.RandomSearch):
+    def __init__(self, hypermodel=None, objective=None, max_trials=10, seed=None, hyperparameters=None, tune_new_entries=True, allow_new_entries=True, **kwargs):
+        super().__init__(hypermodel, objective, max_trials, seed,
+                         hyperparameters, tune_new_entries, allow_new_entries, **kwargs)
+        self.l_names_hp = []
 
-
-class MyHyperModel(kt.HyperModel):
     def build(self, hp, dim=2):
         model = keras.models.Sequential([
             keras.layers.Input(shape=(dim))
@@ -150,9 +156,11 @@ class MyHyperModel(kt.HyperModel):
         model.compile(
             optimizer=optimizer, loss="mse", metrics=["mae"],
         )
+
+        self.l_names_hp += ['noise_enabled', 'num_layers', 'lr']
         return model
 
-    def fit(self, hp, model, tf_coords, tf_boundary_coords, validation_coords=[], patience=10, *args, **kwargs):
+    def fit(self, hp, model, tf_coords, tf_boundary_coords, validation_coords=[], patience=10):
         def save_model(model):
             # checkpoint to save trained model
             last_trial_folder = [f for f in os.listdir(
@@ -163,26 +171,15 @@ class MyHyperModel(kt.HyperModel):
                            last_trial_folder+'/checkpoint.h5')
 
         # @tf.function
-        def train_step(hp, model, tf_sample_coords, tf_boundary_coords, batch_size):
-            def g_3(X):
+        def train_step(model, tf_sample_coords, tf_boundary_coords, batch_size):
+            def g(X):
                 # F_x = Pstud._eval_polynome_numpy(F_xpy_real,x[0,0],x[0,1])
                 N_X = model(X)
                 return tf.squeeze(tf.transpose(expr_F(X[:, 0], X[:, 1])), axis=-1)*N_X
 
             def custom_loss():
-                _, dg_dxx, _, dg_dyy = differentiate(g_3, tf_sample_coords)
-                f_r = tf.reshape(f(tf_sample_coords), [batch_size, 1])
-                res = residual(dg_dxx, dg_dyy, f_r)
-
-                alpha = hp.Float('alpha', min_value=1e-6,
-                                 max_value=3, sampling='log')
-                loss = tf.reduce_mean(tf.square(res)) + alpha*tf.reduce_mean(
-                    tf.square(g_3(tf_boundary_coords)-boundary_conditions(tf_boundary_coords)))
-                return loss, res
-
-            def custom_loss_3():
                 dN_dx, dN_dxx, dN_dy, dN_dyy = differentiate(
-                    model, tf_sample_coords)
+                    g, tf_sample_coords)
                 f_r = tf.reshape(f(tf_sample_coords), [batch_size, 1])
 
                 F, dF_dx, dF_dxx, dF_dy, dF_dyy = evaluate_F_and_diff(
@@ -222,7 +219,7 @@ class MyHyperModel(kt.HyperModel):
 
         history = {'train_loss': [],
                    'val_mae': []}
-        n_epoch = 10
+        n_epoch = n_epoch_max
         for epoch in range(1, n_epoch+1):
             EarlyStopped = False
 
@@ -236,7 +233,7 @@ class MyHyperModel(kt.HyperModel):
                 [tf_coords[i] for i in indices])
             for _ in range(hp.Int('n_train', 10, 500)):
                 metrics, train_loss = train_step(
-                    hp, model, tf_sample_coords, tf_boundary_coords, batch_size)
+                    model, tf_sample_coords, tf_boundary_coords, batch_size)
                 train_losses.append(train_loss)
             mean_train_loss = np.mean(train_losses)
             history['train_loss'].append(mean_train_loss)
@@ -268,6 +265,8 @@ class MyHyperModel(kt.HyperModel):
                 print(
                     f'val_mae: {val_mae:.8f}')
 
+            self.l_names_hp += ['batch_size', 'n_train']
+
             # EarlyStopping implemented :
             if (len(history['val_mae']) > (patience+1)) and np.argmin(history['val_mae'][-(patience+1):]) == 0:
                 EarlyStopped = True
@@ -279,48 +278,46 @@ class MyHyperModel(kt.HyperModel):
             save_model(model)
         return history
 
+    def run_trial(self, trial, *args, **kwargs):
+        # Get the hp from trial.
+        hp = trial.hyperparameters
+        # Define "x" as a hyperparameter.
+        model = self.build(hp)
+        history = self.fit(hp, model, tf_coords, tf_boundary_coords,
+                           validation_coords=[], patience=10)
 
-hp = kt.HyperParameters()
-hypermodel = MyHyperModel()
-model = hypermodel.build(hp)
-history = hypermodel.fit(hp, model, tf_coords=tf_coords,
-                         tf_boundary_coords=tf_boundary_coords, patience=-1)
+        # Return the objective value to minimize.
+        return np.min(history["val_mae"])
 
 
-# keep exuctions_per_trial to 1 ! to overwrite with same sample size
-# patience à 30
-
-tuner = kt.RandomSearch(
-    MyHyperModel(),
-    objective="val_mae",
-    max_trials=2,
-    executions_per_trial=1,
+tuner = MyTuner(
+    # No hypermodel or objective specified.
+    max_trials=1,
     overwrite=overwrite,
     directory=directory,
     project_name=project_name,
 )
 
-# tuner.search(x_train, y_train, epochs=2, validation_data=(x_val, y_val))
-tuner.search(tf_coords=tf_coords,
-             tf_boundary_coords=tf_boundary_coords)
+# No need to pass anything to search()
+# unless you use them in run_trial().
+tuner.search()
+# print(tuner.get_best_hyperparameters()[0].get('units_4'))
+# print(tuner.get_best_hyperparameters()[0].get('noise_enabled'))
+# print(tuner.get_best_hyperparameters()[0])
 
-print('search_space_summary:\n', tuner.search_space_summary(), end='\n')
-# Get the top 2 models.
-# models = tuner.get_best_models(num_models=1)
-# best_model = models[0]
-# Build the model.
-# Needed for `Sequential` without specified `input_shape`.
-# best_model.build(dim=2)
-# best_model.summary()
 
-# hypermodel = MyHyperModel()
-# best_hp = tuner.get_best_hyperparameters()[0]
-# # model = hypermodel.build(best_hp)
-# model = keras.models.load_model(
-#     'differentiate/my_dir/tune_hypermodel/trial_0/checkpoint.h5')
-# hypermodel.fit(best_hp, model, tf_coords=tf_coords,
-#                tf_boundary_coords=tf_boundary_coords)
+# best_model = tuner.get_best_models(num_models=1)
 
-# print(best_hp)
 
-# tuner.results_summary()
+def load_best_hyperparameters(tuner, l_names_hp):
+    for name_hp in l_names_hp:
+        print(name_hp+':', tuner.get_best_hyperparameters()
+              [0].get(name_hp))
+    for i in range(tuner.get_best_hyperparameters()
+                   [0].get('num_layers')):
+        print(f'units_{i} :', tuner.get_best_hyperparameters()
+              [0].get(f'units_{i}'))
+
+
+load_best_hyperparameters(tuner, tuner.l_names_hp)
+model = keras.models.load_model(path_to_trials+'/trial_0/checkpoint.h5')

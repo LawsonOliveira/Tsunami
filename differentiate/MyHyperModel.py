@@ -1,132 +1,16 @@
-from sympy import Matrix
-import os
-from random import sample
+import keras_tuner
 import tensorflow as tf
-import keras_tuner as kt
-import keras
-import sympy as sm
+from tensorflow import keras
 import numpy as np
 
-from tensorflow.python.client import device_lib
-physical_devices = tf.config.list_physical_devices("GPU")
-print("Num GPUs Available: ", len(physical_devices))
-print(device_lib.list_local_devices())
-# what if empty...
-# tf.config.experimental.set_memory_growth(physical_devices[0], True)
-# # On windows systems you cannont install NCCL that is required for multi GPU
-# # So we need to follow hierarchical copy method or reduce to single GPU (less efficient than the former)
-# strategy = tf.distribute.MirroredStrategy(
-#     devices=['GPU:0'], cross_device_ops=tf.distribute.HierarchicalCopyAllReduce())
 
-DTYPE = 'float32'
-
-tf.keras.backend.set_floatx(DTYPE)
-
-__file__ = 'C:/Users/jtros/CS/cours/PoleProjet/FormationRecherche/Tsunami/TP/sceance4/Tsunami'
-
-print('\n cwd:', os.getcwd())
-os.chdir(__file__)
-print('changed to:', os.getcwd(), '\n')
-
-# where we'll put the results and save the models
-directory = "differentiate/my_dir"
-project_name = "tune_hypermodel"
-path_to_trials = __file__+'/'+directory+'/' + project_name
-
-first_run = False  # wait that it creates the folder trial_O... first and nothing else first
-
-overwrite = True  # true = destroy previous results, false = resume search
-
-#############################################################################
-# Set F here
-
-x, y = sm.symbols('x,y')
+x_train = np.random.rand(1000, 28, 28, 1)
+y_train = np.random.randint(0, 10, (1000, 1))
+x_val = np.random.rand(1000, 28, 28, 1)
+y_val = np.random.randint(0, 10, (1000, 1))
 
 
-def expr_dummy_F():
-    return x*(1-x)*y*(1-y)
-
-
-expr_F = expr_dummy_F()
-dexpr_F_dx = sm.diff(expr_F, x, 1)
-dexpr_F_dxx = sm.diff(dexpr_F_dx, x, 1)
-dexpr_F_dy = sm.diff(expr_F, y, 1)
-dexpr_F_dyy = sm.diff(dexpr_F_dy, y, 1)
-
-# print(dexpr_F_dx)
-# print(dexpr_F_dxx)
-
-# You can forget a no lambdified expression => here we greatly avoid 'for' loops
-
-expr_F = sm.lambdify([x, y], Matrix([expr_F]), 'numpy')
-dexpr_F_dx = sm.lambdify([x, y], Matrix([dexpr_F_dx]), 'numpy')
-dexpr_F_dxx = sm.lambdify([x, y], Matrix([dexpr_F_dxx]), 'numpy')
-dexpr_F_dy = sm.lambdify([x, y], Matrix([dexpr_F_dy]), 'numpy')
-dexpr_F_dyy = sm.lambdify([x, y], Matrix([dexpr_F_dyy]), 'numpy')
-
-
-def evaluate_F_and_diff(X):
-    F = tf.squeeze(tf.transpose(expr_F(X[:, 0], X[:, 1])), axis=-1)
-    dF_dx = tf.expand_dims(dexpr_F_dx(X[:, 0], X[:, 1]), axis=-1)
-    dF_dxx = tf.expand_dims(dexpr_F_dxx(X[:, 0], X[:, 1]), axis=-1)
-    dF_dy = tf.expand_dims(dexpr_F_dy(X[:, 0], X[:, 1]), axis=-1)
-    dF_dyy = tf.expand_dims(dexpr_F_dyy(X[:, 0], X[:, 1]), axis=-1)
-
-    return F, dF_dx, dF_dxx, dF_dy, dF_dyy
-
- # oddly enough expr_F and dexpr_F_d... do not have the same output
-
-#############################################################################
-# Set A here
-
-
-A = 0
-dA_dxx = 0
-dA_dyy = 0
-#############################################################################
-# Given EDO
-
-
-def f(X):
-    return tf.sin(np.pi*X[:, 0])*tf.sin(np.pi*X[:, 1])
-
-
-def boundary_conditions(X):
-    return 0
-
-
-def residual(du_dxx, du_dyy, f_ind):
-    return du_dxx+du_dyy+f_ind
-
-
-def differentiate(model, x):
-    with tf.GradientTape(persistent=True) as tape:
-        x1, x2 = x[:, 0:1], x[:, 1:2]
-        tape.watch(x1)
-        tape.watch(x2)
-        u = model(tf.stack([x1[:, 0], x2[:, 0]], axis=1))
-        du_dx = tape.gradient(u, x1)
-        du_dy = tape.gradient(u, x2)
-    du_dxx = tape.gradient(du_dx, x1)
-    du_dyy = tape.gradient(du_dy, x2)
-    return du_dx, du_dxx, du_dy, du_dyy
-
-
-grid_length = 100
-
-
-X = np.linspace(0, 1, grid_length, endpoint=True)
-Y = np.linspace(0, 1, grid_length, endpoint=True)
-tf_coords = tf.convert_to_tensor(
-    [tf.constant([x, y], dtype=DTYPE) for x in X for y in Y])
-tf_boundary_coords = tf.convert_to_tensor([tf.constant([x, y], dtype=DTYPE) for x in [
-                                          0, 1] for y in Y] + [tf.constant([x, y], dtype=DTYPE) for y in [0, 1] for x in X])
-
-
-#############################################################################
-
-
-class MyHyperModel(kt.HyperModel):
+class MyHyperModel(keras_tuner.HyperModel):
     def build(self, hp, dim=2):
         model = keras.models.Sequential([
             keras.layers.Input(shape=(dim))
@@ -152,7 +36,7 @@ class MyHyperModel(kt.HyperModel):
         )
         return model
 
-    def fit(self, hp, model, tf_coords, tf_boundary_coords, validation_coords=[], patience=10, *args, **kwargs):
+    def fit(self, hp, model, tf_coords, tf_boundary_coords, validation_coords=[], callbacks=[], patience=10, *args, **kwargs):
         def save_model(model):
             # checkpoint to save trained model
             last_trial_folder = [f for f in os.listdir(
@@ -268,59 +152,23 @@ class MyHyperModel(kt.HyperModel):
                 print(
                     f'val_mae: {val_mae:.8f}')
 
-            # EarlyStopping implemented :
-            if (len(history['val_mae']) > (patience+1)) and np.argmin(history['val_mae'][-(patience+1):]) == 0:
-                EarlyStopped = True
-                if not(first_run):
-                    save_model(model)
-                break
+            for callback in callbacks:
+                # The "my_metric" is the objective passed to the tuner.
+                callback.on_epoch_end(epoch, logs={"val_mae": val_mae})
 
         if not(EarlyStopped) and not(first_run):
             save_model(model)
         return history
 
 
-hp = kt.HyperParameters()
-hypermodel = MyHyperModel()
-model = hypermodel.build(hp)
-history = hypermodel.fit(hp, model, tf_coords=tf_coords,
-                         tf_boundary_coords=tf_boundary_coords, patience=-1)
+cb_EarlyStopping = tf.keras.callbacks.EarlyStopping(
+    monitor="val_mae", min_delta=1e-9, patience=10)
 
-
-# keep exuctions_per_trial to 1 ! to overwrite with same sample size
-# patience à 30
-
-tuner = kt.RandomSearch(
-    MyHyperModel(),
-    objective="val_mae",
+tuner = keras_tuner.RandomSearch(
+    objective=keras_tuner.Objective("val_mae", "min"),
     max_trials=2,
-    executions_per_trial=1,
-    overwrite=overwrite,
-    directory=directory,
-    project_name=project_name,
+    hypermodel=MyHyperModel(),
+    directory="results",
+    project_name="custom_training",
+    overwrite=True,
 )
-
-# tuner.search(x_train, y_train, epochs=2, validation_data=(x_val, y_val))
-tuner.search(tf_coords=tf_coords,
-             tf_boundary_coords=tf_boundary_coords)
-
-print('search_space_summary:\n', tuner.search_space_summary(), end='\n')
-# Get the top 2 models.
-# models = tuner.get_best_models(num_models=1)
-# best_model = models[0]
-# Build the model.
-# Needed for `Sequential` without specified `input_shape`.
-# best_model.build(dim=2)
-# best_model.summary()
-
-# hypermodel = MyHyperModel()
-# best_hp = tuner.get_best_hyperparameters()[0]
-# # model = hypermodel.build(best_hp)
-# model = keras.models.load_model(
-#     'differentiate/my_dir/tune_hypermodel/trial_0/checkpoint.h5')
-# hypermodel.fit(best_hp, model, tf_coords=tf_coords,
-#                tf_boundary_coords=tf_boundary_coords)
-
-# print(best_hp)
-
-# tuner.results_summary()

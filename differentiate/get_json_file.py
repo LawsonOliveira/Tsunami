@@ -13,7 +13,9 @@ df = pd.read_json(
 for col in df.columns:
     print(col)
 
-print(df['score'])
+print('score=', df['score'][0])
 
 print("DataFrame generated using JSON file:")
 print(df)
+
+print(df['hyperparameters']['values'])
