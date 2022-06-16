@@ -1,0 +1,6 @@
+{
+  "n_epoch_max": 2000,
+  "max_trials": 500,
+  "executions_per_trial": 1,
+  "fixed_val_coords": 1
+}

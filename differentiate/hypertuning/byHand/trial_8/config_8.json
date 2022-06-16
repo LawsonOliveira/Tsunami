@@ -1,0 +1,21 @@
+{
+    "trial_id": 8,
+    "config_training": {
+        "epochs_max": 5000,
+        "n_trains": 50,
+        "batch_size": 2048,
+        "display_step": 10,
+        "tol": 1e-06,
+        "patience": 50
+    },
+    "config_model": {
+        "l_units": [
+            30,
+            15,
+            15
+        ],
+        "noise": 1,
+        "learning_rate": 0.01,
+        "optimizer": "Adam"
+    }
+}

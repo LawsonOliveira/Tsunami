@@ -3,3 +3,7 @@ test_jupiter.ipynb
 useful_commands_ipynb.txt
 MyTuner.ipynb
 hypertuning.py
+MyHyperModel.py
+ex_HyperModel.py
+MyTunerHyperband.py
+using_NN_for_solving_EDP.ipynb
