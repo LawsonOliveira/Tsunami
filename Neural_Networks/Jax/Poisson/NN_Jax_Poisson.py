@@ -3,7 +3,7 @@ Solving PDEs with Jax
  
 This file contains our first approach to solve PDEs with neural networks on Jax Library.  
 
-The equations are written in LaTeX in the pdf
+The equations are written in LaTeX in the PDF
 
 We will try to solve the poisson Equation :  
 -laplacian(psi(x,y)) = f(x,y) on [0,1]^2  
