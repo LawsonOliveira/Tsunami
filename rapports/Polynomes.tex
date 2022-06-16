@@ -40,19 +40,19 @@ Les polynômes que nous avons trouvé à la fin de la séance sont :
 
 \subsection{Prosition de Gabriel :}
 \begin{equation*}
-    P_1(x,y) = \prod_{i=0}^{n-1}((x-x_i)^2 + (y-yi)^2)
+    F_1(x,y) = \prod_{k=0}^{n-1}((x-x_k)^2 + (y-y_k)^2)
 \end{equation*}
 
 \subsection{Proposition de Mariem :}
 \begin{equation*}
-    P_2(x,y) = \prod_{i=0}^{n-1}((x-x_i) + i(y-yi))
+    F_2(x,y) = \prod_{k=0}^{n-1}((x-x_k) + i(y-y_k))
 \end{equation*}
 Si l'on passe au module $P_2$, on retrouve l'expression de $P_1$, il est plus rapide de trouver les coefficients de $P_2$ mais le calcul de $P_2(x,y)$ après ça demande plus de temps (polynome dans$\mathbb{C}$).\\
 
 \subsection{Proposition matricielle :}
 \subsubsection*{Début d'idée}
 \begin{equation*}
-    P_3(x,y) = \sum_{i,j = 0}^{n} a_{ij}x^iy^j
+    F_3(x,y) = \sum_{i,j = 0}^{n} \alpha_{ij}x^iy^j
 \end{equation*}
 \begin{equation*}
     \begin{pmatrix}
@@ -78,7 +78,7 @@ Si l'on passe au module $P_2$, on retrouve l'expression de $P_1$, il est plus ra
 Où $x_b$ et $y_b$ sont définis de manière similaire à $x_b$ au début du document. Dans cette méthode il nous faut inverser la matrice, contrairement au cas en 1D avec de vraies matrices de Vandermonde cela n'est pas théoriquement assuré.
 
 \subsubsection*{L'implémentation}
-Soit $(p_i)_{i \in \llbracket chips \rrbracket}$
+%Soit $(p_i)_{i \in \llbracket chips \rrbracket}$
 La fonction principale est set polynome xpy numpy matrix.
 Elle prend en entrée coords, un array de coordonnées où le polynôme à construire est nul.\\
 
