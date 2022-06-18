@@ -1,5 +1,5 @@
 '''
-Solving PDEs with Jax
+Solving PDEs with Jax - Poisson equation
  
 This file contains our first approach to solve PDEs with neural networks on Jax Library.  
 

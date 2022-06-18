@@ -1,5 +1,5 @@
 '''
-Solving PDEs with Jax
+Solving PDEs with Jax - Problem 8
  
 This file contains our first approach to solve PDEs with neural networks on Jax Library.  
  
@@ -7,11 +7,11 @@ The equations are written in LaTeX in the PDF
 
 We will try to solve the PDE :  
 laplacian(psi(x,y)) + psi(x,y)*del[psi(x,y)]/dely = f(x,y) on [0,1]^2
+Where f(x, y)=sin(pi*x)*(2-pi^2*y^2+2y^3*sin(pi*x))
 (Problem 7 of the article https://ieeexplore.ieee.org/document/712178)
 
 With mixeds boundary conditions :   
 psi(0,y)=psi(1,y)=psi(x,0)=0 and del[psi(x,y)]dely|_(x,1) = 2sin(pi*x)        
-f(x, y)=sin(pi*x)*(2-pi^2*y^2+2y^3*sin(pi*x))
 
 The loss to minimize here is Loss = ||laplacian(psi(x,y)) + psi(x,y)*del[psi(x,y)]/dely - f(x)||_2  
 The true function psi should be psi(x, y)=y^2*sin(pi*x)
