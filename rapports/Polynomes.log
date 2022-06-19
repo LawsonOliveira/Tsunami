@@ -1,14 +1,14 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.17)  17 JUN 2022 19:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.19)  19 JUN 2022 23:57
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**./Polynomes.tex
-(Polynomes.tex
-LaTeX2e <2022-06-01> pre-release-0 (develop 2022-6-17 branch)
-L3 programming layer <2022-06-02>
-(C:\Program Files\MiKTeX\tex/latex/base\article.cls
+**c:/Users/antie/Documents/Pole_recherche/Tsunami/rapports/Polynomes.tex
+(c:/Users/antie/Documents/Pole_recherche/Tsunami/rapports/Polynomes.tex
+LaTeX2e <2022-06-01> patch level 1
+L3 programming layer <2022-06-16> (c:/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
-(C:\Program Files\MiKTeX\tex/latex/base\size10.clo
+(c:/texlive/2022/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count185
@@ -22,30 +22,25 @@ File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
-)
-(C:\Program Files\MiKTeX\tex/latex/base\inputenc.sty
+) (c:/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
-)
-(C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
+) (c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2022/04/08 v2.17n AMS math features
 \@mathmargin=\skip49
 
 For additional information on amsmath, use the `?' option.
-(C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty
+(c:/texlive/2022/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
-
-(C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty
+ (c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks18
 \ex@=\dimen139
-))
-(C:\Program Files\MiKTeX\tex/latex/amsmath\amsbsy.sty
+)) (c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen140
-)
-(C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty
+) (c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count193
@@ -95,22 +90,19 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-)
-(C:\Program Files\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+) (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)
-(C:\Program Files\MiKTeX\tex/latex/stmaryrd\stmaryrd.sty
+) (c:/texlive/2022/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
 Package: stmaryrd 1994/03/03 St Mary's Road symbol package
 \symstmry=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 (Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
-)
-(C:\Program Files\MiKTeX\tex/latex/amscls\amsthm.sty
+) (c:/texlive/2022/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks23
 \thm@bodyfont=\toks24
@@ -121,26 +113,20 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@postskip=\skip53
 \thm@headsep=\skip54
 \dth@everypar=\toks28
-)
-(C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty
+) (c:/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-
-(C:\Program Files\MiKTeX\tex/latex/graphics\keyval.sty
+ (c:/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks29
-)
-(C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty
+) (c:/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
-
-(C:\Program Files\MiKTeX\tex/latex/graphics\trig.sty
+ (c:/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-)
-(C:\Program Files\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+) (c:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
-
-(C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def
+ (c:/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen148
@@ -152,12 +138,11 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 Package amsthm Warning: Unknown theoremstyle `property' on input line 17.
 
 \c@property=\count272
-(C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+(c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-04-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count273
 \l__pdf_internal_box=\box53
-)
-(Polynomes.aux)
+) (./Polynomes.aux)
 \openout1 = `Polynomes.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
@@ -174,7 +159,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
- (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+ (c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count274
 \scratchdimen=\dimen150
@@ -187,74 +172,67 @@ LaTeX Font Info:    ... okay on input line 29.
 \MPnumerator=\count278
 \makeMPintoPDFobject=\count279
 \everyMPtoPDFconversion=\toks31
-) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (c:/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 31.
+Underfull \hbox (badness 10000) in paragraph at lines 31--34
 
+ []
 
-(C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
+LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
+(c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 31.
-
-
-(C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
+LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
+ (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 3
-1.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 40.
+ (c:/texlive/2022/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
+Underfull \hbox (badness 10000) in paragraph at lines 59--61
 
-(C:\Program Files\MiKTeX\tex/latex/stmaryrd\ustmry.fd)
-Underfull \hbox (badness 10000) in paragraph at lines 91--94
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--64
 
  []
 
 [1
 
-{C:/Users/jtros/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
-<tuning_model.png, id=23, 1031.052pt x 320.397pt>
+{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 217--219
+
+ []
+
+[4] [5]
+<tuning_model.png, id=34, 1031.052pt x 320.397pt>
 File: tuning_model.png Graphic file (type png)
 <use tuning_model.png>
-Package pdftex.def Info: tuning_model.png  used on input line 121.
+Package pdftex.def Info: tuning_model.png  used on input line 246.
 (pdftex.def)             Requested size: 369.88837pt x 113.8126pt.
 
-Overfull \hbox (24.88837pt too wide) in paragraph at lines 121--123
+Overfull \hbox (24.88837pt too wide) in paragraph at lines 246--248
  [][] 
  []
 
-[3 <./tuning_model.png>] [4] (Polynomes.aux) ) 
+[6 <./tuning_model.PNG>] [7] (./Polynomes.aux) ) 
 Here is how much of TeX's memory you used:
- 2534 strings out of 478354
- 38514 string characters out of 2846933
- 348904 words of memory out of 3000000
- 20938 multiletter control sequences out of 15000+600000
+ 2533 strings out of 478038
+ 38485 string characters out of 5843069
+ 349328 words of memory out of 5000000
+ 20960 multiletter control sequences out of 15000+600000
  473937 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,9n,62p,398b,234s stack positions out of 10000i,1000n,20000p,200000b,80000s
- <C:\Users\jtros\AppData\Local\Mi
-KTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\jtros\AppData\Lo
-cal\MiKTeX\fonts/pk/ljfour/public/stmaryrd/dpi600\stmary10.pk> <C:\Users\jtros\
-AppData\Local\MiKTeX\fonts/pk/ljfour/public/stmaryrd/dpi600\stmary7.pk><C:/Prog
-ram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:
-/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/font
-s/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmtt10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm1
-0.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Polynomes.pdf (4 pages, 193419 bytes).
+ 55i,12n,62p,453b,234s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/stmaryrd/stmary7.pfb>
+Output written on Polynomes.pdf (7 pages, 225835 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
+ 117 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
