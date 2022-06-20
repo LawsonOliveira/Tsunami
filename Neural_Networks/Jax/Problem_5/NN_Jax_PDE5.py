@@ -82,8 +82,8 @@ class MLP:
     def get_key(self):
         return self.key
 
-############################### PDE operators ###############################
-class PDE_operators:
+############################### Two dimensional PDE operators ###############################
+class PDE_operators2d:
     """
         Class with the most common operators used to solve PDEs
     Input:
@@ -106,7 +106,7 @@ class PDE_operators:
         laplacian = vec_fun(params, inputs[:,0], inputs[:,1])
         return laplacian
 
-    # Compute the derivative in x
+    # Compute the partial derivative in x
     @partial(jit, static_argnums=(0,))    
     def du_dx(self,params,inputs):
         fun = lambda params,x,y: self.function(params, x,y)
@@ -117,7 +117,7 @@ class PDE_operators:
         vec_fun = vmap(action, in_axes = (None, 0, 0))
         return vec_fun(params, inputs[:,0], inputs[:,1])
 
-    # Compute the derivative in y
+    # Compute the partial derivative in y
     @partial(jit, static_argnums=(0,))    
     def du_dy(self,params,inputs):
         fun = lambda params,x,y: self.function(params, x,y)
@@ -138,7 +138,7 @@ class PINN:
 
     # Class initialization
     def __init__(self,NN_evaluation):
-        self.operators=PDE_operators(self.solution)
+        self.operators=PDE_operators2d(self.solution)
         self.laplacian=self.operators.laplacian_2d
         self.NN_evaluation=NN_evaluation
 
@@ -175,16 +175,16 @@ class PINN:
 
     # Compute the loss function
     @partial(jit, static_argnums=(0,))    
-    def loss_function(self,params,batch,targets):
+    def loss_function(self,params,batch):
         targets=self.target_function(batch)
         preds=self.laplacian(params,batch).reshape(-1,1)
         return jnp.linalg.norm(preds-targets)
  
     # Train step
     @partial(jit, static_argnums=(0,))    
-    def train_step(self,i, opt_state, inputs, pred_outputs):
+    def train_step(self,i, opt_state, inputs):
         params = get_params(opt_state)
-        loss, gradient = value_and_grad(self.loss_function)(params,inputs, pred_outputs)
+        loss, gradient = value_and_grad(self.loss_function)(params,inputs)
         return loss, opt_update(i, gradient, opt_state)
 
 ############################### Initialize neural network ###############################
@@ -227,8 +227,7 @@ for ibatch in range(0,num_batches):
     ran_key, batch_key = jran.split(key)
     XY_train = jran.uniform(batch_key, shape=(batch_size, n_features), minval=0, maxval=1)
 
-    targets = solver.target_function(XY_train)
-    loss, opt_state = solver.train_step(ibatch,opt_state, XY_train,targets)
+    loss, opt_state = solver.train_step(ibatch,opt_state, XY_train)
     loss_history.append(float(loss))
 
     if ibatch%report_steps==report_steps-1:
@@ -274,6 +273,7 @@ XY_train = jran.uniform(batch_key, shape=(n_points, n_features), minval=0, maxva
 
 true_sol = true_solution(XY_test)
 plt.scatter(XY_test[:,0],XY_test[:,1], c=true_sol, cmap="hot",s=10)
+plt.clim(vmin=jnp.min(true_sol),vmax=jnp.max(true_sol))
 plt.colorbar()
 plt.title("True solution")
 plt.show()
@@ -290,6 +290,7 @@ true_sol = true_solution(XY_test)
 error=abs(predictions-true_sol)
 
 plt.scatter(XY_test[:,0],XY_test[:,1], c=error, cmap="viridis",s=10)
+plt.clim(vmin=0,vmax=jnp.max(error))
 plt.colorbar()
 plt.title("Absolut error")
 plt.show()
