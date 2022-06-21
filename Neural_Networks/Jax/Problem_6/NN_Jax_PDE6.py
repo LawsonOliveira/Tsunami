@@ -2,7 +2,7 @@
 # ## Description
 # 
 # ### Average time of execution 
-# Between 3 and 4 minutes on GPU
+# Between 15 and 18 minutes on GPU
 # 
 # ### PDE
 # We will try to solve the problem 6 of the article https://ieeexplore.ieee.org/document/712178:  
@@ -208,13 +208,13 @@ key=NN_MLP.get_key()
 
 ############################### Train parameters ###############################
 batch_size = 10000
-num_batches = 25000
-report_steps=500
+num_batches = 100000
+report_steps=1000
 loss_history = []
 
 ############################### Adam optimizer ###############################
 # It's possible to continue the last training if we use options=1
-opt_init, opt_update, get_params = jax_opt.adam(0.001)
+opt_init, opt_update, get_params = jax_opt.adam(0.0001)
 
 options=0
 if options==0:  # Start a new training
