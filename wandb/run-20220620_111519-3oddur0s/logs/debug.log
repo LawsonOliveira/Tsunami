@@ -1,0 +1,169 @@
+2022-06-20 11:15:19,682 INFO    MainThread:17228 [wandb_setup.py:_flush():76] Loading settings from C:\Users\jtros\.config\wandb\settings
+2022-06-20 11:15:19,682 INFO    MainThread:17228 [wandb_setup.py:_flush():76] Loading settings from C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\settings
+2022-06-20 11:15:19,682 INFO    MainThread:17228 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2022-06-20 11:15:19,682 INFO    MainThread:17228 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': '.', 'program': 'C:/Users/jtros/CS/cours/PoleProjet/FormationRecherche/Tsunami/TP/sceance4/Tsunami'}
+2022-06-20 11:15:19,682 INFO    MainThread:17228 [wandb_init.py:_log_setup():428] Logging user logs to C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111519-3oddur0s\logs\debug.log
+2022-06-20 11:15:19,683 INFO    MainThread:17228 [wandb_init.py:_log_setup():429] Logging internal logs to C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111519-3oddur0s\logs\debug-internal.log
+2022-06-20 11:15:19,683 INFO    MainThread:17228 [wandb_init.py:_jupyter_setup():378] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000001F7D1E3C5E0>
+2022-06-20 11:15:19,684 INFO    MainThread:17228 [wandb_init.py:init():462] calling init triggers
+2022-06-20 11:15:19,684 INFO    MainThread:17228 [wandb_init.py:init():465] wandb.init called with sweep_config: {}
+config: {'trial_id': 6, 'remark': '', 'config_training': {'epochs_max': 100, 'n_trains': 50, 'batch_size': 8192, 'val_size': 8192, 'display_step': 10, 'tol': 1e-06, 'patience': 50}, 'config_model': {'l_units': [30, 30], 'noise': 0, 'dropout_rate': 0.2, 'learning_rate': {'scheduler': 0, 'lr_max': 1e-05, 'lr_middle': 1e-07, 'lr_min': 1e-09, 'step_middle': 1300, 'step_min': 3000}, 'optimizer': 'Adam', 'save_path': 'differentiate/hypertuning/byHand/trial_100/model_poisson_trial_100_epoch_2_val_mae_0.408173.h5'}}
+2022-06-20 11:15:19,684 INFO    MainThread:17228 [wandb_init.py:init():515] starting backend
+2022-06-20 11:15:19,684 INFO    MainThread:17228 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2022-06-20 11:15:19,686 INFO    MainThread:17228 [backend.py:ensure_launched():217] starting backend process...
+2022-06-20 11:15:19,776 INFO    MainThread:17228 [backend.py:ensure_launched():222] started backend process with pid: 11384
+2022-06-20 11:15:19,777 INFO    MainThread:17228 [wandb_init.py:init():525] backend started and connected
+2022-06-20 11:15:19,779 INFO    MainThread:17228 [wandb_run.py:_label_probe_notebook():1089] probe notebook
+2022-06-20 11:15:19,780 INFO    MainThread:17228 [wandb_run.py:_label_probe_notebook():1099] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2022-06-20 11:15:19,780 INFO    MainThread:17228 [wandb_init.py:init():596] updated telemetry
+2022-06-20 11:15:19,841 INFO    MainThread:17228 [wandb_init.py:init():627] communicating run to backend with 30 second timeout
+2022-06-20 11:15:21,438 INFO    MainThread:17228 [wandb_run.py:_on_init():1924] communicating current version
+2022-06-20 11:15:21,626 INFO    MainThread:17228 [wandb_run.py:_on_init():1928] got version response 
+2022-06-20 11:15:21,626 INFO    MainThread:17228 [wandb_init.py:init():662] starting run threads in backend
+2022-06-20 11:15:21,896 INFO    MainThread:17228 [wandb_run.py:_console_start():1898] atexit reg
+2022-06-20 11:15:21,897 INFO    MainThread:17228 [wandb_run.py:_redirect():1771] redirect: SettingsConsole.WRAP
+2022-06-20 11:15:21,898 INFO    MainThread:17228 [wandb_run.py:_redirect():1808] Wrapping output streams.
+2022-06-20 11:15:21,900 INFO    MainThread:17228 [wandb_run.py:_redirect():1832] Redirects installed.
+2022-06-20 11:15:21,901 INFO    MainThread:17228 [wandb_init.py:init():688] run started, returning control to user process
+2022-06-20 11:16:43,014 INFO    MainThread:17228 [wandb_run.py:_finish():1685] finishing run julien-rsbrg/TF-tsunami/3oddur0s
+2022-06-20 11:16:43,015 ERROR   MainThread:17228 [jupyter.py:save_history():427] Run pip install nbformat to save notebook history
+2022-06-20 11:16:43,015 INFO    MainThread:17228 [jupyter.py:save_ipynb():377] not saving jupyter notebook
+2022-06-20 11:16:43,015 INFO    MainThread:17228 [wandb_init.py:_jupyter_teardown():360] cleaning up jupyter logic
+2022-06-20 11:16:43,015 INFO    MainThread:17228 [wandb_run.py:_atexit_cleanup():1867] got exitcode: 0
+2022-06-20 11:16:43,016 INFO    MainThread:17228 [wandb_run.py:_restore():1839] restore
+2022-06-20 11:16:43,772 INFO    MainThread:17228 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 963
+}
+
+2022-06-20 11:16:44,189 INFO    MainThread:17228 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 963
+}
+
+2022-06-20 11:16:45,140 INFO    MainThread:17228 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 20937
+}
+
+2022-06-20 11:16:45,250 INFO    MainThread:17228 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 21121
+}
+
+2022-06-20 11:16:45,357 INFO    MainThread:17228 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 21121
+}
+
+2022-06-20 11:16:45,472 INFO    MainThread:17228 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 21121
+}
+
+2022-06-20 11:16:45,577 INFO    MainThread:17228 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 21121
+}
+
+2022-06-20 11:16:45,685 INFO    MainThread:17228 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 21121
+  total_bytes: 21121
+}
+
+2022-06-20 11:16:45,795 INFO    MainThread:17228 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 21121
+  total_bytes: 21121
+}
+
+2022-06-20 11:16:45,903 INFO    MainThread:17228 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 21121
+  total_bytes: 21121
+}
+
+2022-06-20 11:16:46,015 INFO    MainThread:17228 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 21121
+  total_bytes: 21121
+}
+
+2022-06-20 11:16:46,122 INFO    MainThread:17228 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 21121
+  total_bytes: 21121
+}
+
+2022-06-20 11:16:46,231 INFO    MainThread:17228 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 21121
+  total_bytes: 21121
+}
+
+2022-06-20 11:16:46,340 INFO    MainThread:17228 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 21121
+  total_bytes: 21121
+}
+
+2022-06-20 11:16:46,999 INFO    MainThread:17228 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 21121
+  total_bytes: 21121
+}
+
+2022-06-20 11:16:47,588 INFO    MainThread:17228 [wandb_run.py:_on_finish():1996] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 21121
+  total_bytes: 21121
+}
+local_info {
+}
+
+2022-06-20 11:16:48,827 INFO    MainThread:17228 [wandb_run.py:_footer_history_summary_info():3104] rendering history
+2022-06-20 11:16:48,828 INFO    MainThread:17228 [wandb_run.py:_footer_history_summary_info():3136] rendering summary
+2022-06-20 11:16:48,835 INFO    MainThread:17228 [wandb_run.py:_footer_sync_info():3060] logging synced files

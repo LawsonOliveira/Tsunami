@@ -1,0 +1,24 @@
+{
+    "os": "Windows-10-10.0.19044-SP0",
+    "python": "3.9.12",
+    "heartbeatAt": "2022-06-20T08:34:13.662008",
+    "startedAt": "2022-06-20T08:34:04.210255",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 3080 Laptop GPU",
+    "gpu_count": 1,
+    "cpu_count": 16,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "C:/Users/jtros/CS/cours/PoleProjet/FormationRecherche/Tsunami/TP/sceance4/Tsunami",
+    "codePath": ".",
+    "git": {
+        "remote": "https://github.com/LawsonOliveira/Tsunami.git",
+        "commit": "a122df4e658ed3871a4233aae1bc235193dec093"
+    },
+    "email": "julien.rosenberger@student-cs.fr",
+    "root": "C:/Users/jtros/CS/cours/PoleProjet/FormationRecherche/Tsunami/TP/sceance4/Tsunami",
+    "host": "MSI",
+    "username": "jtros",
+    "executable": "c:\\Users\\jtros\\CS\\cours\\PoleProjet\\FormationRecherche\\Tsunami\\TP\\sceance4\\Tsunami\\venv_tsunami\\Scripts\\python.exe"
+}

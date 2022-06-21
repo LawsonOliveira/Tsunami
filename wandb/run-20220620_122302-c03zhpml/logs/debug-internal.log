@@ -1,0 +1,149 @@
+2022-06-20 12:23:03,629 INFO    MainThread:14020 [internal.py:wandb_internal():90] W&B internal server running at pid: 14020, started at: 2022-06-20 12:23:03.629156
+2022-06-20 12:23:03,632 INFO    WriterThread:14020 [datastore.py:open_for_write():75] open: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_122302-c03zhpml\run-c03zhpml.wandb
+2022-06-20 12:23:03,635 DEBUG   SenderThread:14020 [sender.py:send():235] send: header
+2022-06-20 12:23:03,635 DEBUG   SenderThread:14020 [sender.py:send():235] send: run
+2022-06-20 12:23:04,000 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: check_version
+2022-06-20 12:23:04,005 INFO    SenderThread:14020 [dir_watcher.py:__init__():205] watching files in: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_122302-c03zhpml\files
+2022-06-20 12:23:04,005 INFO    SenderThread:14020 [sender.py:_start_run_threads():812] run started: c03zhpml with start time 1655720582
+2022-06-20 12:23:04,005 DEBUG   SenderThread:14020 [sender.py:send():235] send: summary
+2022-06-20 12:23:04,006 INFO    SenderThread:14020 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 12:23:04,006 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: check_version
+2022-06-20 12:23:04,188 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: run_start
+2022-06-20 12:23:04,207 DEBUG   HandlerThread:14020 [meta.py:__init__():35] meta init
+2022-06-20 12:23:04,207 DEBUG   HandlerThread:14020 [meta.py:__init__():49] meta init done
+2022-06-20 12:23:04,207 DEBUG   HandlerThread:14020 [meta.py:probe():209] probe
+2022-06-20 12:23:04,267 DEBUG   HandlerThread:14020 [meta.py:_setup_git():199] setup git
+2022-06-20 12:23:04,361 DEBUG   HandlerThread:14020 [meta.py:_setup_git():206] setup git done
+2022-06-20 12:23:04,361 DEBUG   HandlerThread:14020 [meta.py:_save_pip():53] save pip
+2022-06-20 12:23:04,362 DEBUG   HandlerThread:14020 [meta.py:_save_pip():67] save pip done
+2022-06-20 12:23:04,362 DEBUG   HandlerThread:14020 [meta.py:probe():247] probe done
+2022-06-20 12:23:04,485 DEBUG   SenderThread:14020 [sender.py:send():235] send: files
+2022-06-20 12:23:04,485 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-20 12:23:04,485 INFO    SenderThread:14020 [sender.py:_save_file():949] saving file wandb-metadata.json with policy now
+2022-06-20 12:23:04,486 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: stop_status
+2022-06-20 12:23:04,728 DEBUG   SenderThread:14020 [sender.py:send():235] send: telemetry
+2022-06-20 12:23:04,729 DEBUG   SenderThread:14020 [sender.py:send():235] send: telemetry
+2022-06-20 12:23:05,023 INFO    Thread-11 :14020 [dir_watcher.py:_on_file_created():256] file/dir created: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_122302-c03zhpml\files\output.log
+2022-06-20 12:23:05,024 INFO    Thread-11 :14020 [dir_watcher.py:_on_file_created():256] file/dir created: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_122302-c03zhpml\files\requirements.txt
+2022-06-20 12:23:05,024 INFO    Thread-11 :14020 [dir_watcher.py:_on_file_created():256] file/dir created: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_122302-c03zhpml\files\wandb-summary.json
+2022-06-20 12:23:05,024 INFO    Thread-11 :14020 [dir_watcher.py:_on_file_created():256] file/dir created: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_122302-c03zhpml\files\wandb-metadata.json
+2022-06-20 12:23:05,437 INFO    Thread-17 :14020 [upload_job.py:push():132] Uploaded file C:\Users\jtros\AppData\Local\Temp\tmpg39kt7omwandb\3jnq607a-wandb-metadata.json
+2022-06-20 12:23:05,441 DEBUG   SenderThread:14020 [sender.py:send():235] send: exit
+2022-06-20 12:23:05,441 INFO    SenderThread:14020 [sender.py:send_exit():371] handling exit code: 1
+2022-06-20 12:23:05,441 INFO    SenderThread:14020 [sender.py:send_exit():373] handling runtime: 1
+2022-06-20 12:23:05,443 INFO    SenderThread:14020 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 12:23:05,443 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 12:23:05,444 INFO    SenderThread:14020 [sender.py:send_exit():379] send defer
+2022-06-20 12:23:05,444 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 12:23:05,445 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: defer
+2022-06-20 12:23:05,445 INFO    HandlerThread:14020 [handler.py:handle_request_defer():164] handle defer: 0
+2022-06-20 12:23:05,445 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: defer
+2022-06-20 12:23:05,445 INFO    SenderThread:14020 [sender.py:send_request_defer():388] handle sender defer: 0
+2022-06-20 12:23:05,446 INFO    SenderThread:14020 [sender.py:transition_state():392] send defer: 1
+2022-06-20 12:23:05,446 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: defer
+2022-06-20 12:23:05,446 INFO    HandlerThread:14020 [handler.py:handle_request_defer():164] handle defer: 1
+2022-06-20 12:23:05,521 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: defer
+2022-06-20 12:23:05,521 INFO    SenderThread:14020 [sender.py:send_request_defer():388] handle sender defer: 1
+2022-06-20 12:23:05,521 INFO    SenderThread:14020 [sender.py:transition_state():392] send defer: 2
+2022-06-20 12:23:05,521 DEBUG   SenderThread:14020 [sender.py:send():235] send: stats
+2022-06-20 12:23:05,522 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: defer
+2022-06-20 12:23:05,522 INFO    HandlerThread:14020 [handler.py:handle_request_defer():164] handle defer: 2
+2022-06-20 12:23:05,522 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: defer
+2022-06-20 12:23:05,522 INFO    SenderThread:14020 [sender.py:send_request_defer():388] handle sender defer: 2
+2022-06-20 12:23:05,522 INFO    SenderThread:14020 [sender.py:transition_state():392] send defer: 3
+2022-06-20 12:23:05,523 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: defer
+2022-06-20 12:23:05,523 INFO    HandlerThread:14020 [handler.py:handle_request_defer():164] handle defer: 3
+2022-06-20 12:23:05,523 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: defer
+2022-06-20 12:23:05,523 INFO    SenderThread:14020 [sender.py:send_request_defer():388] handle sender defer: 3
+2022-06-20 12:23:05,523 INFO    SenderThread:14020 [sender.py:transition_state():392] send defer: 4
+2022-06-20 12:23:05,523 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: defer
+2022-06-20 12:23:05,524 INFO    HandlerThread:14020 [handler.py:handle_request_defer():164] handle defer: 4
+2022-06-20 12:23:05,524 DEBUG   SenderThread:14020 [sender.py:send():235] send: summary
+2022-06-20 12:23:05,525 INFO    SenderThread:14020 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 12:23:05,525 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: defer
+2022-06-20 12:23:05,525 INFO    SenderThread:14020 [sender.py:send_request_defer():388] handle sender defer: 4
+2022-06-20 12:23:05,525 INFO    SenderThread:14020 [sender.py:transition_state():392] send defer: 5
+2022-06-20 12:23:05,525 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: defer
+2022-06-20 12:23:05,525 INFO    HandlerThread:14020 [handler.py:handle_request_defer():164] handle defer: 5
+2022-06-20 12:23:05,526 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: defer
+2022-06-20 12:23:05,526 INFO    SenderThread:14020 [sender.py:send_request_defer():388] handle sender defer: 5
+2022-06-20 12:23:05,560 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 12:23:05,812 INFO    SenderThread:14020 [sender.py:transition_state():392] send defer: 6
+2022-06-20 12:23:05,813 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 12:23:05,814 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: defer
+2022-06-20 12:23:05,814 INFO    HandlerThread:14020 [handler.py:handle_request_defer():164] handle defer: 6
+2022-06-20 12:23:05,814 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: defer
+2022-06-20 12:23:05,814 INFO    SenderThread:14020 [sender.py:send_request_defer():388] handle sender defer: 6
+2022-06-20 12:23:05,814 INFO    SenderThread:14020 [dir_watcher.py:finish():336] shutting down directory watcher
+2022-06-20 12:23:05,923 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 12:23:06,036 INFO    SenderThread:14020 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_122302-c03zhpml\files\config.yaml
+2022-06-20 12:23:06,036 INFO    SenderThread:14020 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_122302-c03zhpml\files\output.log
+2022-06-20 12:23:06,036 INFO    SenderThread:14020 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_122302-c03zhpml\files\wandb-summary.json
+2022-06-20 12:23:06,036 INFO    SenderThread:14020 [dir_watcher.py:finish():366] scan: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_122302-c03zhpml\files
+2022-06-20 12:23:06,037 INFO    SenderThread:14020 [dir_watcher.py:finish():380] scan save: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_122302-c03zhpml\files\config.yaml config.yaml
+2022-06-20 12:23:06,037 INFO    SenderThread:14020 [dir_watcher.py:finish():380] scan save: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_122302-c03zhpml\files\output.log output.log
+2022-06-20 12:23:06,038 INFO    SenderThread:14020 [dir_watcher.py:finish():380] scan save: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_122302-c03zhpml\files\requirements.txt requirements.txt
+2022-06-20 12:23:06,041 INFO    SenderThread:14020 [dir_watcher.py:finish():380] scan save: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_122302-c03zhpml\files\wandb-metadata.json wandb-metadata.json
+2022-06-20 12:23:06,042 INFO    SenderThread:14020 [dir_watcher.py:finish():380] scan save: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_122302-c03zhpml\files\wandb-summary.json wandb-summary.json
+2022-06-20 12:23:06,047 INFO    SenderThread:14020 [sender.py:transition_state():392] send defer: 7
+2022-06-20 12:23:06,048 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 12:23:06,049 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: defer
+2022-06-20 12:23:06,049 INFO    HandlerThread:14020 [handler.py:handle_request_defer():164] handle defer: 7
+2022-06-20 12:23:06,053 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: defer
+2022-06-20 12:23:06,053 INFO    SenderThread:14020 [sender.py:send_request_defer():388] handle sender defer: 7
+2022-06-20 12:23:06,053 INFO    SenderThread:14020 [file_pusher.py:finish():145] shutting down file pusher
+2022-06-20 12:23:06,159 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 12:23:06,160 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 12:23:06,268 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 12:23:06,268 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 12:23:06,375 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 12:23:06,376 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 12:23:06,486 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 12:23:06,487 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 12:23:06,597 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 12:23:06,598 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 12:23:06,708 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 12:23:06,709 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 12:23:06,817 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 12:23:06,818 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 12:23:06,821 INFO    Thread-18 :14020 [upload_job.py:push():132] Uploaded file C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_122302-c03zhpml\files\config.yaml
+2022-06-20 12:23:06,843 INFO    Thread-20 :14020 [upload_job.py:push():132] Uploaded file C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_122302-c03zhpml\files\requirements.txt
+2022-06-20 12:23:06,885 INFO    Thread-21 :14020 [upload_job.py:push():132] Uploaded file C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_122302-c03zhpml\files\wandb-summary.json
+2022-06-20 12:23:06,927 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 12:23:06,927 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 12:23:06,957 INFO    Thread-19 :14020 [upload_job.py:push():132] Uploaded file C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_122302-c03zhpml\files\output.log
+2022-06-20 12:23:07,037 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 12:23:07,038 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 12:23:07,150 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 12:23:07,150 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 12:23:07,165 INFO    Thread-10 :14020 [sender.py:transition_state():392] send defer: 8
+2022-06-20 12:23:07,165 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: defer
+2022-06-20 12:23:07,165 INFO    HandlerThread:14020 [handler.py:handle_request_defer():164] handle defer: 8
+2022-06-20 12:23:07,167 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: defer
+2022-06-20 12:23:07,167 INFO    SenderThread:14020 [sender.py:send_request_defer():388] handle sender defer: 8
+2022-06-20 12:23:07,261 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 12:23:07,529 INFO    SenderThread:14020 [sender.py:transition_state():392] send defer: 9
+2022-06-20 12:23:07,529 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 12:23:07,530 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: defer
+2022-06-20 12:23:07,530 INFO    HandlerThread:14020 [handler.py:handle_request_defer():164] handle defer: 9
+2022-06-20 12:23:07,530 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: defer
+2022-06-20 12:23:07,530 INFO    SenderThread:14020 [sender.py:send_request_defer():388] handle sender defer: 9
+2022-06-20 12:23:07,531 INFO    SenderThread:14020 [sender.py:transition_state():392] send defer: 10
+2022-06-20 12:23:07,532 DEBUG   SenderThread:14020 [sender.py:send():235] send: final
+2022-06-20 12:23:07,532 DEBUG   SenderThread:14020 [sender.py:send():235] send: footer
+2022-06-20 12:23:07,533 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: defer
+2022-06-20 12:23:07,533 INFO    HandlerThread:14020 [handler.py:handle_request_defer():164] handle defer: 10
+2022-06-20 12:23:07,533 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: defer
+2022-06-20 12:23:07,533 INFO    SenderThread:14020 [sender.py:send_request_defer():388] handle sender defer: 10
+2022-06-20 12:23:07,636 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 12:23:07,637 DEBUG   SenderThread:14020 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 12:23:07,638 INFO    SenderThread:14020 [file_pusher.py:join():150] waiting for file pusher
+2022-06-20 12:23:08,259 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: sampled_history
+2022-06-20 12:23:08,262 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: get_summary
+2022-06-20 12:23:08,265 DEBUG   HandlerThread:14020 [handler.py:handle_request():141] handle_request: shutdown
+2022-06-20 12:23:08,266 INFO    HandlerThread:14020 [handler.py:finish():806] shutting down handler
+2022-06-20 12:23:08,535 INFO    WriterThread:14020 [datastore.py:close():279] close: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_122302-c03zhpml\run-c03zhpml.wandb
+2022-06-20 12:23:09,155 INFO    SenderThread:14020 [sender.py:finish():1111] shutting down sender
+2022-06-20 12:23:09,155 INFO    SenderThread:14020 [file_pusher.py:finish():145] shutting down file pusher
+2022-06-20 12:23:09,155 INFO    SenderThread:14020 [file_pusher.py:join():150] waiting for file pusher
+2022-06-20 12:23:09,159 INFO    MainThread:14020 [internal.py:handle_exit():80] Internal process exited

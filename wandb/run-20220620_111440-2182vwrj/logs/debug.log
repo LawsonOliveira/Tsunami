@@ -1,0 +1,69 @@
+2022-06-20 11:14:40,662 INFO    MainThread:12376 [wandb_setup.py:_flush():76] Loading settings from C:\Users\jtros\.config\wandb\settings
+2022-06-20 11:14:40,662 INFO    MainThread:12376 [wandb_setup.py:_flush():76] Loading settings from C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\settings
+2022-06-20 11:14:40,662 INFO    MainThread:12376 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2022-06-20 11:14:40,662 INFO    MainThread:12376 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': '.', 'program': 'C:/Users/jtros/CS/cours/PoleProjet/FormationRecherche/Tsunami/TP/sceance4/Tsunami'}
+2022-06-20 11:14:40,663 INFO    MainThread:12376 [wandb_init.py:_log_setup():428] Logging user logs to C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111440-2182vwrj\logs\debug.log
+2022-06-20 11:14:40,663 INFO    MainThread:12376 [wandb_init.py:_log_setup():429] Logging internal logs to C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111440-2182vwrj\logs\debug-internal.log
+2022-06-20 11:14:40,663 INFO    MainThread:12376 [wandb_init.py:init():462] calling init triggers
+2022-06-20 11:14:40,663 INFO    MainThread:12376 [wandb_init.py:init():465] wandb.init called with sweep_config: {}
+config: {'trial_id': 6, 'remark': '', 'config_training': {'epochs_max': 100, 'n_trains': 50, 'batch_size': 8192, 'val_size': 8192, 'display_step': 10, 'tol': 1e-06, 'patience': 50}, 'config_model': {'l_units': [30, 30], 'noise': 0, 'dropout_rate': 0.2, 'learning_rate': {'scheduler': 0, 'lr_max': 1e-05, 'lr_middle': 1e-07, 'lr_min': 1e-09, 'step_middle': 1300, 'step_min': 3000}, 'optimizer': 'Adam', 'save_path': 'differentiate/hypertuning/byHand/trial_100/model_poisson_trial_100_epoch_2_val_mae_0.408173.h5'}}
+2022-06-20 11:14:40,663 INFO    MainThread:12376 [wandb_init.py:init():481] re-initializing run, found existing run on stack: s970aqy8
+2022-06-20 11:14:40,666 INFO    MainThread:12376 [wandb_run.py:_finish():1685] finishing run julien-rsbrg/TF-tsunami/s970aqy8
+2022-06-20 11:14:40,666 INFO    MainThread:12376 [wandb_run.py:_atexit_cleanup():1867] got exitcode: 0
+2022-06-20 11:14:40,668 INFO    MainThread:12376 [wandb_run.py:_restore():1839] restore
+2022-06-20 11:14:41,083 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 963
+}
+
+2022-06-20 11:14:46,199 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: None
+2022-06-20 11:14:46,307 INFO    MainThread:12376 [wandb_run.py:_restore():1839] restore
+2022-06-20 11:14:46,327 ERROR   MainThread:12376 [wandb_init.py:init():1026] error
+Traceback (most recent call last):
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\wandb_run.py", line 1876, in _atexit_cleanup
+    self._on_finish()
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\wandb_run.py", line 1994, in _on_finish
+    self._backend.interface.communicate_poll_exit()
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\interface\interface.py", line 653, in communicate_poll_exit
+    resp = self._communicate_poll_exit(poll_exit)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 419, in _communicate_poll_exit
+    result = self._communicate(rec)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 226, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 231, in _communicate_async
+    raise Exception("The wandb backend process has shutdown")
+Exception: The wandb backend process has shutdown
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\wandb_init.py", line 999, in init
+    run = wi.init()
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\wandb_init.py", line 494, in init
+    self._wl._global_run_stack[-1].finish()
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\wandb_run.py", line 256, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\wandb_run.py", line 222, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\wandb_run.py", line 1678, in finish
+    return self._finish(exit_code, quiet)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\wandb_run.py", line 1691, in _finish
+    self._atexit_cleanup(exit_code=exit_code)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\wandb_run.py", line 1887, in _atexit_cleanup
+    self._backend.cleanup()
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\backend\backend.py", line 246, in cleanup
+    self.interface.join()
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 475, in join
+    super().join()
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\interface\interface.py", line 666, in join
+    _ = self._communicate_shutdown()
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 472, in _communicate_shutdown
+    _ = self._communicate(record)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 226, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 231, in _communicate_async
+    raise Exception("The wandb backend process has shutdown")
+Exception: The wandb backend process has shutdown

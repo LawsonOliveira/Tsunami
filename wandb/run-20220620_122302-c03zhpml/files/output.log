@@ -1,0 +1,36 @@
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ dropout (Dropout)           (None, 2)                 0
+ dense (Dense)               (None, 30)                90
+ dropout_1 (Dropout)         (None, 30)                0
+ dense_1 (Dense)             (None, 30)                930
+ dense_2 (Dense)             (None, 1)                 30
+=================================================================
+Total params: 1,050
+Trainable params: 1,050
+Non-trainable params: 0
+_________________________________________________________________
+epoch: 1
+Traceback (most recent call last):
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\Neural_Networks\Tensorflow\Problem_1\NN_TF_problem_1.py", line 491, in <module>
+    try_config(config, id_add=100, use_wandb=True)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\Neural_Networks\Tensorflow\Problem_1\NN_TF_problem_1.py", line 325, in try_config
+    loss = train_step(tf_sample_coords, lr)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\Neural_Networks\Tensorflow\Problem_1\NN_TF_problem_1.py", line 263, in train_step
+    loss = custom_loss(tf_sample_coords)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\Neural_Networks\Tensorflow\Problem_1\NN_TF_problem_1.py", line 243, in custom_loss
+    N, dN_dx = differentiate(
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\Neural_Networks\Tensorflow\Problem_1\NN_TF_problem_1.py", line 84, in differentiate
+    u = model(tf.stack([x1[:, 0]], axis=1), training=training)
+  File "C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\keras\utils\traceback_utils.py", line 67, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\keras\engine\input_spec.py", line 248, in assert_input_compatibility
+    raise ValueError(
+ValueError: Exception encountered when calling layer "sequential" (type Sequential).
+Input 0 of layer "dense" is incompatible with the layer: expected axis -1 of input shape to have value 2, but received input with shape (8192, 1)
+Call arguments received by layer "sequential" (type Sequential):
+  • inputs=tf.Tensor(shape=(8192, 1), dtype=float32)
+  • training=True
+  • mask=None

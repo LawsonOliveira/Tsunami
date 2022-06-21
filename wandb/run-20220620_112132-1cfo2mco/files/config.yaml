@@ -1,0 +1,63 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.12.18
+    framework: keras
+    is_jupyter_run: true
+    is_kaggle_kernel: false
+    python_version: 3.9.12
+    start_time: 1655716892
+    t:
+      1:
+      - 2
+      - 3
+      - 55
+      2:
+      - 2
+      - 3
+      - 55
+      3:
+      - 2
+      - 13
+      - 16
+      4: 3.9.12
+      5: 0.12.18
+      8:
+      - 1
+      - 3
+      - 5
+config_model:
+  desc: null
+  value:
+    dropout_rate: 0.2
+    l_units:
+    - 30
+    - 30
+    learning_rate:
+      lr_max: 1.0e-05
+      lr_middle: 0
+      lr_min: 0
+      scheduler: 0
+      step_middle: 1300
+      step_min: 3000
+    noise: 0
+    optimizer: Adam
+    save_path: differentiate/hypertuning/byHand/trial_100/model_poisson_trial_100_epoch_2_val_mae_0.408173.h5
+config_training:
+  desc: null
+  value:
+    batch_size: 8192
+    display_step: 10
+    epochs_max: 100
+    n_trains: 5000
+    patience: 100
+    tol: 1.0e-06
+    val_size: 8192
+remark:
+  desc: null
+  value: ''
+trial_id:
+  desc: null
+  value: 7

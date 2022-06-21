@@ -1,0 +1,532 @@
+2022-06-20 11:19:02,602 INFO    MainThread:19348 [internal.py:wandb_internal():90] W&B internal server running at pid: 19348, started at: 2022-06-20 11:19:02.601488
+2022-06-20 11:19:02,605 INFO    WriterThread:19348 [datastore.py:open_for_write():75] open: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\run-35jwyrpw.wandb
+2022-06-20 11:19:02,608 DEBUG   SenderThread:19348 [sender.py:send():235] send: header
+2022-06-20 11:19:02,608 DEBUG   SenderThread:19348 [sender.py:send():235] send: run
+2022-06-20 11:19:03,189 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: check_version
+2022-06-20 11:19:03,199 INFO    SenderThread:19348 [dir_watcher.py:__init__():205] watching files in: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files
+2022-06-20 11:19:03,200 INFO    SenderThread:19348 [sender.py:_start_run_threads():812] run started: 35jwyrpw with start time 1655716741
+2022-06-20 11:19:03,200 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:03,202 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:03,202 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: check_version
+2022-06-20 11:19:03,387 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: run_start
+2022-06-20 11:19:03,411 DEBUG   HandlerThread:19348 [meta.py:__init__():35] meta init
+2022-06-20 11:19:03,411 DEBUG   HandlerThread:19348 [meta.py:__init__():49] meta init done
+2022-06-20 11:19:03,411 DEBUG   HandlerThread:19348 [meta.py:probe():209] probe
+2022-06-20 11:19:03,480 DEBUG   HandlerThread:19348 [meta.py:_setup_git():199] setup git
+2022-06-20 11:19:03,579 DEBUG   HandlerThread:19348 [meta.py:_setup_git():206] setup git done
+2022-06-20 11:19:03,579 DEBUG   HandlerThread:19348 [meta.py:_save_pip():53] save pip
+2022-06-20 11:19:03,581 DEBUG   HandlerThread:19348 [meta.py:_save_pip():67] save pip done
+2022-06-20 11:19:03,581 DEBUG   HandlerThread:19348 [meta.py:probe():247] probe done
+2022-06-20 11:19:03,698 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-20 11:19:03,698 DEBUG   SenderThread:19348 [sender.py:send():235] send: files
+2022-06-20 11:19:03,698 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-metadata.json with policy now
+2022-06-20 11:19:03,700 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: stop_status
+2022-06-20 11:19:03,754 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:03,932 DEBUG   SenderThread:19348 [sender.py:send():235] send: telemetry
+2022-06-20 11:19:03,932 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:03,932 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:03,933 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:04,028 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:04,028 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:04,029 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:04,029 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:04,200 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_created():256] file/dir created: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\requirements.txt
+2022-06-20 11:19:04,201 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_created():256] file/dir created: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\wandb-summary.json
+2022-06-20 11:19:04,201 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_created():256] file/dir created: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\wandb-metadata.json
+2022-06-20 11:19:04,201 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_created():256] file/dir created: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\output.log
+2022-06-20 11:19:04,299 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:04,299 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:04,299 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:04,300 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:04,478 INFO    Thread-17 :19348 [upload_job.py:push():132] Uploaded file C:\Users\jtros\AppData\Local\Temp\tmp2k7nu6n2wandb\mg4mfmui-wandb-metadata.json
+2022-06-20 11:19:04,547 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:04,547 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:04,547 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:04,548 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:04,786 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:04,786 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:04,787 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:04,787 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:05,012 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:05,012 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:05,013 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:05,013 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:05,026 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:05,026 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:05,026 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:05,027 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:05,066 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:05,067 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:05,067 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:05,068 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:05,200 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\wandb-summary.json
+2022-06-20 11:19:05,326 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:05,327 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:05,327 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:05,329 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:05,636 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:05,637 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:05,637 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:05,637 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:05,957 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:05,957 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:05,958 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:05,959 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:06,212 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\wandb-summary.json
+2022-06-20 11:19:06,213 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\output.log
+2022-06-20 11:19:06,314 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:06,315 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:06,316 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:06,317 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:06,553 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:06,554 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:06,554 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:06,555 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:06,565 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:06,565 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:06,565 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:06,566 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:06,606 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:06,607 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:06,607 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:06,608 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:06,972 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:06,972 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:06,972 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:06,974 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:07,220 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\wandb-summary.json
+2022-06-20 11:19:07,250 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:07,251 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:07,251 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:07,252 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:07,517 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:07,518 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:07,518 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:07,522 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:07,837 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:07,839 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:07,839 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:07,840 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:08,143 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:08,144 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:08,145 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:08,146 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:08,162 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:08,163 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:08,163 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:08,164 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:08,223 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\wandb-summary.json
+2022-06-20 11:19:08,224 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\output.log
+2022-06-20 11:19:08,226 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:08,226 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:08,226 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:08,227 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:08,493 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:08,494 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:08,494 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:08,495 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:08,735 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:08,738 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:08,738 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:08,739 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:09,036 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:09,038 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:09,038 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:09,040 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:09,225 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\wandb-summary.json
+2022-06-20 11:19:09,339 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:09,340 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:09,340 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:09,341 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:09,635 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:09,635 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:09,635 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:09,637 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:09,648 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:09,649 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:09,649 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:09,650 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:09,690 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:09,691 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:09,691 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:09,693 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:09,946 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:09,946 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:09,947 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:09,947 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:10,220 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:10,220 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:10,220 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:10,221 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:10,231 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\wandb-summary.json
+2022-06-20 11:19:10,231 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\output.log
+2022-06-20 11:19:10,468 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:10,469 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:10,469 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:10,470 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:10,713 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:10,713 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:10,714 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:10,714 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:10,941 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:10,941 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:10,941 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:10,942 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:10,955 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:10,956 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:10,956 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:10,957 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:10,993 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:10,993 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:10,994 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:10,994 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:11,233 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:11,234 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:11,234 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:11,235 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:11,241 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\wandb-summary.json
+2022-06-20 11:19:11,475 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:11,477 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:11,477 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:11,478 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:11,759 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:11,759 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:11,760 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:11,760 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:12,018 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:12,019 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:12,019 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:12,020 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:12,247 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\wandb-summary.json
+2022-06-20 11:19:12,247 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\output.log
+2022-06-20 11:19:12,268 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:12,268 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:12,269 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:12,269 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:12,285 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:12,285 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:12,285 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:12,286 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:12,326 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:12,326 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:12,326 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:12,327 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:12,615 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:12,616 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:12,616 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:12,617 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:12,903 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:12,904 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:12,904 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:12,906 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:13,190 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:13,191 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:13,191 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:13,192 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:13,248 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\wandb-summary.json
+2022-06-20 11:19:13,455 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:13,456 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:13,456 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:13,457 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:13,677 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:13,677 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:13,677 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:13,678 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:13,690 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:13,691 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:13,691 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:13,692 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:13,743 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:13,744 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:13,745 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:13,746 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:13,973 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:13,973 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:13,973 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:13,974 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:14,169 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:14,170 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:14,170 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:14,171 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:14,264 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\wandb-summary.json
+2022-06-20 11:19:14,264 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\output.log
+2022-06-20 11:19:14,389 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:14,389 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:14,390 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:14,390 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:14,601 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:14,610 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:14,616 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:14,617 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:14,813 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:14,814 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:14,814 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:14,816 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:14,829 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:14,829 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:14,829 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:14,830 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:14,874 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:14,875 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:14,875 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:14,876 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:15,118 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:15,119 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:15,119 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:15,120 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:15,269 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\wandb-summary.json
+2022-06-20 11:19:15,325 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:15,326 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:15,326 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:15,327 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:15,576 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:15,577 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:15,577 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:15,578 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:15,858 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:15,859 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:15,859 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:15,860 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:16,094 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:16,094 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:16,095 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:16,096 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:16,117 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:16,117 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:16,117 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:16,117 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:16,162 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:16,163 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:16,163 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:16,164 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:16,281 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\wandb-summary.json
+2022-06-20 11:19:16,282 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\output.log
+2022-06-20 11:19:16,403 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:16,403 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:16,403 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:16,405 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:16,670 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:16,670 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:16,671 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:16,671 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:16,923 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:16,923 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:16,924 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:16,924 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:17,175 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:17,176 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:17,176 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:17,177 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:17,296 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\wandb-summary.json
+2022-06-20 11:19:17,394 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:17,394 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:17,394 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:17,395 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:17,408 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:17,409 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:17,409 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:17,410 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:17,450 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:17,451 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:17,451 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:17,452 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:17,678 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:17,678 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:17,678 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:17,680 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:17,922 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:17,922 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:17,922 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:17,924 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:18,142 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:18,142 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:18,143 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:18,143 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:18,308 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\wandb-summary.json
+2022-06-20 11:19:18,308 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\output.log
+2022-06-20 11:19:18,367 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:18,367 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:18,367 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:18,368 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:18,636 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:18,636 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:18,637 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:18,638 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:18,651 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:18,652 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:18,652 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:18,653 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:18,699 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:18,699 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:18,700 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:18,701 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:18,947 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-20 11:19:18,948 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: stop_status
+2022-06-20 11:19:18,965 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:19,239 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:19,318 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\wandb-summary.json
+2022-06-20 11:19:19,370 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:19,371 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:19,372 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:19,373 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:19,373 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:19,374 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:19,541 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:19,542 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:19,543 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:19,544 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:19,817 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-20 11:19:19,818 DEBUG   SenderThread:19348 [sender.py:send():235] send: history
+2022-06-20 11:19:19,818 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:19,819 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:20,330 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\wandb-summary.json
+2022-06-20 11:19:20,330 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\output.log
+2022-06-20 11:19:22,340 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\output.log
+2022-06-20 11:19:32,891 DEBUG   SenderThread:19348 [sender.py:send():235] send: telemetry
+2022-06-20 11:19:33,425 INFO    Thread-11 :19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\output.log
+2022-06-20 11:19:33,480 DEBUG   SenderThread:19348 [sender.py:send():235] send: telemetry
+2022-06-20 11:19:33,724 DEBUG   SenderThread:19348 [sender.py:send():235] send: exit
+2022-06-20 11:19:33,724 INFO    SenderThread:19348 [sender.py:send_exit():371] handling exit code: 0
+2022-06-20 11:19:33,725 INFO    SenderThread:19348 [sender.py:send_exit():373] handling runtime: 30
+2022-06-20 11:19:33,726 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:33,726 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:33,727 INFO    SenderThread:19348 [sender.py:send_exit():379] send defer
+2022-06-20 11:19:33,727 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:33,728 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: defer
+2022-06-20 11:19:33,728 INFO    HandlerThread:19348 [handler.py:handle_request_defer():164] handle defer: 0
+2022-06-20 11:19:33,728 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: defer
+2022-06-20 11:19:33,728 INFO    SenderThread:19348 [sender.py:send_request_defer():388] handle sender defer: 0
+2022-06-20 11:19:33,728 INFO    SenderThread:19348 [sender.py:transition_state():392] send defer: 1
+2022-06-20 11:19:33,729 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: defer
+2022-06-20 11:19:33,729 INFO    HandlerThread:19348 [handler.py:handle_request_defer():164] handle defer: 1
+2022-06-20 11:19:33,836 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: defer
+2022-06-20 11:19:33,836 INFO    SenderThread:19348 [sender.py:send_request_defer():388] handle sender defer: 1
+2022-06-20 11:19:33,836 INFO    SenderThread:19348 [sender.py:transition_state():392] send defer: 2
+2022-06-20 11:19:33,837 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:33,837 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:33,838 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: defer
+2022-06-20 11:19:33,838 INFO    HandlerThread:19348 [handler.py:handle_request_defer():164] handle defer: 2
+2022-06-20 11:19:33,838 DEBUG   SenderThread:19348 [sender.py:send():235] send: stats
+2022-06-20 11:19:33,839 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: defer
+2022-06-20 11:19:33,839 INFO    SenderThread:19348 [sender.py:send_request_defer():388] handle sender defer: 2
+2022-06-20 11:19:33,839 INFO    SenderThread:19348 [sender.py:transition_state():392] send defer: 3
+2022-06-20 11:19:33,839 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: defer
+2022-06-20 11:19:33,839 INFO    HandlerThread:19348 [handler.py:handle_request_defer():164] handle defer: 3
+2022-06-20 11:19:33,839 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: defer
+2022-06-20 11:19:33,840 INFO    SenderThread:19348 [sender.py:send_request_defer():388] handle sender defer: 3
+2022-06-20 11:19:33,840 INFO    SenderThread:19348 [sender.py:transition_state():392] send defer: 4
+2022-06-20 11:19:33,840 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: defer
+2022-06-20 11:19:33,840 INFO    HandlerThread:19348 [handler.py:handle_request_defer():164] handle defer: 4
+2022-06-20 11:19:33,840 DEBUG   SenderThread:19348 [sender.py:send():235] send: summary
+2022-06-20 11:19:33,842 INFO    SenderThread:19348 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-20 11:19:33,842 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: defer
+2022-06-20 11:19:33,842 INFO    SenderThread:19348 [sender.py:send_request_defer():388] handle sender defer: 4
+2022-06-20 11:19:33,842 INFO    SenderThread:19348 [sender.py:transition_state():392] send defer: 5
+2022-06-20 11:19:33,842 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: defer
+2022-06-20 11:19:33,842 INFO    HandlerThread:19348 [handler.py:handle_request_defer():164] handle defer: 5
+2022-06-20 11:19:33,842 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: defer
+2022-06-20 11:19:33,842 INFO    SenderThread:19348 [sender.py:send_request_defer():388] handle sender defer: 5
+2022-06-20 11:19:33,946 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:34,206 INFO    SenderThread:19348 [sender.py:transition_state():392] send defer: 6
+2022-06-20 11:19:34,206 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:34,207 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: defer
+2022-06-20 11:19:34,207 INFO    HandlerThread:19348 [handler.py:handle_request_defer():164] handle defer: 6
+2022-06-20 11:19:34,207 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: defer
+2022-06-20 11:19:34,207 INFO    SenderThread:19348 [sender.py:send_request_defer():388] handle sender defer: 6
+2022-06-20 11:19:34,207 INFO    SenderThread:19348 [dir_watcher.py:finish():336] shutting down directory watcher
+2022-06-20 11:19:34,322 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:34,435 INFO    SenderThread:19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\config.yaml
+2022-06-20 11:19:34,435 INFO    SenderThread:19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\wandb-summary.json
+2022-06-20 11:19:34,435 INFO    SenderThread:19348 [dir_watcher.py:_on_file_modified():269] file/dir modified: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\output.log
+2022-06-20 11:19:34,436 INFO    SenderThread:19348 [dir_watcher.py:finish():366] scan: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files
+2022-06-20 11:19:34,436 INFO    SenderThread:19348 [dir_watcher.py:finish():380] scan save: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\config.yaml config.yaml
+2022-06-20 11:19:34,436 INFO    SenderThread:19348 [dir_watcher.py:finish():380] scan save: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\output.log output.log
+2022-06-20 11:19:34,437 INFO    SenderThread:19348 [dir_watcher.py:finish():380] scan save: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\requirements.txt requirements.txt
+2022-06-20 11:19:34,440 INFO    SenderThread:19348 [dir_watcher.py:finish():380] scan save: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\wandb-metadata.json wandb-metadata.json
+2022-06-20 11:19:34,441 INFO    SenderThread:19348 [dir_watcher.py:finish():380] scan save: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\wandb-summary.json wandb-summary.json
+2022-06-20 11:19:34,446 INFO    SenderThread:19348 [sender.py:transition_state():392] send defer: 7
+2022-06-20 11:19:34,447 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:34,448 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: defer
+2022-06-20 11:19:34,450 INFO    HandlerThread:19348 [handler.py:handle_request_defer():164] handle defer: 7
+2022-06-20 11:19:34,450 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: defer
+2022-06-20 11:19:34,450 INFO    SenderThread:19348 [sender.py:send_request_defer():388] handle sender defer: 7
+2022-06-20 11:19:34,450 INFO    SenderThread:19348 [file_pusher.py:finish():145] shutting down file pusher
+2022-06-20 11:19:34,559 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:34,560 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:34,667 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:34,669 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:34,777 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:34,777 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:34,887 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:34,888 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:34,997 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:34,997 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:35,105 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:35,106 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:35,216 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:35,216 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:35,326 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:35,327 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:35,434 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:35,435 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:35,480 INFO    Thread-20 :19348 [upload_job.py:push():132] Uploaded file C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\requirements.txt
+2022-06-20 11:19:35,543 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:35,544 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:35,654 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:35,654 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:35,765 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:35,765 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:35,835 INFO    Thread-18 :19348 [upload_job.py:push():132] Uploaded file C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\config.yaml
+2022-06-20 11:19:35,873 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:35,874 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:35,984 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:35,984 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:36,014 INFO    Thread-21 :19348 [upload_job.py:push():132] Uploaded file C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\wandb-summary.json
+2022-06-20 11:19:36,094 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:36,095 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:36,207 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:36,208 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:36,315 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:36,316 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:36,426 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:36,427 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:36,539 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:36,539 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:36,647 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:36,648 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:36,724 INFO    Thread-19 :19348 [upload_job.py:push():132] Uploaded file C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\files\output.log
+2022-06-20 11:19:36,759 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:36,759 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:36,868 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:36,868 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:36,929 INFO    Thread-10 :19348 [sender.py:transition_state():392] send defer: 8
+2022-06-20 11:19:36,930 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: defer
+2022-06-20 11:19:36,930 INFO    HandlerThread:19348 [handler.py:handle_request_defer():164] handle defer: 8
+2022-06-20 11:19:36,931 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: defer
+2022-06-20 11:19:36,931 INFO    SenderThread:19348 [sender.py:send_request_defer():388] handle sender defer: 8
+2022-06-20 11:19:36,977 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:37,153 INFO    SenderThread:19348 [sender.py:transition_state():392] send defer: 9
+2022-06-20 11:19:37,153 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:37,154 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: defer
+2022-06-20 11:19:37,154 INFO    HandlerThread:19348 [handler.py:handle_request_defer():164] handle defer: 9
+2022-06-20 11:19:37,154 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: defer
+2022-06-20 11:19:37,154 INFO    SenderThread:19348 [sender.py:send_request_defer():388] handle sender defer: 9
+2022-06-20 11:19:37,155 INFO    SenderThread:19348 [sender.py:transition_state():392] send defer: 10
+2022-06-20 11:19:37,155 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: defer
+2022-06-20 11:19:37,155 INFO    HandlerThread:19348 [handler.py:handle_request_defer():164] handle defer: 10
+2022-06-20 11:19:37,157 DEBUG   SenderThread:19348 [sender.py:send():235] send: final
+2022-06-20 11:19:37,157 DEBUG   SenderThread:19348 [sender.py:send():235] send: footer
+2022-06-20 11:19:37,157 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: defer
+2022-06-20 11:19:37,157 INFO    SenderThread:19348 [sender.py:send_request_defer():388] handle sender defer: 10
+2022-06-20 11:19:37,260 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-20 11:19:37,260 DEBUG   SenderThread:19348 [sender.py:send_request():249] send_request: poll_exit
+2022-06-20 11:19:37,260 INFO    SenderThread:19348 [file_pusher.py:join():150] waiting for file pusher
+2022-06-20 11:19:38,105 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: sampled_history
+2022-06-20 11:19:38,107 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: get_summary
+2022-06-20 11:19:38,109 DEBUG   HandlerThread:19348 [handler.py:handle_request():141] handle_request: shutdown
+2022-06-20 11:19:38,109 INFO    HandlerThread:19348 [handler.py:finish():806] shutting down handler
+2022-06-20 11:19:38,166 INFO    WriterThread:19348 [datastore.py:close():279] close: C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111855-35jwyrpw\run-35jwyrpw.wandb
+2022-06-20 11:19:39,011 INFO    SenderThread:19348 [sender.py:finish():1111] shutting down sender
+2022-06-20 11:19:39,011 INFO    SenderThread:19348 [file_pusher.py:finish():145] shutting down file pusher
+2022-06-20 11:19:39,011 INFO    SenderThread:19348 [file_pusher.py:join():150] waiting for file pusher
+2022-06-20 11:19:39,015 INFO    MainThread:19348 [internal.py:handle_exit():80] Internal process exited

@@ -1,0 +1,94 @@
+epoch: 1
+epoch: 1 train step: 0 loss: 0.01430971
+mean_loss: 0.01400768 val_mae: 0.40763316 duration epoch: 1.5951271057128906
+epoch: 2
+epoch: 2 train step: 0 loss: 0.013984365
+mean_loss: 0.013895059 val_mae: 0.4032396 duration epoch: 1.4599635601043701
+epoch: 3
+epoch: 3 train step: 0 loss: 0.014050411
+mean_loss: 0.013815169 val_mae: 0.40463638 duration epoch: 1.4243037700653076
+epoch: 4
+epoch: 4 train step: 0 loss: 0.013493888
+mean_loss: 0.013786818 val_mae: 0.40375745 duration epoch: 1.367577314376831
+epoch: 5
+epoch: 5 train step: 0 loss: 0.013819518
+mean_loss: 0.01376523 val_mae: 0.40416685 duration epoch: 1.3299622535705566
+epoch: 6
+epoch: 6 train step: 0 loss: 0.013528663
+mean_loss: 0.013606471 val_mae: 0.4047407 duration epoch: 1.2987327575683594
+epoch: 7
+epoch: 7 train step: 0 loss: 0.013665697
+mean_loss: 0.013506259 val_mae: 0.40493408 duration epoch: 1.5137834548950195
+epoch: 8
+epoch: 8 train step: 0 loss: 0.013709385
+mean_loss: 0.013473231 val_mae: 0.40467528 duration epoch: 1.4765946865081787
+epoch: 9
+epoch: 9 train step: 0 loss: 0.013874962
+mean_loss: 0.013338623 val_mae: 0.40450028 duration epoch: 1.4027378559112549
+epoch: 10
+epoch: 10 train step: 0 loss: 0.013012411
+mean_loss: 0.013176217 val_mae: 0.40430441 duration epoch: 1.107966661453247
+epoch: 11
+epoch: 11 train step: 0 loss: 0.013038092
+mean_loss: 0.0130187925 val_mae: 0.4047574 duration epoch: 1.240051507949829
+epoch: 12
+epoch: 12 train step: 0 loss: 0.0128775425
+mean_loss: 0.012923755 val_mae: 0.404503 duration epoch: 1.242126226425171
+epoch: 13
+epoch: 13 train step: 0 loss: 0.0128654
+mean_loss: 0.012939525 val_mae: 0.40464026 duration epoch: 1.4080157279968262
+epoch: 14
+epoch: 14 train step: 0 loss: 0.0128287375
+mean_loss: 0.012846576 val_mae: 0.4044207 duration epoch: 1.5990681648254395
+epoch: 15
+epoch: 15 train step: 0 loss: 0.013076138
+mean_loss: 0.012732643 val_mae: 0.404251 duration epoch: 1.560957431793213
+epoch: 16
+epoch: 16 train step: 0 loss: 0.01239207
+mean_loss: 0.0126209 val_mae: 0.4043525 duration epoch: 1.5677027702331543
+epoch: 17
+epoch: 17 train step: 0 loss: 0.012505855
+mean_loss: 0.012526947 val_mae: 0.4046405 duration epoch: 1.5951173305511475
+epoch: 18
+epoch: 18 train step: 0 loss: 0.012712818
+mean_loss: 0.012469256 val_mae: 0.40451923 duration epoch: 1.554443359375
+epoch: 19
+epoch: 19 train step: 0 loss: 0.012092983
+mean_loss: 0.012423367 val_mae: 0.40480432 duration epoch: 1.7104382514953613
+epoch: 20
+epoch: 20 train step: 0 loss: 0.012375947
+mean_loss: 0.012374466 val_mae: 0.40517515 duration epoch: 1.7357580661773682
+epoch: 21
+epoch: 21 train step: 0 loss: 0.012044826
+mean_loss: 0.012329725 val_mae: 0.40507627 duration epoch: 1.5765249729156494
+epoch: 22
+epoch: 22 train step: 0 loss: 0.012844153
+mean_loss: 0.01231024 val_mae: 0.40531665 duration epoch: 1.4717035293579102
+epoch: 23
+epoch: 23 train step: 0 loss: 0.012270629
+mean_loss: 0.012240596 val_mae: 0.4053929 duration epoch: 1.418668270111084
+epoch: 24
+epoch: 24 train step: 0 loss: 0.012229992
+mean_loss: 0.012153908 val_mae: 0.4055315 duration epoch: 1.3668327331542969
+epoch: 25
+epoch: 25 train step: 0 loss: 0.01223295
+mean_loss: 0.012058807 val_mae: 0.4054858 duration epoch: 1.2945482730865479
+epoch: 26
+epoch: 26 train step: 0 loss: 0.012248171
+mean_loss: 0.012063336 val_mae: 0.40545103 duration epoch: 1.1965818405151367
+epoch: 27
+epoch: 27 train step: 0 loss: 0.012353731
+mean_loss: 0.011994884 val_mae: 0.40539223 duration epoch: 1.2016613483428955
+epoch: 28
+epoch: 28 train step: 0 loss: 0.011934457
+mean_loss: 0.011955903 val_mae: 0.40545878 duration epoch: 1.3890535831451416
+epoch: 29
+epoch: 29 train step: 0 loss: 0.012116794
+mean_loss: 0.011921546 val_mae: 0.40535772 duration epoch: 1.4732589721679688
+epoch: 30
+epoch: 30 train step: 0 loss: 0.012041206
+mean_loss: 0.011721344 val_mae: 0.4053359 duration epoch: 1.6151189804077148
+epoch: 31
+epoch: 31 train step: 0 loss: 0.012020206
+config:
+ {'trial_id': 6, 'remark': '', 'config_training': {'epochs_max': 100, 'n_trains': 50, 'batch_size': 8192, 'val_size': 8192, 'display_step': 10, 'tol': 1e-06, 'patience': 50}, 'config_model': {'l_units': [30, 30], 'noise': 0, 'dropout_rate': 0.2, 'learning_rate': {'scheduler': 0, 'lr_max': 1e-05, 'lr_middle': 1e-07, 'lr_min': 1e-09, 'step_middle': 1300, 'step_min': 3000}, 'optimizer': 'Adam', 'save_path': 'differentiate/hypertuning/byHand/trial_100/model_poisson_trial_100_epoch_2_val_mae_0.408173.h5'}}

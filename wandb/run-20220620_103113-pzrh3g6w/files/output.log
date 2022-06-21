@@ -1,0 +1,47 @@
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ dense (Dense)               (None, 30)                90
+ dense_1 (Dense)             (None, 30)                930
+ dense_2 (Dense)             (None, 1)                 30
+=================================================================
+Total params: 1,050
+Trainable params: 1,050
+Non-trainable params: 0
+_________________________________________________________________
+epoch: 1
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+epoch: 1 train step: 0 loss: 0.116982564
+epoch: 1 train step: 50 loss: 0.11449267
+epoch: 1 train step: 100 loss: 0.11043653
+epoch: 1 train step: 150 loss: 0.107545
+epoch: 1 train step: 200 loss: 0.108753994
+epoch: 1 train step: 250 loss: 0.10363562
+epoch: 1 train step: 300 loss: 0.10595671
+epoch: 1 train step: 350 loss: 0.100004286
+epoch: 1 train step: 400 loss: 0.09675592
+epoch: 1 train step: 450 loss: 0.095249385
+epoch: 1 train step: 500 loss: 0.0957718
+epoch: 1 train step: 550 loss: 0.09327169
+epoch: 1 train step: 600 loss: 0.091242276
+epoch: 1 train step: 650 loss: 0.092393056
+epoch: 1 train step: 700 loss: 0.087109886
+epoch: 1 train step: 750 loss: 0.0878175
+epoch: 1 train step: 800 loss: 0.082878396
+epoch: 1 train step: 850 loss: 0.08305663
+epoch: 1 train step: 900 loss: 0.08273099
+epoch: 1 train step: 950 loss: 0.08115877
+epoch: 1 train step: 1000 loss: 0.07883565
+epoch: 1 train step: 1050 loss: 0.07610485
+epoch: 1 train step: 1100 loss: 0.07469301
+epoch: 1 train step: 1150 loss: 0.07073326
+epoch: 1 train step: 1200 loss: 0.07150552
+epoch: 1 train step: 1250 loss: 0.071459174
+epoch: 1 train step: 1300 loss: 0.06620586
+epoch: 1 train step: 1350 loss: 0.0693841
+epoch: 1 train step: 1400 loss: 0.064944535
+epoch: 1 train step: 1450 loss: 0.064123824
+config:
+ {'trial_id': 0, 'remark': '', 'config_training': {'epochs_max': 50, 'n_trains': 5000, 'batch_size': 8192, 'val_size': 8192, 'display_step': 50, 'tol': 1e-06, 'patience': 50}, 'config_model': {'l_units': [30, 30], 'noise': 0, 'learning_rate': {'lr_max': 1e-05, 'lr_min': 1e-10, 'scheduler': 0}, 'optimizer': 'Adam', 'save_path': 'differentiate/hypertuning/byHand/trial_100/model_poisson_trial_100_epoch_2_val_mae_0.408173.h5'}}

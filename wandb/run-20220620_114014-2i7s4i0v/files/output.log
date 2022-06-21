@@ -1,0 +1,41 @@
+epoch: 1
+epoch: 1 train step: 0 loss: 0.014021265
+epoch: 1 train step: 100 loss: 0.013949014
+epoch: 1 train step: 200 loss: 0.013852855
+epoch: 1 train step: 300 loss: 0.013585234
+epoch: 1 train step: 400 loss: 0.0133146625
+epoch: 1 train step: 500 loss: 0.013151396
+epoch: 1 train step: 600 loss: 0.013056433
+epoch: 1 train step: 700 loss: 0.012959382
+epoch: 1 train step: 800 loss: 0.012863608
+epoch: 1 train step: 900 loss: 0.012717929
+epoch: 1 train step: 1000 loss: 0.012623792
+epoch: 1 train step: 1100 loss: 0.01260107
+epoch: 1 train step: 1200 loss: 0.012566657
+epoch: 1 train step: 1300 loss: 0.012592696
+epoch: 1 train step: 1400 loss: 0.012723103
+epoch: 1 train step: 1500 loss: 0.01283698
+epoch: 1 train step: 1600 loss: 0.01288627
+epoch: 1 train step: 1700 loss: 0.012861084
+epoch: 1 train step: 1800 loss: 0.012865493
+epoch: 1 train step: 1900 loss: 0.012887503
+epoch: 1 train step: 2000 loss: 0.012854422
+epoch: 1 train step: 2100 loss: 0.012816572
+epoch: 1 train step: 2200 loss: 0.0127950795
+epoch: 1 train step: 2300 loss: 0.012778189
+epoch: 1 train step: 2400 loss: 0.012775732
+epoch: 1 train step: 2500 loss: 0.012725559
+epoch: 1 train step: 2600 loss: 0.012752885
+epoch: 1 train step: 2700 loss: 0.01277194
+epoch: 1 train step: 2800 loss: 0.01276144
+epoch: 1 train step: 2900 loss: 0.012693122
+epoch: 1 train step: 3000 loss: 0.01257854
+epoch: 1 train step: 3100 loss: 0.012485214
+epoch: 1 train step: 3200 loss: 0.012422167
+epoch: 1 train step: 3300 loss: 0.012349016
+epoch: 1 train step: 3400 loss: 0.012286087
+epoch: 1 train step: 3500 loss: 0.012208969
+epoch: 1 train step: 3600 loss: 0.012121541
+epoch: 1 train step: 3700 loss: 0.011984964
+config:
+ {'trial_id': 9, 'remark': '', 'config_training': {'epochs_max': 100, 'n_trains': 5000, 'batch_size': 8192, 'val_size': 8192, 'display_step': 100, 'tol': 1e-06, 'patience': 10}, 'config_model': {'l_units': [30, 30], 'noise': 0, 'dropout_rate': 0.2, 'learning_rate': {'scheduler': 0, 'lr_max': 1e-05, 'lr_middle': 1e-07, 'lr_min': 1e-09, 'step_middle': 1300, 'step_min': 3000}, 'optimizer': 'Adam', 'save_path': 'differentiate/hypertuning/byHand/trial_100/model_poisson_trial_100_epoch_2_val_mae_0.408173.h5'}}

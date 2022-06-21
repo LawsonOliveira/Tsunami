@@ -1,0 +1,11 @@
+Convertir en pdf :
+
+    ref: https://towardsdatascience.com/jupyter-notebook-to-pdf-in-a-few-lines-3c48d68a7a63
+
+    pip install -U notebook-as-pdf
+    pyppeteer-install #qqc pour Chromium... commencez par faire sans pour voir si c'est nécessaire
+    jupyter-nbconvert --to PDFviaHTML example.ipynb
+
+Convertir en .py :
+    pip install nbconvert
+    jupyter nbconvert --to script my-notebook.ipynb

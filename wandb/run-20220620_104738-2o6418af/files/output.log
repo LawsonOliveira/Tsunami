@@ -1,0 +1,2 @@
+config:
+ {'trial_id': 2, 'remark': '', 'config_training': {'epochs_max': 1, 'n_trains': 5000, 'batch_size': 8192, 'val_size': 8192, 'display_step': 50, 'tol': 1e-06, 'patience': 50}, 'config_model': {'l_units': [30, 30], 'noise': 0, 'learning_rate': {'scheduler': 0, 'lr_max': 1e-05, 'lr_middle': 1e-06, 'lr_min': 1e-07, 'step_middle': 1350, 'step_min': 4000}, 'optimizer': 'Adam', 'save_path': 'differentiate/hypertuning/byHand/trial_100/model_poisson_trial_100_epoch_2_val_mae_0.408173.h5'}}

@@ -1,0 +1,498 @@
+2022-06-20 11:03:01,839 INFO    MainThread:12376 [wandb_setup.py:_flush():76] Loading settings from C:\Users\jtros\.config\wandb\settings
+2022-06-20 11:03:01,840 INFO    MainThread:12376 [wandb_setup.py:_flush():76] Loading settings from C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\settings
+2022-06-20 11:03:01,840 INFO    MainThread:12376 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2022-06-20 11:03:01,840 INFO    MainThread:12376 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': '.', 'program': 'C:/Users/jtros/CS/cours/PoleProjet/FormationRecherche/Tsunami/TP/sceance4/Tsunami'}
+2022-06-20 11:03:01,840 INFO    MainThread:12376 [wandb_init.py:_log_setup():428] Logging user logs to C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_110301-3p02jfls\logs\debug.log
+2022-06-20 11:03:01,840 INFO    MainThread:12376 [wandb_init.py:_log_setup():429] Logging internal logs to C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_110301-3p02jfls\logs\debug-internal.log
+2022-06-20 11:03:01,840 INFO    MainThread:12376 [wandb_init.py:_jupyter_setup():378] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x0000021CE93AC580>
+2022-06-20 11:03:01,841 INFO    MainThread:12376 [wandb_init.py:init():462] calling init triggers
+2022-06-20 11:03:01,841 INFO    MainThread:12376 [wandb_init.py:init():465] wandb.init called with sweep_config: {}
+config: {'trial_id': 4, 'remark': '', 'config_training': {'epochs_max': 1, 'n_trains': 5000, 'batch_size': 8192, 'val_size': 8192, 'display_step': 50, 'tol': 1e-06, 'patience': 50}, 'config_model': {'l_units': [30, 30], 'noise': 0, 'dropout_rate': 0.1, 'learning_rate': {'scheduler': 0, 'lr_max': 1e-05, 'lr_middle': 1e-07, 'lr_min': 1e-09, 'step_middle': 1300, 'step_min': 3000}, 'optimizer': 'Adam', 'save_path': 'differentiate/hypertuning/byHand/trial_100/model_poisson_trial_100_epoch_2_val_mae_0.408173.h5'}}
+2022-06-20 11:03:01,841 INFO    MainThread:12376 [wandb_init.py:init():515] starting backend
+2022-06-20 11:03:01,841 INFO    MainThread:12376 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2022-06-20 11:03:01,842 INFO    MainThread:12376 [backend.py:ensure_launched():217] starting backend process...
+2022-06-20 11:03:01,926 INFO    MainThread:12376 [backend.py:ensure_launched():222] started backend process with pid: 2416
+2022-06-20 11:03:01,928 INFO    MainThread:12376 [wandb_init.py:init():525] backend started and connected
+2022-06-20 11:03:01,930 INFO    MainThread:12376 [wandb_run.py:_label_probe_notebook():1089] probe notebook
+2022-06-20 11:03:01,930 INFO    MainThread:12376 [wandb_run.py:_label_probe_notebook():1099] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2022-06-20 11:03:01,930 INFO    MainThread:12376 [wandb_init.py:init():596] updated telemetry
+2022-06-20 11:03:01,979 INFO    MainThread:12376 [wandb_init.py:init():627] communicating run to backend with 30 second timeout
+2022-06-20 11:03:04,019 INFO    MainThread:12376 [wandb_run.py:_on_init():1924] communicating current version
+2022-06-20 11:03:04,227 INFO    MainThread:12376 [wandb_run.py:_on_init():1928] got version response 
+2022-06-20 11:03:04,227 INFO    MainThread:12376 [wandb_init.py:init():662] starting run threads in backend
+2022-06-20 11:03:04,507 WARNING MainThread:12376 [wandb_init.py:init():1020] interrupted
+Traceback (most recent call last):
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\wandb_init.py", line 999, in init
+    run = wi.init()
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\wandb_init.py", line 673, in init
+    _ = backend.interface.communicate_run_start(run_obj)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\interface\interface.py", line 234, in communicate_run_start
+    result = self._communicate_run_start(run_start)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 440, in _communicate_run_start
+    result = self._communicate(rec)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 226, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\interface\router.py", line 37, in get
+    is_set = self._object_ready.wait(timeout)
+  File "C:\Users\jtros\AppData\Local\Programs\Python\Python39\lib\threading.py", line 574, in wait
+    signaled = self._cond.wait(timeout)
+  File "C:\Users\jtros\AppData\Local\Programs\Python\Python39\lib\threading.py", line 316, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
+2022-06-20 11:03:12,164 INFO    MainThread:12376 [wandb_setup.py:_flush():76] Loading settings from C:\Users\jtros\.config\wandb\settings
+2022-06-20 11:03:12,164 INFO    MainThread:12376 [wandb_setup.py:_flush():76] Loading settings from C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\settings
+2022-06-20 11:03:12,164 INFO    MainThread:12376 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2022-06-20 11:03:12,164 INFO    MainThread:12376 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': '.', 'program': 'C:/Users/jtros/CS/cours/PoleProjet/FormationRecherche/Tsunami/TP/sceance4/Tsunami'}
+2022-06-20 11:03:12,164 INFO    MainThread:12376 [wandb_init.py:_log_setup():428] Logging user logs to C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_110312-1l3vaou1\logs\debug.log
+2022-06-20 11:03:12,164 INFO    MainThread:12376 [wandb_init.py:_log_setup():429] Logging internal logs to C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_110312-1l3vaou1\logs\debug-internal.log
+2022-06-20 11:03:12,165 INFO    MainThread:12376 [wandb_init.py:init():462] calling init triggers
+2022-06-20 11:03:12,165 INFO    MainThread:12376 [wandb_init.py:init():465] wandb.init called with sweep_config: {}
+config: {'trial_id': 5, 'remark': '', 'config_training': {'epochs_max': 1, 'n_trains': 5000, 'batch_size': 8192, 'val_size': 8192, 'display_step': 50, 'tol': 1e-06, 'patience': 50}, 'config_model': {'l_units': [30, 30], 'noise': 0, 'dropout_rate': 0.1, 'learning_rate': {'scheduler': 0, 'lr_max': 1e-05, 'lr_middle': 1e-07, 'lr_min': 1e-09, 'step_middle': 1300, 'step_min': 3000}, 'optimizer': 'Adam', 'save_path': 'differentiate/hypertuning/byHand/trial_100/model_poisson_trial_100_epoch_2_val_mae_0.408173.h5'}}
+2022-06-20 11:03:12,165 INFO    MainThread:12376 [wandb_init.py:init():515] starting backend
+2022-06-20 11:03:12,165 INFO    MainThread:12376 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2022-06-20 11:03:12,167 INFO    MainThread:12376 [backend.py:ensure_launched():217] starting backend process...
+2022-06-20 11:03:12,253 INFO    MainThread:12376 [backend.py:ensure_launched():222] started backend process with pid: 11764
+2022-06-20 11:03:12,254 INFO    MainThread:12376 [wandb_init.py:init():525] backend started and connected
+2022-06-20 11:03:12,256 INFO    MainThread:12376 [wandb_run.py:_label_probe_notebook():1089] probe notebook
+2022-06-20 11:03:12,256 INFO    MainThread:12376 [wandb_run.py:_label_probe_notebook():1099] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2022-06-20 11:03:12,256 INFO    MainThread:12376 [wandb_init.py:init():596] updated telemetry
+2022-06-20 11:03:12,316 INFO    MainThread:12376 [wandb_init.py:init():627] communicating run to backend with 30 second timeout
+2022-06-20 11:03:13,969 INFO    MainThread:12376 [wandb_run.py:_on_init():1924] communicating current version
+2022-06-20 11:03:14,171 INFO    MainThread:12376 [wandb_run.py:_on_init():1928] got version response 
+2022-06-20 11:03:14,172 INFO    MainThread:12376 [wandb_init.py:init():662] starting run threads in backend
+2022-06-20 11:03:14,431 INFO    MainThread:12376 [wandb_run.py:_console_start():1898] atexit reg
+2022-06-20 11:03:14,432 INFO    MainThread:12376 [wandb_run.py:_redirect():1771] redirect: SettingsConsole.WRAP
+2022-06-20 11:03:14,432 INFO    MainThread:12376 [wandb_run.py:_redirect():1808] Wrapping output streams.
+2022-06-20 11:03:14,435 INFO    MainThread:12376 [wandb_run.py:_redirect():1832] Redirects installed.
+2022-06-20 11:03:14,435 INFO    MainThread:12376 [wandb_init.py:init():688] run started, returning control to user process
+2022-06-20 11:05:35,434 INFO    MainThread:12376 [wandb_run.py:_finish():1685] finishing run julien-rsbrg/TF-tsunami/1l3vaou1
+2022-06-20 11:05:35,434 INFO    MainThread:12376 [wandb_run.py:_atexit_cleanup():1867] got exitcode: 0
+2022-06-20 11:05:35,435 INFO    MainThread:12376 [wandb_run.py:_restore():1839] restore
+2022-06-20 11:05:36,220 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 963
+}
+
+2022-06-20 11:05:36,595 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 963
+}
+
+2022-06-20 11:05:37,212 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 4
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 9141
+}
+
+2022-06-20 11:05:37,321 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 9261
+}
+
+2022-06-20 11:05:37,429 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 9261
+}
+
+2022-06-20 11:05:37,536 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 9261
+}
+
+2022-06-20 11:05:37,643 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 9261
+}
+
+2022-06-20 11:05:37,755 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 7421
+  total_bytes: 9261
+}
+
+2022-06-20 11:05:37,864 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 7421
+  total_bytes: 9261
+}
+
+2022-06-20 11:05:37,971 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 7421
+  total_bytes: 9261
+}
+
+2022-06-20 11:05:38,081 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 7421
+  total_bytes: 9261
+}
+
+2022-06-20 11:05:38,189 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 7421
+  total_bytes: 9261
+}
+
+2022-06-20 11:05:38,297 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 9261
+  total_bytes: 9261
+}
+
+2022-06-20 11:05:38,405 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 9261
+  total_bytes: 9261
+}
+
+2022-06-20 11:05:38,514 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 9261
+  total_bytes: 9261
+}
+
+2022-06-20 11:05:38,621 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 9261
+  total_bytes: 9261
+}
+
+2022-06-20 11:05:38,731 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 9261
+  total_bytes: 9261
+}
+
+2022-06-20 11:05:39,335 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 9261
+  total_bytes: 9261
+}
+
+2022-06-20 11:05:40,053 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 9261
+  total_bytes: 9261
+}
+local_info {
+}
+
+2022-06-20 11:05:41,259 INFO    MainThread:12376 [wandb_run.py:_footer_history_summary_info():3104] rendering history
+2022-06-20 11:05:41,259 INFO    MainThread:12376 [wandb_run.py:_footer_history_summary_info():3136] rendering summary
+2022-06-20 11:05:41,265 INFO    MainThread:12376 [wandb_run.py:_footer_sync_info():3060] logging synced files
+2022-06-20 11:08:00,052 INFO    MainThread:12376 [wandb_setup.py:_flush():76] Loading settings from C:\Users\jtros\.config\wandb\settings
+2022-06-20 11:08:00,052 INFO    MainThread:12376 [wandb_setup.py:_flush():76] Loading settings from C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\settings
+2022-06-20 11:08:00,052 INFO    MainThread:12376 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2022-06-20 11:08:00,052 INFO    MainThread:12376 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': '.', 'program': 'C:/Users/jtros/CS/cours/PoleProjet/FormationRecherche/Tsunami/TP/sceance4/Tsunami'}
+2022-06-20 11:08:00,053 INFO    MainThread:12376 [wandb_init.py:_log_setup():428] Logging user logs to C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_110800-1hdskv8l\logs\debug.log
+2022-06-20 11:08:00,053 INFO    MainThread:12376 [wandb_init.py:_log_setup():429] Logging internal logs to C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_110800-1hdskv8l\logs\debug-internal.log
+2022-06-20 11:08:00,054 INFO    MainThread:12376 [wandb_init.py:init():462] calling init triggers
+2022-06-20 11:08:00,054 INFO    MainThread:12376 [wandb_init.py:init():465] wandb.init called with sweep_config: {}
+config: {'trial_id': 5, 'remark': '', 'config_training': {'epochs_max': 1, 'n_trains': 5000, 'batch_size': 8192, 'val_size': 8192, 'display_step': 50, 'tol': 1e-06, 'patience': 50}, 'config_model': {'l_units': [30, 30], 'noise': 0, 'dropout_rate': 0.1, 'learning_rate': {'scheduler': 0, 'lr_max': 1e-05, 'lr_middle': 1e-07, 'lr_min': 1e-09, 'step_middle': 1300, 'step_min': 3000}, 'optimizer': 'Adam', 'save_path': 'differentiate/hypertuning/byHand/trial_100/model_poisson_trial_100_epoch_2_val_mae_0.408173.h5'}}
+2022-06-20 11:08:00,054 INFO    MainThread:12376 [wandb_init.py:init():515] starting backend
+2022-06-20 11:08:00,054 INFO    MainThread:12376 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2022-06-20 11:08:00,056 INFO    MainThread:12376 [backend.py:ensure_launched():217] starting backend process...
+2022-06-20 11:08:00,136 INFO    MainThread:12376 [backend.py:ensure_launched():222] started backend process with pid: 23228
+2022-06-20 11:08:00,136 INFO    MainThread:12376 [wandb_init.py:init():525] backend started and connected
+2022-06-20 11:08:00,138 INFO    MainThread:12376 [wandb_run.py:_label_probe_notebook():1089] probe notebook
+2022-06-20 11:08:00,138 INFO    MainThread:12376 [wandb_run.py:_label_probe_notebook():1099] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2022-06-20 11:08:00,138 INFO    MainThread:12376 [wandb_init.py:init():596] updated telemetry
+2022-06-20 11:08:00,180 INFO    MainThread:12376 [wandb_init.py:init():627] communicating run to backend with 30 second timeout
+2022-06-20 11:08:01,847 INFO    MainThread:12376 [wandb_run.py:_on_init():1924] communicating current version
+2022-06-20 11:08:02,054 INFO    MainThread:12376 [wandb_run.py:_on_init():1928] got version response 
+2022-06-20 11:08:02,054 INFO    MainThread:12376 [wandb_init.py:init():662] starting run threads in backend
+2022-06-20 11:08:02,308 INFO    MainThread:12376 [wandb_run.py:_console_start():1898] atexit reg
+2022-06-20 11:08:02,309 INFO    MainThread:12376 [wandb_run.py:_redirect():1771] redirect: SettingsConsole.WRAP
+2022-06-20 11:08:02,309 INFO    MainThread:12376 [wandb_run.py:_redirect():1808] Wrapping output streams.
+2022-06-20 11:08:02,312 INFO    MainThread:12376 [wandb_run.py:_redirect():1832] Redirects installed.
+2022-06-20 11:08:02,312 INFO    MainThread:12376 [wandb_init.py:init():688] run started, returning control to user process
+2022-06-20 11:10:37,468 INFO    MainThread:12376 [wandb_run.py:_finish():1685] finishing run julien-rsbrg/TF-tsunami/1hdskv8l
+2022-06-20 11:10:37,468 INFO    MainThread:12376 [wandb_run.py:_atexit_cleanup():1867] got exitcode: 0
+2022-06-20 11:10:37,469 INFO    MainThread:12376 [wandb_run.py:_restore():1839] restore
+2022-06-20 11:10:38,150 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 963
+}
+
+2022-06-20 11:10:38,257 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 963
+}
+
+2022-06-20 11:10:38,592 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 963
+}
+
+2022-06-20 11:10:39,229 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 9255
+}
+
+2022-06-20 11:10:39,334 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 9255
+}
+
+2022-06-20 11:10:39,441 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 9255
+}
+
+2022-06-20 11:10:39,549 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 9255
+}
+
+2022-06-20 11:10:39,661 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 9255
+}
+
+2022-06-20 11:10:39,769 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 9255
+}
+
+2022-06-20 11:10:39,876 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 9255
+  total_bytes: 9255
+}
+
+2022-06-20 11:10:39,987 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 9255
+  total_bytes: 9255
+}
+
+2022-06-20 11:10:40,096 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 9255
+  total_bytes: 9255
+}
+
+2022-06-20 11:10:40,205 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 9255
+  total_bytes: 9255
+}
+
+2022-06-20 11:10:40,314 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 9255
+  total_bytes: 9255
+}
+
+2022-06-20 11:10:40,423 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 9255
+  total_bytes: 9255
+}
+
+2022-06-20 11:10:40,777 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 9255
+  total_bytes: 9255
+}
+
+2022-06-20 11:10:41,413 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 9255
+  total_bytes: 9255
+}
+local_info {
+}
+
+2022-06-20 11:10:42,650 INFO    MainThread:12376 [wandb_run.py:_footer_history_summary_info():3104] rendering history
+2022-06-20 11:10:42,650 INFO    MainThread:12376 [wandb_run.py:_footer_history_summary_info():3136] rendering summary
+2022-06-20 11:10:42,656 INFO    MainThread:12376 [wandb_run.py:_footer_sync_info():3060] logging synced files
+2022-06-20 11:13:23,877 INFO    MainThread:12376 [wandb_setup.py:_flush():76] Loading settings from C:\Users\jtros\.config\wandb\settings
+2022-06-20 11:13:23,877 INFO    MainThread:12376 [wandb_setup.py:_flush():76] Loading settings from C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\settings
+2022-06-20 11:13:23,877 INFO    MainThread:12376 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2022-06-20 11:13:23,878 INFO    MainThread:12376 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': '.', 'program': 'C:/Users/jtros/CS/cours/PoleProjet/FormationRecherche/Tsunami/TP/sceance4/Tsunami'}
+2022-06-20 11:13:23,878 INFO    MainThread:12376 [wandb_init.py:_log_setup():428] Logging user logs to C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111323-s970aqy8\logs\debug.log
+2022-06-20 11:13:23,878 INFO    MainThread:12376 [wandb_init.py:_log_setup():429] Logging internal logs to C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111323-s970aqy8\logs\debug-internal.log
+2022-06-20 11:13:23,879 INFO    MainThread:12376 [wandb_init.py:init():462] calling init triggers
+2022-06-20 11:13:23,879 INFO    MainThread:12376 [wandb_init.py:init():465] wandb.init called with sweep_config: {}
+config: {'trial_id': 6, 'remark': '', 'config_training': {'epochs_max': 100, 'n_trains': 50, 'batch_size': 8192, 'val_size': 8192, 'display_step': 50, 'tol': 1e-06, 'patience': 50}, 'config_model': {'l_units': [30, 30], 'noise': 0, 'dropout_rate': 0.2, 'learning_rate': {'scheduler': 0, 'lr_max': 1e-05, 'lr_middle': 1e-07, 'lr_min': 1e-09, 'step_middle': 1300, 'step_min': 3000}, 'optimizer': 'Adam', 'save_path': 'differentiate/hypertuning/byHand/trial_100/model_poisson_trial_100_epoch_2_val_mae_0.408173.h5'}}
+2022-06-20 11:13:23,879 INFO    MainThread:12376 [wandb_init.py:init():515] starting backend
+2022-06-20 11:13:23,879 INFO    MainThread:12376 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2022-06-20 11:13:23,881 INFO    MainThread:12376 [backend.py:ensure_launched():217] starting backend process...
+2022-06-20 11:13:23,968 INFO    MainThread:12376 [backend.py:ensure_launched():222] started backend process with pid: 2580
+2022-06-20 11:13:23,969 INFO    MainThread:12376 [wandb_init.py:init():525] backend started and connected
+2022-06-20 11:13:23,970 INFO    MainThread:12376 [wandb_run.py:_label_probe_notebook():1089] probe notebook
+2022-06-20 11:13:23,970 INFO    MainThread:12376 [wandb_run.py:_label_probe_notebook():1099] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2022-06-20 11:13:23,970 INFO    MainThread:12376 [wandb_init.py:init():596] updated telemetry
+2022-06-20 11:13:24,408 INFO    MainThread:12376 [wandb_init.py:init():627] communicating run to backend with 30 second timeout
+2022-06-20 11:13:25,723 INFO    MainThread:12376 [wandb_run.py:_on_init():1924] communicating current version
+2022-06-20 11:13:25,929 INFO    MainThread:12376 [wandb_run.py:_on_init():1928] got version response 
+2022-06-20 11:13:25,929 INFO    MainThread:12376 [wandb_init.py:init():662] starting run threads in backend
+2022-06-20 11:13:26,179 INFO    MainThread:12376 [wandb_run.py:_console_start():1898] atexit reg
+2022-06-20 11:13:26,179 INFO    MainThread:12376 [wandb_run.py:_redirect():1771] redirect: SettingsConsole.WRAP
+2022-06-20 11:13:26,179 INFO    MainThread:12376 [wandb_run.py:_redirect():1808] Wrapping output streams.
+2022-06-20 11:13:26,181 INFO    MainThread:12376 [wandb_run.py:_redirect():1832] Redirects installed.
+2022-06-20 11:13:26,182 INFO    MainThread:12376 [wandb_init.py:init():688] run started, returning control to user process
+2022-06-20 11:14:40,662 INFO    MainThread:12376 [wandb_setup.py:_flush():76] Loading settings from C:\Users\jtros\.config\wandb\settings
+2022-06-20 11:14:40,662 INFO    MainThread:12376 [wandb_setup.py:_flush():76] Loading settings from C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\settings
+2022-06-20 11:14:40,662 INFO    MainThread:12376 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2022-06-20 11:14:40,662 INFO    MainThread:12376 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': '.', 'program': 'C:/Users/jtros/CS/cours/PoleProjet/FormationRecherche/Tsunami/TP/sceance4/Tsunami'}
+2022-06-20 11:14:40,663 INFO    MainThread:12376 [wandb_init.py:_log_setup():428] Logging user logs to C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111440-2182vwrj\logs\debug.log
+2022-06-20 11:14:40,663 INFO    MainThread:12376 [wandb_init.py:_log_setup():429] Logging internal logs to C:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\wandb\run-20220620_111440-2182vwrj\logs\debug-internal.log
+2022-06-20 11:14:40,663 INFO    MainThread:12376 [wandb_init.py:init():462] calling init triggers
+2022-06-20 11:14:40,663 INFO    MainThread:12376 [wandb_init.py:init():465] wandb.init called with sweep_config: {}
+config: {'trial_id': 6, 'remark': '', 'config_training': {'epochs_max': 100, 'n_trains': 50, 'batch_size': 8192, 'val_size': 8192, 'display_step': 10, 'tol': 1e-06, 'patience': 50}, 'config_model': {'l_units': [30, 30], 'noise': 0, 'dropout_rate': 0.2, 'learning_rate': {'scheduler': 0, 'lr_max': 1e-05, 'lr_middle': 1e-07, 'lr_min': 1e-09, 'step_middle': 1300, 'step_min': 3000}, 'optimizer': 'Adam', 'save_path': 'differentiate/hypertuning/byHand/trial_100/model_poisson_trial_100_epoch_2_val_mae_0.408173.h5'}}
+2022-06-20 11:14:40,663 INFO    MainThread:12376 [wandb_init.py:init():481] re-initializing run, found existing run on stack: s970aqy8
+2022-06-20 11:14:40,666 INFO    MainThread:12376 [wandb_run.py:_finish():1685] finishing run julien-rsbrg/TF-tsunami/s970aqy8
+2022-06-20 11:14:40,666 INFO    MainThread:12376 [wandb_run.py:_atexit_cleanup():1867] got exitcode: 0
+2022-06-20 11:14:40,668 INFO    MainThread:12376 [wandb_run.py:_restore():1839] restore
+2022-06-20 11:14:41,083 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 963
+  total_bytes: 963
+}
+
+2022-06-20 11:14:46,199 INFO    MainThread:12376 [wandb_run.py:_on_finish():1996] got exit ret: None
+2022-06-20 11:14:46,307 INFO    MainThread:12376 [wandb_run.py:_restore():1839] restore
+2022-06-20 11:14:46,327 ERROR   MainThread:12376 [wandb_init.py:init():1026] error
+Traceback (most recent call last):
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\wandb_run.py", line 1876, in _atexit_cleanup
+    self._on_finish()
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\wandb_run.py", line 1994, in _on_finish
+    self._backend.interface.communicate_poll_exit()
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\interface\interface.py", line 653, in communicate_poll_exit
+    resp = self._communicate_poll_exit(poll_exit)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 419, in _communicate_poll_exit
+    result = self._communicate(rec)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 226, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 231, in _communicate_async
+    raise Exception("The wandb backend process has shutdown")
+Exception: The wandb backend process has shutdown
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\wandb_init.py", line 999, in init
+    run = wi.init()
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\wandb_init.py", line 494, in init
+    self._wl._global_run_stack[-1].finish()
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\wandb_run.py", line 256, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\wandb_run.py", line 222, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\wandb_run.py", line 1678, in finish
+    return self._finish(exit_code, quiet)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\wandb_run.py", line 1691, in _finish
+    self._atexit_cleanup(exit_code=exit_code)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\wandb_run.py", line 1887, in _atexit_cleanup
+    self._backend.cleanup()
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\backend\backend.py", line 246, in cleanup
+    self.interface.join()
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 475, in join
+    super().join()
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\interface\interface.py", line 666, in join
+    _ = self._communicate_shutdown()
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 472, in _communicate_shutdown
+    _ = self._communicate(record)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 226, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "c:\Users\jtros\CS\cours\PoleProjet\FormationRecherche\Tsunami\TP\sceance4\Tsunami\venv_tsunami\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 231, in _communicate_async
+    raise Exception("The wandb backend process has shutdown")
+Exception: The wandb backend process has shutdown

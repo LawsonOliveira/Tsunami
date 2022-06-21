@@ -1,0 +1,358 @@
+epoch: 1
+epoch: 1 train step: 0 loss: 0.01445692
+epoch: 1 train step: 10 loss: 0.014422927
+epoch: 1 train step: 20 loss: 0.014405355
+epoch: 1 train step: 30 loss: 0.014389936
+epoch: 1 train step: 40 loss: 0.014363155
+mean_loss: 0.014397135 val_mae: 0.40393168 duration epoch: 1.490067958831787
+epoch: 2
+epoch: 2 train step: 0 loss: 0.013923331
+epoch: 2 train step: 10 loss: 0.01390695
+epoch: 2 train step: 20 loss: 0.013902998
+epoch: 2 train step: 30 loss: 0.013903021
+epoch: 2 train step: 40 loss: 0.01388984
+mean_loss: 0.013901162 val_mae: 0.40595758 duration epoch: 1.4118328094482422
+epoch: 3
+epoch: 3 train step: 0 loss: 0.013758877
+epoch: 3 train step: 10 loss: 0.013751083
+epoch: 3 train step: 20 loss: 0.013772821
+epoch: 3 train step: 30 loss: 0.013773749
+epoch: 3 train step: 40 loss: 0.013756292
+mean_loss: 0.013762164 val_mae: 0.40502813 duration epoch: 1.4972734451293945
+epoch: 4
+epoch: 4 train step: 0 loss: 0.013717743
+epoch: 4 train step: 10 loss: 0.013701849
+epoch: 4 train step: 20 loss: 0.013673451
+epoch: 4 train step: 30 loss: 0.013666114
+epoch: 4 train step: 40 loss: 0.013654388
+mean_loss: 0.013676009 val_mae: 0.40603483 duration epoch: 1.5441219806671143
+epoch: 5
+epoch: 5 train step: 0 loss: 0.013629295
+epoch: 5 train step: 10 loss: 0.01362633
+epoch: 5 train step: 20 loss: 0.01362312
+epoch: 5 train step: 30 loss: 0.013613329
+epoch: 5 train step: 40 loss: 0.013600146
+mean_loss: 0.013612963 val_mae: 0.40625304 duration epoch: 1.2564830780029297
+epoch: 6
+epoch: 6 train step: 0 loss: 0.013981443
+epoch: 6 train step: 10 loss: 0.0139489
+epoch: 6 train step: 20 loss: 0.013917578
+epoch: 6 train step: 30 loss: 0.013901857
+epoch: 6 train step: 40 loss: 0.013878923
+mean_loss: 0.013916881 val_mae: 0.40534282 duration epoch: 1.4331510066986084
+epoch: 7
+epoch: 7 train step: 0 loss: 0.01356826
+epoch: 7 train step: 10 loss: 0.01356885
+epoch: 7 train step: 20 loss: 0.0135691725
+epoch: 7 train step: 30 loss: 0.013568284
+epoch: 7 train step: 40 loss: 0.013555009
+mean_loss: 0.013562296 val_mae: 0.40537873 duration epoch: 1.1850383281707764
+epoch: 8
+epoch: 8 train step: 0 loss: 0.013166138
+epoch: 8 train step: 10 loss: 0.0131445695
+epoch: 8 train step: 20 loss: 0.013126535
+epoch: 8 train step: 30 loss: 0.013092661
+epoch: 8 train step: 40 loss: 0.013043931
+mean_loss: 0.013102479 val_mae: 0.40499753 duration epoch: 1.1463255882263184
+epoch: 9
+epoch: 9 train step: 0 loss: 0.013352874
+epoch: 9 train step: 10 loss: 0.013331724
+epoch: 9 train step: 20 loss: 0.013295183
+epoch: 9 train step: 30 loss: 0.013262212
+epoch: 9 train step: 40 loss: 0.01324204
+mean_loss: 0.013287068 val_mae: 0.4055411 duration epoch: 1.6201765537261963
+epoch: 10
+epoch: 10 train step: 0 loss: 0.013243396
+epoch: 10 train step: 10 loss: 0.013217816
+epoch: 10 train step: 20 loss: 0.013185753
+epoch: 10 train step: 30 loss: 0.01315783
+epoch: 10 train step: 40 loss: 0.013117552
+mean_loss: 0.013170409 val_mae: 0.405495 duration epoch: 1.6421241760253906
+epoch: 11
+epoch: 11 train step: 0 loss: 0.012839828
+epoch: 11 train step: 10 loss: 0.012807649
+epoch: 11 train step: 20 loss: 0.012802948
+epoch: 11 train step: 30 loss: 0.012787839
+epoch: 11 train step: 40 loss: 0.012789708
+mean_loss: 0.012797903 val_mae: 0.40526912 duration epoch: 1.4243814945220947
+epoch: 12
+epoch: 12 train step: 0 loss: 0.012980962
+epoch: 12 train step: 10 loss: 0.012956871
+epoch: 12 train step: 20 loss: 0.01293879
+epoch: 12 train step: 30 loss: 0.012923801
+epoch: 12 train step: 40 loss: 0.012909018
+mean_loss: 0.012933609 val_mae: 0.405259 duration epoch: 1.6939659118652344
+epoch: 13
+epoch: 13 train step: 0 loss: 0.012788336
+epoch: 13 train step: 10 loss: 0.012762907
+epoch: 13 train step: 20 loss: 0.012744204
+epoch: 13 train step: 30 loss: 0.012722919
+epoch: 13 train step: 40 loss: 0.012700064
+mean_loss: 0.012734015 val_mae: 0.40516362 duration epoch: 1.6933958530426025
+epoch: 14
+epoch: 14 train step: 0 loss: 0.012519658
+epoch: 14 train step: 10 loss: 0.012507314
+epoch: 14 train step: 20 loss: 0.012489088
+epoch: 14 train step: 30 loss: 0.0124699585
+epoch: 14 train step: 40 loss: 0.012447745
+mean_loss: 0.012477952 val_mae: 0.40498683 duration epoch: 1.7097539901733398
+epoch: 15
+epoch: 15 train step: 0 loss: 0.012666378
+epoch: 15 train step: 10 loss: 0.012631846
+epoch: 15 train step: 20 loss: 0.012609279
+epoch: 15 train step: 30 loss: 0.0125872195
+epoch: 15 train step: 40 loss: 0.012571946
+mean_loss: 0.012604343 val_mae: 0.404317 duration epoch: 1.686192512512207
+epoch: 16
+epoch: 16 train step: 0 loss: 0.012751353
+epoch: 16 train step: 10 loss: 0.012747847
+epoch: 16 train step: 20 loss: 0.012754369
+epoch: 16 train step: 30 loss: 0.012756592
+epoch: 16 train step: 40 loss: 0.012758162
+mean_loss: 0.012752877 val_mae: 0.40463316 duration epoch: 1.6644887924194336
+epoch: 17
+epoch: 17 train step: 0 loss: 0.012452104
+epoch: 17 train step: 10 loss: 0.012444897
+epoch: 17 train step: 20 loss: 0.012428602
+epoch: 17 train step: 30 loss: 0.012446699
+epoch: 17 train step: 40 loss: 0.012436751
+mean_loss: 0.012439438 val_mae: 0.40458134 duration epoch: 1.7393271923065186
+epoch: 18
+epoch: 18 train step: 0 loss: 0.012416938
+epoch: 18 train step: 10 loss: 0.012398167
+epoch: 18 train step: 20 loss: 0.012371371
+epoch: 18 train step: 30 loss: 0.012332397
+epoch: 18 train step: 40 loss: 0.012312435
+mean_loss: 0.012356759 val_mae: 0.4047942 duration epoch: 1.6730506420135498
+epoch: 19
+epoch: 19 train step: 0 loss: 0.012895379
+epoch: 19 train step: 10 loss: 0.012874253
+epoch: 19 train step: 20 loss: 0.012841613
+epoch: 19 train step: 30 loss: 0.012814445
+epoch: 19 train step: 40 loss: 0.012786834
+mean_loss: 0.012831045 val_mae: 0.40465802 duration epoch: 1.546544075012207
+epoch: 20
+epoch: 20 train step: 0 loss: 0.012879077
+epoch: 20 train step: 10 loss: 0.012866568
+epoch: 20 train step: 20 loss: 0.012866852
+epoch: 20 train step: 30 loss: 0.012842249
+epoch: 20 train step: 40 loss: 0.012825875
+mean_loss: 0.012850247 val_mae: 0.40432343 duration epoch: 1.6686820983886719
+epoch: 21
+epoch: 21 train step: 0 loss: 0.012555136
+epoch: 21 train step: 10 loss: 0.012555473
+epoch: 21 train step: 20 loss: 0.012557162
+epoch: 21 train step: 30 loss: 0.0125418175
+epoch: 21 train step: 40 loss: 0.012533953
+mean_loss: 0.01254357 val_mae: 0.40426487 duration epoch: 1.6590256690979004
+epoch: 22
+epoch: 22 train step: 0 loss: 0.012122902
+epoch: 22 train step: 10 loss: 0.012103181
+epoch: 22 train step: 20 loss: 0.012094398
+epoch: 22 train step: 30 loss: 0.012080041
+epoch: 22 train step: 40 loss: 0.012083719
+mean_loss: 0.012091513 val_mae: 0.40451372 duration epoch: 1.6889004707336426
+epoch: 23
+epoch: 23 train step: 0 loss: 0.01258821
+epoch: 23 train step: 10 loss: 0.012582088
+epoch: 23 train step: 20 loss: 0.012553756
+epoch: 23 train step: 30 loss: 0.012540741
+epoch: 23 train step: 40 loss: 0.012538265
+mean_loss: 0.01255438 val_mae: 0.40468076 duration epoch: 1.8222415447235107
+epoch: 24
+epoch: 24 train step: 0 loss: 0.012318957
+epoch: 24 train step: 10 loss: 0.012315137
+epoch: 24 train step: 20 loss: 0.012294608
+epoch: 24 train step: 30 loss: 0.012282705
+epoch: 24 train step: 40 loss: 0.0122609725
+mean_loss: 0.0122895185 val_mae: 0.40495574 duration epoch: 1.7793495655059814
+epoch: 25
+epoch: 25 train step: 0 loss: 0.012261088
+epoch: 25 train step: 10 loss: 0.012249699
+epoch: 25 train step: 20 loss: 0.012243399
+epoch: 25 train step: 30 loss: 0.01223809
+epoch: 25 train step: 40 loss: 0.012247891
+mean_loss: 0.012246495 val_mae: 0.40496364 duration epoch: 1.644075870513916
+epoch: 26
+epoch: 26 train step: 0 loss: 0.012424012
+epoch: 26 train step: 10 loss: 0.012419194
+epoch: 26 train step: 20 loss: 0.012437073
+epoch: 26 train step: 30 loss: 0.012427098
+epoch: 26 train step: 40 loss: 0.012414118
+mean_loss: 0.012422341 val_mae: 0.40522188 duration epoch: 1.727907419204712
+epoch: 27
+epoch: 27 train step: 0 loss: 0.011893481
+epoch: 27 train step: 10 loss: 0.011849568
+epoch: 27 train step: 20 loss: 0.011824284
+epoch: 27 train step: 30 loss: 0.011823568
+epoch: 27 train step: 40 loss: 0.011802536
+mean_loss: 0.011827547 val_mae: 0.40507042 duration epoch: 1.6602771282196045
+epoch: 28
+epoch: 28 train step: 0 loss: 0.01206491
+epoch: 28 train step: 10 loss: 0.012039672
+epoch: 28 train step: 20 loss: 0.012018679
+epoch: 28 train step: 30 loss: 0.011983588
+epoch: 28 train step: 40 loss: 0.011976603
+mean_loss: 0.012007836 val_mae: 0.40511566 duration epoch: 1.3861889839172363
+epoch: 29
+epoch: 29 train step: 0 loss: 0.012179561
+epoch: 29 train step: 10 loss: 0.0121602435
+epoch: 29 train step: 20 loss: 0.012140277
+epoch: 29 train step: 30 loss: 0.0121322
+epoch: 29 train step: 40 loss: 0.012114953
+mean_loss: 0.01213828 val_mae: 0.40518266 duration epoch: 1.408588171005249
+epoch: 30
+epoch: 30 train step: 0 loss: 0.01194299
+epoch: 30 train step: 10 loss: 0.011968631
+epoch: 30 train step: 20 loss: 0.011970585
+epoch: 30 train step: 30 loss: 0.011974322
+epoch: 30 train step: 40 loss: 0.011960493
+mean_loss: 0.011962618 val_mae: 0.40526024 duration epoch: 1.4542090892791748
+epoch: 31
+epoch: 31 train step: 0 loss: 0.012277257
+epoch: 31 train step: 10 loss: 0.01227812
+epoch: 31 train step: 20 loss: 0.012277419
+epoch: 31 train step: 30 loss: 0.012286603
+epoch: 31 train step: 40 loss: 0.012284635
+mean_loss: 0.012286641 val_mae: 0.40529364 duration epoch: 1.4396097660064697
+epoch: 32
+epoch: 32 train step: 0 loss: 0.011844102
+epoch: 32 train step: 10 loss: 0.011838888
+epoch: 32 train step: 20 loss: 0.011854011
+epoch: 32 train step: 30 loss: 0.011833231
+epoch: 32 train step: 40 loss: 0.01183148
+mean_loss: 0.011837147 val_mae: 0.40547052 duration epoch: 1.342815637588501
+epoch: 33
+epoch: 33 train step: 0 loss: 0.012026952
+epoch: 33 train step: 10 loss: 0.0120276855
+epoch: 33 train step: 20 loss: 0.011991146
+epoch: 33 train step: 30 loss: 0.011988699
+epoch: 33 train step: 40 loss: 0.011963384
+mean_loss: 0.011993939 val_mae: 0.4052254 duration epoch: 1.3512294292449951
+epoch: 34
+epoch: 34 train step: 0 loss: 0.011827417
+epoch: 34 train step: 10 loss: 0.011805752
+epoch: 34 train step: 20 loss: 0.011798169
+epoch: 34 train step: 30 loss: 0.011789398
+epoch: 34 train step: 40 loss: 0.011795584
+mean_loss: 0.01180289 val_mae: 0.40530103 duration epoch: 1.3921263217926025
+epoch: 35
+epoch: 35 train step: 0 loss: 0.01172325
+epoch: 35 train step: 10 loss: 0.011720159
+epoch: 35 train step: 20 loss: 0.011716057
+epoch: 35 train step: 30 loss: 0.011732383
+epoch: 35 train step: 40 loss: 0.011745365
+mean_loss: 0.011730487 val_mae: 0.4052512 duration epoch: 1.4229493141174316
+epoch: 36
+epoch: 36 train step: 0 loss: 0.011869518
+epoch: 36 train step: 10 loss: 0.0118626235
+epoch: 36 train step: 20 loss: 0.011856486
+epoch: 36 train step: 30 loss: 0.011865866
+epoch: 36 train step: 40 loss: 0.011862375
+mean_loss: 0.01186184 val_mae: 0.40528965 duration epoch: 1.3123955726623535
+epoch: 37
+epoch: 37 train step: 0 loss: 0.011712374
+epoch: 37 train step: 10 loss: 0.011714302
+epoch: 37 train step: 20 loss: 0.011735734
+epoch: 37 train step: 30 loss: 0.011743103
+epoch: 37 train step: 40 loss: 0.011751714
+mean_loss: 0.011734736 val_mae: 0.40534526 duration epoch: 1.3015398979187012
+epoch: 38
+epoch: 38 train step: 0 loss: 0.011634874
+epoch: 38 train step: 10 loss: 0.011647731
+epoch: 38 train step: 20 loss: 0.011644304
+epoch: 38 train step: 30 loss: 0.011655016
+epoch: 38 train step: 40 loss: 0.011649752
+mean_loss: 0.011646787 val_mae: 0.40535852 duration epoch: 1.396653652191162
+epoch: 39
+epoch: 39 train step: 0 loss: 0.011607725
+epoch: 39 train step: 10 loss: 0.011621948
+epoch: 39 train step: 20 loss: 0.011630492
+epoch: 39 train step: 30 loss: 0.011632327
+epoch: 39 train step: 40 loss: 0.01163676
+mean_loss: 0.011627461 val_mae: 0.40538827 duration epoch: 1.3148291110992432
+epoch: 40
+epoch: 40 train step: 0 loss: 0.012014789
+epoch: 40 train step: 10 loss: 0.012015298
+epoch: 40 train step: 20 loss: 0.012005089
+epoch: 40 train step: 30 loss: 0.012007512
+epoch: 40 train step: 40 loss: 0.012018336
+mean_loss: 0.012014233 val_mae: 0.40540376 duration epoch: 1.265836238861084
+epoch: 41
+epoch: 41 train step: 0 loss: 0.011810529
+epoch: 41 train step: 10 loss: 0.01180964
+epoch: 41 train step: 20 loss: 0.01181262
+epoch: 41 train step: 30 loss: 0.0118435845
+epoch: 41 train step: 40 loss: 0.011870664
+mean_loss: 0.011836517 val_mae: 0.40551242 duration epoch: 1.271437168121338
+epoch: 42
+epoch: 42 train step: 0 loss: 0.012200468
+epoch: 42 train step: 10 loss: 0.012182165
+epoch: 42 train step: 20 loss: 0.012185772
+epoch: 42 train step: 30 loss: 0.012184093
+epoch: 42 train step: 40 loss: 0.01217937
+mean_loss: 0.012185473 val_mae: 0.4055081 duration epoch: 1.381140947341919
+epoch: 43
+epoch: 43 train step: 0 loss: 0.01248952
+epoch: 43 train step: 10 loss: 0.012491027
+epoch: 43 train step: 20 loss: 0.012488636
+epoch: 43 train step: 30 loss: 0.012488538
+epoch: 43 train step: 40 loss: 0.01249426
+mean_loss: 0.012491171 val_mae: 0.40550667 duration epoch: 1.3409321308135986
+epoch: 44
+epoch: 44 train step: 0 loss: 0.012393935
+epoch: 44 train step: 10 loss: 0.012384988
+epoch: 44 train step: 20 loss: 0.012375069
+epoch: 44 train step: 30 loss: 0.012355376
+epoch: 44 train step: 40 loss: 0.012353163
+mean_loss: 0.012370251 val_mae: 0.40554562 duration epoch: 1.3881418704986572
+epoch: 45
+epoch: 45 train step: 0 loss: 0.012495354
+epoch: 45 train step: 10 loss: 0.012492635
+epoch: 45 train step: 20 loss: 0.012491014
+epoch: 45 train step: 30 loss: 0.012481641
+epoch: 45 train step: 40 loss: 0.012482419
+mean_loss: 0.012486335 val_mae: 0.40551585 duration epoch: 1.4323854446411133
+epoch: 46
+epoch: 46 train step: 0 loss: 0.011876045
+epoch: 46 train step: 10 loss: 0.011876676
+epoch: 46 train step: 20 loss: 0.011879208
+epoch: 46 train step: 30 loss: 0.011909807
+epoch: 46 train step: 40 loss: 0.011938627
+mean_loss: 0.011903212 val_mae: 0.40544584 duration epoch: 1.3881139755249023
+epoch: 47
+epoch: 47 train step: 0 loss: 0.012363588
+epoch: 47 train step: 10 loss: 0.012362378
+epoch: 47 train step: 20 loss: 0.012386195
+epoch: 47 train step: 30 loss: 0.012403968
+epoch: 47 train step: 40 loss: 0.012391817
+mean_loss: 0.0123853395 val_mae: 0.4053589 duration epoch: 1.5179827213287354
+epoch: 48
+epoch: 48 train step: 0 loss: 0.012188228
+epoch: 48 train step: 10 loss: 0.012188029
+epoch: 48 train step: 20 loss: 0.012181602
+epoch: 48 train step: 30 loss: 0.012197036
+epoch: 48 train step: 40 loss: 0.012183274
+mean_loss: 0.0121848695 val_mae: 0.4053781 duration epoch: 1.3961732387542725
+epoch: 49
+epoch: 49 train step: 0 loss: 0.012172835
+epoch: 49 train step: 10 loss: 0.0121668065
+epoch: 49 train step: 20 loss: 0.012170319
+epoch: 49 train step: 30 loss: 0.012201813
+epoch: 49 train step: 40 loss: 0.012213245
+mean_loss: 0.012189407 val_mae: 0.40543342 duration epoch: 1.4899780750274658
+epoch: 50
+epoch: 50 train step: 0 loss: 0.012328628
+epoch: 50 train step: 10 loss: 0.012317169
+epoch: 50 train step: 20 loss: 0.012321854
+epoch: 50 train step: 30 loss: 0.0123180635
+epoch: 50 train step: 40 loss: 0.012321389
+mean_loss: 0.012322539 val_mae: 0.40542766 duration epoch: 1.157172679901123
+epoch: 51
+epoch: 51 train step: 0 loss: 0.01252616
+epoch: 51 train step: 10 loss: 0.012529625
+epoch: 51 train step: 20 loss: 0.012510596
+epoch: 51 train step: 30 loss: 0.01249857
+epoch: 51 train step: 40 loss: 0.01250508
+mean_loss: 0.012511598 val_mae: 0.40535995
+ EarlyStopping activated duration epoch: 1.1254332065582275

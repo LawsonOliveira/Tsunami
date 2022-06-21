@@ -1,0 +1,8 @@
+epoch: 1
+epoch: 1 train step: 0 loss: 0.014538478
+epoch: 1 train step: 10 loss: 0.014524956
+epoch: 1 train step: 20 loss: 0.014495607
+epoch: 1 train step: 30 loss: 0.014486852
+epoch: 1 train step: 40 loss: 0.0144877555
+config:
+ {'trial_id': 7, 'remark': '', 'config_training': {'epochs_max': 100, 'n_trains': 50, 'batch_size': 8192, 'val_size': 8192, 'display_step': 10, 'tol': 1e-06, 'patience': 50}, 'config_model': {'l_units': [30, 30], 'noise': 0, 'dropout_rate': 0.2, 'learning_rate': {'scheduler': 0, 'lr_max': 1e-05, 'lr_middle': 1e-07, 'lr_min': 1e-09, 'step_middle': 1300, 'step_min': 3000}, 'optimizer': 'Adam', 'save_path': 'differentiate/hypertuning/byHand/trial_100/model_poisson_trial_100_epoch_2_val_mae_0.408173.h5'}}
