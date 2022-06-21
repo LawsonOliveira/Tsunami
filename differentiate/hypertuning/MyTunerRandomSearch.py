@@ -283,7 +283,7 @@ class MyTuner(kt.RandomSearch):
                 val_metrics = validate(model, tf_val_coords)
                 val_mae = float(val_metrics['mae'])
                 history['val_mae'].append(
-                    float(val_mae))
+                    val_mae)
                 print(
                     f'val_mae: {val_mae:.8f}')
 
@@ -291,7 +291,7 @@ class MyTuner(kt.RandomSearch):
 
             save_history(history)
             # EarlyStopping implemented :
-            if (len(history['val_mae']) > (patience+1)) and np.argmin(history['val_mae'][-(patience+1):]) == 0:
+            if (len(history['val_mae']) >= (patience+1)) and np.argmin(history['val_mae'][-(patience+1):]) == 0:
                 EarlyStopped = True
                 print('## early stopped ## ')
                 if overwrite_checkpoint:
