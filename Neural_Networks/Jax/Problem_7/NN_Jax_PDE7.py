@@ -186,7 +186,7 @@ class PINN:
 # Neural network parameters
 SEED = 351
 n_features, n_targets = 2, 1            # Input and output dimension
-layers = [n_features,30,30,n_targets]   # Layers structure
+layers = [n_features,30,n_targets]      # Layers structure
 
 # Initialization
 NN_MLP=MLP(SEED,layers)                 
@@ -196,14 +196,14 @@ solver=PINN(NN_eval)
 key=NN_MLP.get_key()
 
 ############################### Train parameters ###############################
-batch_size = 10000
-num_batches = 5000
-report_steps=100
+batch_size = 50
+num_batches = 100000
+report_steps=1000
 loss_history = []
 
 ############################### Adam optimizer ###############################
 # It's possible to continue the last training if we use options=1
-opt_init, opt_update, get_params = jax_opt.adam(0.001)
+opt_init, opt_update, get_params = jax_opt.adam(0.00005)
 
 options=0
 if options==0:  # Start a new training
@@ -211,7 +211,7 @@ if options==0:  # Start a new training
 
 '''
 else:           # Continue the last training
-    # Load trained parameters for a NN with the layers [2,30,30,1]
+    # Load trained parameters for a NN with the layers [2,30,1]
     best_params = pickle.load(open("./NN_saves/NN_jax_params.pkl", "rb"))
     opt_state = jax_opt.pack_optimizer_state(best_params)
     params=get_params(opt_state)
