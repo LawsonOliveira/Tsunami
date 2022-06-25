@@ -61,4 +61,4 @@
 \contentsline {chapter}{\numberline {8}Conclusion}{17}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Conclusion}{17}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Perspectives for new works and how to improve the project}{17}{section.8.2}%
-\contentsline {part}{Références bibliographiques}{18}{chapter*.8}%
+\contentsline {part}{Bibliography}{18}{chapter*.8}%
