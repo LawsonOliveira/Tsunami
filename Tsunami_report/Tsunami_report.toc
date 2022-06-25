@@ -39,7 +39,7 @@
 \contentsline {subsection}{\numberline {3.6.3}Solving with sigmoid}{10}{subsection.3.6.3}%
 \contentsline {subsection}{\numberline {3.6.4}Solving with elu}{10}{subsection.3.6.4}%
 \contentsline {subsection}{\numberline {3.6.5}Analysis}{10}{subsection.3.6.5}%
-\contentsline {section}{\numberline {3.7}PyTorch}{10}{section.3.7}%
+\contentsline {section}{\numberline {3.7}PyTorch approach}{10}{section.3.7}%
 \contentsline {subsection}{\numberline {3.7.1}PyTorch library}{10}{subsection.3.7.1}%
 \contentsline {subsection}{\numberline {3.7.2}Solving with tanh}{10}{subsection.3.7.2}%
 \contentsline {subsection}{\numberline {3.7.3}Solving with sigmoid}{10}{subsection.3.7.3}%
