@@ -2,6 +2,12 @@
 
 Github du projet de recherche Tsunami : résoudre à l'aide de réseaux neuronaux les équations de propagation d'un tsunami.
 
+# Contexte :
+CentraleSupélec : Pôle 005 projet formation à la recherche
+
+# Encadrant :
+- Frédéric Magoulès
+
 # Membres du projet :
 - Rosenberger Julien
 - Oliveira Lima Lawson
