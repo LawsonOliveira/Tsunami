@@ -1,0 +1,160 @@
+\chapter{Mesh}
+\label{chapter4}
+\section{Arcachon basin}
+To do the simulation it is necessary to choose a location that has a lot of data available and a favorable geography, so we chose the Arcachon basin to do our simulation. The figure below shows the topology and bathymetry of this region.
+The dataset was obtained from Shom France and OpenTopoData.
+\vspace*{-0.85cm}
+\begin{figure}[h]
+    \hspace*{-1.5cm}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[scale=0.5]{images/Mesh/Mar_data.png}
+        \caption{Bathymetry}
+        \label{fig:sub1}
+    \end{subfigure}%
+    \hspace*{-2.7cm}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[scale=0.5]{images/Mesh/Topo_data.png}
+        \caption{Topography}
+        \label{fig:sub2}
+    \end{subfigure}%
+    \hspace*{-2.7cm}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[scale=0.5]{images/Mesh/Topo_Mar_data.png}
+        \caption{Topography and bathymetry}
+        \label{fig:sub3}
+    \end{subfigure}%
+    \caption{Real datas for topography and bathymetry, on scale is the depth in meters}
+    \label{fig:test}
+    \end{figure}
+
+\vspace{-0.75cm}
+\section{Our approach}
+With the data obtained from the topology and topography of this region, the delaunay method from the PyVista library was used to make the mesh. However, due to the way the data is collected in real life, there are very sharp variations in the height of the relief.
+Thus, it is necessary to smooth these aspects, for this, we used the k-nearest neighbors (k-NN) with k=7 to make a mean and update the depth for each element in order to obtain a more regular structure. The figure below shows the mesh obtained for the dataset mentioned before.
+\begin{figure}[h]
+\begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/Mesh/mesh_wireframe1.png}
+    \caption{Topography and bathymetry}
+    \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{0.6\textwidth}
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/Mesh/mesh_wireframe.png}
+    \caption{Wireframe}
+    \label{fig:sub2}
+\end{subfigure}%
+\caption{Arcachon basin mesh}
+\label{fig:test}
+\end{figure}
+
+\vspace{-0.75cm}
+\section{Parallel processing}
+The obtained structure has about 280000 elements and according to the simulations performed on chapter \ref{chapter3}, a very high number of loops will be required for the neural network to provide a good solution. However, due to the dimensions of the Mesh, the computational cost is very high, so a different approach is needed to do the simulation.
+A very effective way to do this is to use parallel computing, i.e. the domain is divided into several subdomains that will be processed in different cores so that the same task is divided into small subtasks to speed up the final operation. 
+So at each step of the main loop the neural net is put to train in the sub-domains, and then at the end of each loop the performance of the net is evaluated.
+This procedure is described in the pseudo-code below.
+\begin{algorithm}[H]
+    \caption*{Parallel processing to solve a PDE using neural networks}
+    \hspace*{\algorithmicindent} \textbf{Input} a,b,c\\
+    \hspace*{\algorithmicindent} \textbf{Output} d
+    \begin{algorithmic}
+    \STATE a $\leftarrow$ c
+    \STATE b $\leftarrow$ a
+    \STATE \textbf{function} \quad resursion(a,b)
+        \bindent
+        \RETURN a
+        \eindent
+    \end{algorithmic}
+    \end{algorithm}
+
+\section{Mesh partitioning}
+To use parallel computing, first it is necessary to divide the domain into several sub-domains with an equivalent computational load and respecting the structure of the mesh. To do this there are several algorithms, which use the geometry of the data, graph spectrum or a multi-level approach.
+Thus, this section presents some aspects of these algorithms as well as their pseudo-code.
+
+\subsection{Algorithm 1}
+aaaaaa
+\begin{algorithm}[H]
+    \caption*{Algorithm 1}
+    \hspace*{\algorithmicindent} \textbf{Input} a,b,c\\
+    \hspace*{\algorithmicindent} \textbf{Output} d
+    \begin{algorithmic}
+    \STATE a $\leftarrow$ c
+    \STATE b $\leftarrow$ a
+    \STATE \textbf{function} \quad resursion(a,b)
+        \bindent
+        \RETURN a
+        \eindent
+    \end{algorithmic}
+    \end{algorithm}
+
+\subsection{Algorithm 2}
+aaaaaa
+\begin{algorithm}[H]
+    \caption*{Algorithm 2}
+    \hspace*{\algorithmicindent} \textbf{Input} a,b,c\\
+    \hspace*{\algorithmicindent} \textbf{Output} d
+    \begin{algorithmic}
+    \STATE a $\leftarrow$ c
+    \STATE b $\leftarrow$ a
+    \STATE \textbf{function} \quad resursion(a,b)
+        \bindent
+        \RETURN a
+        \eindent
+    \end{algorithmic}
+    \end{algorithm}
+
+
+\subsection{Algorithm 3}
+aaaa
+\begin{algorithm}[H]
+    \caption*{Algorithm 3}
+    \hspace*{\algorithmicindent} \textbf{Input} a,b,c\\
+    \hspace*{\algorithmicindent} \textbf{Output} d
+    \begin{algorithmic}
+    \STATE a $\leftarrow$ c
+    \STATE b $\leftarrow$ a
+    \STATE \textbf{function} \quad resursion(a,b)
+        \bindent
+        \RETURN a
+        \eindent
+    \end{algorithmic}
+    \end{algorithm}
+
+
+\subsection{Some possibles partitions of the Arcachon basin}
+Images for each partition obtained using the algorithms above.
+
+%\begin{figure}[H]
+%    \hspace*{-1.5cm}
+%    \begin{subfigure}{0.5\textwidth}
+%        \centering
+%        \includegraphics[scale=0.25]{images/Mesh/algorithm1.png}
+%        \caption{Algorithm 1}
+%        \label{fig:sub1}
+%    \end{subfigure}%
+%    \hspace*{-2.7cm}
+%    \begin{subfigure}{0.5\textwidth}
+%        \centering
+%        \includegraphics[scale=0.25]{images/Mesh/algorithm2.png}
+%        \caption{Algorithm 2}
+%        \label{fig:sub2}
+%    \end{subfigure}%
+%    \hspace*{-2.7cm}
+%    \begin{subfigure}{0.5\textwidth}
+%        \centering
+%        \includegraphics[scale=0.25]{images/Mesh/algorithm3.png}
+%        \caption{Algorithm 3}
+%        \label{fig:spectral}
+%    \end{subfigure}%
+%    \caption{Three ways of make 8 partitions of the domain}
+%   \label{fig:test}
+%    \end{figure}
+
+%On this case, the Figure \ref{fig:spectral} is the best partition to use in parallel computing, because spectral algorithm obtains a domain that has a well-distributed computational load.
+%So, we will use it to reduce computational coast and make the tsunami simulation faster.
+
+\section{Partition Connectivity}

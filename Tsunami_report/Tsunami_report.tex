@@ -1,0 +1,80 @@
+\documentclass{rapportCS}
+\usepackage{lipsum}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{stmaryrd} % more math symbols
+\usepackage{amsthm} % for theoreme style
+\usepackage{graphics}
+\usepackage{algorithm,algorithmic}
+\usepackage{caption}
+\usepackage{mathtools}
+\newlength\myindent
+\setlength\myindent{2em}
+\newcommand\bindent{%
+  \begingroup
+  \setlength{\itemindent}{\myindent}
+  \addtolength{\algorithmicindent}{\myindent}
+}
+\newcommand\eindent{\endgroup}
+
+%%%% for images
+\usepackage{graphicx}
+
+\title{Rapport ECS Template} %Titre du fichier
+
+\begin{document}
+
+%----------- Informations du rapport ---------
+\titre{
+{\LARGE \bfseries \textit{Tsunami propagation using neural networks}\\[0.1cm] }} %Titre du fichier .pdf
+
+\enseignant{ Frédéric \textsc{Magoulès}\\Joanna \textsc{Tomasik}
+}%Nom de l'enseignant
+
+
+\eleves{Lawson \textsc{Oliveira Lima}\newline
+        Julien \textsc{Rosenberger} \newline
+        Antier \textsc{Esteban} \newline
+        Besbes \textsc{Mariem} \newline
+        Paun \textsc{Théodore} \newline
+        Ruault \textsc{Gabriel} \newline
+        } %Nom des élèves
+
+
+%----------- Initialisation -------------------
+        
+\fairemarges%Afficher les marges
+\fairepagedegarde%Créer la page de garde
+\tabledematieres%Créer la table de matières
+
+
+%====================== INCLUSION DES PARTIES ======================
+%régler l'espacement entre les lignes
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+%recommencer la numérotation des pages à "1"
+
+\input{Introduction}
+
+\input{Chapitre2.tex}
+\input{Chapitre3.tex}
+\input{Chapitre4.tex}
+\input{Chapitre5.tex}
+\input{Chapitre6.tex}
+\input{Chapitre7.tex}
+\input{Conclusion.tex}
+%\input{annexes.tex}
+\input{Bibliographie.tex}
+
+%récupérer les citation avec "/footnotemark"
+
+
+%choix du style de la biblio
+\bibliographystyle{plain}
+%inclusion de la biblio
+\bibliography{bibliographie}
+%voir wiki pour plus d'information sur la syntaxe des entrées d'une bibliographie
+
+
+\end{document}
