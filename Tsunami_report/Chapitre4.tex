@@ -58,7 +58,7 @@ A very effective way to do this is to use parallel computing, i.e. the domain is
 So at each step of the main loop the neural net is put to train in the sub-domains, and then at the end of each loop the performance of the net is evaluated.
 This procedure is described in the pseudo-code below.
 \begin{algorithm}[H]
-    \caption*{Gradient descent with parallel computing}
+    \caption*{Gradient descent with parallel processing}
     \hspace*{\algorithmicindent} \textbf{Input}  NN\_parametres, p the number of simultaneous subtasks, loss\_function\\
     \hspace*{\algorithmicindent} \textbf{Output} new parametres
     \begin{algorithmic}
