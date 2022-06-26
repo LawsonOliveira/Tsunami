@@ -29,36 +29,30 @@
 \contentsline {section}{\numberline {3.4}PDE example}{8}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Jax approach}{8}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Jax library}{8}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Solving with tanh}{8}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.2}Solving with hyperbolic tangent}{8}{subsection.3.5.2}%
 \contentsline {subsection}{\numberline {3.5.3}Solving with sigmoid}{9}{subsection.3.5.3}%
 \contentsline {subsection}{\numberline {3.5.4}Solving with elu}{9}{subsection.3.5.4}%
 \contentsline {subsection}{\numberline {3.5.5}Analysis}{9}{subsection.3.5.5}%
 \contentsline {section}{\numberline {3.6}TensorFlow approach}{10}{section.3.6}%
 \contentsline {subsection}{\numberline {3.6.1}TensorFlow library}{10}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Solving with tanh}{10}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.2}Solving with hyperbolic tangent}{10}{subsection.3.6.2}%
 \contentsline {subsection}{\numberline {3.6.3}Solving with sigmoid}{10}{subsection.3.6.3}%
 \contentsline {subsection}{\numberline {3.6.4}Solving with elu}{10}{subsection.3.6.4}%
 \contentsline {subsection}{\numberline {3.6.5}Analysis}{10}{subsection.3.6.5}%
 \contentsline {section}{\numberline {3.7}PyTorch approach}{10}{section.3.7}%
 \contentsline {subsection}{\numberline {3.7.1}PyTorch library}{10}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Solving with tanh}{10}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.2}Solving with hyperbolic tangent}{10}{subsection.3.7.2}%
 \contentsline {subsection}{\numberline {3.7.3}Solving with sigmoid}{10}{subsection.3.7.3}%
 \contentsline {subsection}{\numberline {3.7.4}Solving with elu}{10}{subsection.3.7.4}%
 \contentsline {subsection}{\numberline {3.7.5}Analysis}{10}{subsection.3.7.5}%
-\contentsline {chapter}{\numberline {4}Mesh}{11}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Model}{11}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Arcachon basin}{11}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Our approach}{11}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Parallel processing}{11}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Mesh partitioning}{12}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Algorithm 1}{12}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Algorithm 2}{12}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Algorithm 3}{12}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Some possibles partitions of the Arcachon basin}{12}{subsection.4.4.4}%
-\contentsline {section}{\numberline {4.5}Partition Connectivity}{13}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Mild-slop equation}{14}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Simulation}{15}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Discussion of the results}{16}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Conclusion}{17}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Conclusion}{17}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Perspectives for new works and how to improve the project}{17}{section.8.2}%
-\contentsline {part}{Bibliography}{18}{chapter*.8}%
+\contentsline {section}{\numberline {4.4}Mild slope equation}{12}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Simulation}{13}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Discussion of the results}{14}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Conclusion}{15}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Conclusion}{15}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Perspectives for new works and future improvements}{15}{section.7.2}%
+\contentsline {part}{Bibliography}{16}{chapter*.8}%

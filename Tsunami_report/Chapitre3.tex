@@ -31,7 +31,7 @@ An automatization of the hypertuning by hand and using Keras Tuner has already b
 \section{Pseudo-code}
 \label{pseudo_code}
 \begin{algorithm}[H]
-    \caption*{Algorithm to solve a PDE using neural networks}
+    \caption*{Solving PDEs using neural networks (PINN method)}
     \hspace*{\algorithmicindent} \textbf{Input} a,b,c\\
     \hspace*{\algorithmicindent} \textbf{Output} d
     \begin{algorithmic}
@@ -57,7 +57,7 @@ We want to solve the following PDE using the algorithm described on section \ref
 with boundary conditions $\psi(0,y)=\psi(1,y)=\psi(x,0)=0$ and $\frac{\partial \psi}{\partial y}(x,1)=2\sin(\pi x)$           
 and $f(x, y)=\sin(\pi x)(2-\pi^2y^2+2y^3\sin(\pi x))$. 
 \newline
-This problem has a analytical solution $\psi_t$ s.t $\psi_t(x, y)=y^2sin(\pi x)$. Thus, to solve it and compare the results we define our loss function like $\mathcal{L} = ||\Delta \psi_a(x,y) +\psi(x,y)\cdot\frac{\partial \psi(x,y)}{\partial y}-f(x,y) ||_2$  
+This problem has a analytical solution $\psi_t$ s.t $\psi_t(x, y)=y^2sin(\pi x)$. Thus, to solve it and compare the results we define our loss function like $\mathcal{L} = ||\Delta \psi(x,y) +\psi(x,y)\cdot\frac{\partial \psi(x,y)}{\partial y}-f(x,y) ||_2$  
 and the approximated solution like $\psi_a(x,y)=F(x,y)N(x,y)+A(x,y)$ with:
 \begin{itemize}
     \item $F(x,y)=\sin(x-1)\sin(y-1)\sin(x)\sin(y)$
@@ -66,10 +66,10 @@ and the approximated solution like $\psi_a(x,y)=F(x,y)N(x,y)+A(x,y)$ with:
 
 \section{Jax approach}
 \subsection{Jax library}
-Jax is a python library built using NumPy and the lax architecture, which makes it high performance and highly recommended for simulations that have a high computational cost. Also, because of the way it is used to implement a neural network, it is possible to parallelize several steps of the simulation so that it runs faster.  
+Jax is a python library built using lax architecture, which makes it high performance and highly recommended for simulations that have a high computational cost. Also, because of the way it is used to implement a neural network, it is possible to parallelize several steps of the simulation so that it runs faster.  
 Therefore, due to these characteristics, we chose to do some tests with it.
 
-\subsection{Solving with tanh}
+\subsection{Solving with hyperbolic tangent}
 On the image below we can see the results obtained for the PDE of the section \ref{pde_example} using $\tanh$.
 \begin{figure}[H]
 \begin{subfigure}{0.45\textwidth}
@@ -97,7 +97,7 @@ On the image below we can see the results obtained for the PDE of the section \r
     %\caption{A subfigure}
     \label{fig:sub4}
 \end{subfigure}
-\caption{Results using Jax and tanh}
+\caption{Results using Jax and hyperbolic tangent}
 \label{fig:test}
 \end{figure}
 
@@ -176,7 +176,7 @@ According to the results obtained, the elu activation function takes longer to c
 
 \section{TensorFlow approach}
 \subsection{TensorFlow library}
-\subsection{Solving with tanh}
+\subsection{Solving with hyperbolic tangent}
 
 
 
@@ -195,7 +195,7 @@ According to the results obtained, the elu activation function takes longer to c
 
 
 
-\subsection{Solving with tanh}
+\subsection{Solving with hyperbolic tangent}
 
 
 

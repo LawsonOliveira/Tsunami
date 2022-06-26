@@ -1,4 +1,4 @@
-\chapter{Mesh}
+\chapter{Model}
 \label{chapter4}
 \section{Arcachon basin}
 To do the simulation it is necessary to choose a location that has a lot of data available and a favorable geography, so we chose the Arcachon basin to do our simulation. The figure below shows the topology and bathymetry of this region.
@@ -58,103 +58,24 @@ A very effective way to do this is to use parallel computing, i.e. the domain is
 So at each step of the main loop the neural net is put to train in the sub-domains, and then at the end of each loop the performance of the net is evaluated.
 This procedure is described in the pseudo-code below.
 \begin{algorithm}[H]
-    \caption*{Parallel processing to solve a PDE using neural networks}
-    \hspace*{\algorithmicindent} \textbf{Input} a,b,c\\
-    \hspace*{\algorithmicindent} \textbf{Output} d
+    \caption*{Gradient descent with parallel computing}
+    \hspace*{\algorithmicindent} \textbf{Input}  NN\_parametres, p the number of simultaneous subtasks, loss\_function\\
+    \hspace*{\algorithmicindent} \textbf{Output} new parametres
     \begin{algorithmic}
-    \STATE a $\leftarrow$ c
-    \STATE b $\leftarrow$ a
-    \STATE \textbf{function} \quad resursion(a,b)
-        \bindent
-        \RETURN a
+    \STATE repeat until convergence
+        \bindent 
+        \STATE get a training set and divide it into p-subsets with the same number of elements 
+        \FOR {each n-processor}
+            \STATE evaluate loss\_function of the n-subset
+        \ENDFOR
+        \STATE concatenate the p-set values obtained in the same training set order
+        \STATE make gradient descent and update the parametres  
         \eindent
     \end{algorithmic}
     \end{algorithm}
+    
+\begin{itemize}
+    \item To do this in Python we can use vmap function of Jax library to vectorize the gradient descent
+\end{itemize}
 
-\section{Mesh partitioning}
-To use parallel computing, first it is necessary to divide the domain into several sub-domains with an equivalent computational load and respecting the structure of the mesh. To do this there are several algorithms, which use the geometry of the data, graph spectrum or a multi-level approach.
-Thus, this section presents some aspects of these algorithms as well as their pseudo-code.
-
-\subsection{Algorithm 1}
-aaaaaa
-\begin{algorithm}[H]
-    \caption*{Algorithm 1}
-    \hspace*{\algorithmicindent} \textbf{Input} a,b,c\\
-    \hspace*{\algorithmicindent} \textbf{Output} d
-    \begin{algorithmic}
-    \STATE a $\leftarrow$ c
-    \STATE b $\leftarrow$ a
-    \STATE \textbf{function} \quad resursion(a,b)
-        \bindent
-        \RETURN a
-        \eindent
-    \end{algorithmic}
-    \end{algorithm}
-
-\subsection{Algorithm 2}
-aaaaaa
-\begin{algorithm}[H]
-    \caption*{Algorithm 2}
-    \hspace*{\algorithmicindent} \textbf{Input} a,b,c\\
-    \hspace*{\algorithmicindent} \textbf{Output} d
-    \begin{algorithmic}
-    \STATE a $\leftarrow$ c
-    \STATE b $\leftarrow$ a
-    \STATE \textbf{function} \quad resursion(a,b)
-        \bindent
-        \RETURN a
-        \eindent
-    \end{algorithmic}
-    \end{algorithm}
-
-
-\subsection{Algorithm 3}
-aaaa
-\begin{algorithm}[H]
-    \caption*{Algorithm 3}
-    \hspace*{\algorithmicindent} \textbf{Input} a,b,c\\
-    \hspace*{\algorithmicindent} \textbf{Output} d
-    \begin{algorithmic}
-    \STATE a $\leftarrow$ c
-    \STATE b $\leftarrow$ a
-    \STATE \textbf{function} \quad resursion(a,b)
-        \bindent
-        \RETURN a
-        \eindent
-    \end{algorithmic}
-    \end{algorithm}
-
-
-\subsection{Some possibles partitions of the Arcachon basin}
-Images for each partition obtained using the algorithms above.
-
-%\begin{figure}[H]
-%    \hspace*{-1.5cm}
-%    \begin{subfigure}{0.5\textwidth}
-%        \centering
-%        \includegraphics[scale=0.25]{images/Mesh/algorithm1.png}
-%        \caption{Algorithm 1}
-%        \label{fig:sub1}
-%    \end{subfigure}%
-%    \hspace*{-2.7cm}
-%    \begin{subfigure}{0.5\textwidth}
-%        \centering
-%        \includegraphics[scale=0.25]{images/Mesh/algorithm2.png}
-%        \caption{Algorithm 2}
-%        \label{fig:sub2}
-%    \end{subfigure}%
-%    \hspace*{-2.7cm}
-%    \begin{subfigure}{0.5\textwidth}
-%        \centering
-%        \includegraphics[scale=0.25]{images/Mesh/algorithm3.png}
-%        \caption{Algorithm 3}
-%        \label{fig:spectral}
-%    \end{subfigure}%
-%    \caption{Three ways of make 8 partitions of the domain}
-%   \label{fig:test}
-%    \end{figure}
-
-%On this case, the Figure \ref{fig:spectral} is the best partition to use in parallel computing, because spectral algorithm obtains a domain that has a well-distributed computational load.
-%So, we will use it to reduce computational coast and make the tsunami simulation faster.
-
-\section{Partition Connectivity}
+\section{Mild slope equation}

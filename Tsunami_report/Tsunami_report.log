@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.6.24)  25 JUN 2022 16:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.6.24)  26 JUN 2022 12:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -566,15 +566,6 @@ LaTeX Warning: Label `sub@fig:sub2' multiply defined.
 
 LaTeX Warning: Label `fig:test' multiply defined.
 
-
-LaTeX Warning: Label `ch:Conclusion' multiply defined.
-
-
-LaTeX Warning: Label `ch:Conclusion' multiply defined.
-
-
-LaTeX Warning: Label `ch:Conclusion' multiply defined.
-
 )
 \openout1 = `Tsunami_report.aux'.
 
@@ -678,7 +669,7 @@ LaTeX Info: Redefining \nameref on input line 26.
 \openout4 = `Tsunami_report.nlo'.
 
 Package nomencl Info: Writing nomenclature file Tsunami_report.nlo on input line 47.
-<logos/logo.jpg, id=221, 1087.06125pt x 318.18875pt>
+<logos/logo.jpg, id=196, 1087.06125pt x 318.18875pt>
 File: logos/logo.jpg Graphic file (type jpg)
 <use logos/logo.jpg>
 Package pdftex.def Info: logos/logo.jpg  used on input line 48.
@@ -693,7 +684,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 48.
  (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-<logos/logoECS.png, id=222, 119.69719pt x 238.64156pt>
+<logos/logoECS.png, id=197, 119.69719pt x 238.64156pt>
 File: logos/logoECS.png Graphic file (type png)
 <use logos/logoECS.png>
 Package pdftex.def Info: logos/logoECS.png  used on input line 48.
@@ -701,15 +692,15 @@ Package pdftex.def Info: logos/logoECS.png  used on input line 48.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./logos/logoECS.png> <./logos/logo.jpg>] (./Tsunami_report.toc
-<logos/logo_ECS.png, id=282, 1204.5pt x 624.3325pt>
+<logos/logo_ECS.png, id=256, 1204.5pt x 624.3325pt>
 File: logos/logo_ECS.png Graphic file (type png)
 <use logos/logo_ECS.png>
-Package pdftex.def Info: logos/logo_ECS.png  used on input line 57.
+Package pdftex.def Info: logos/logo_ECS.png  used on input line 54.
 (pdftex.def)             Requested size: 60.22852pt x 31.21844pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.57 ...5}Partition Connectivity}{13}{section.4.5}
+l.54 ...}Discussion of the results}{14}{chapter.6}
                                                   % [1
 
  <./logos/logo_ECS.png>])
@@ -782,7 +773,7 @@ Package pdftex.def Info: logos/logo_ECS.png  used on input line 1.
 (pdftex.def)             Requested size: 60.22852pt x 31.21844pt.
  [5]
 Chapter 3.
-<images/tuning_model.png, id=340, 1031.052pt x 320.397pt>
+<images/tuning_model.png, id=309, 1031.052pt x 320.397pt>
 File: images/tuning_model.png Graphic file (type png)
 <use images/tuning_model.png>
 Package pdftex.def Info: images/tuning_model.png  used on input line 6.
@@ -807,22 +798,22 @@ File: logos/logo_ECS.png Graphic file (type png)
 Package pdftex.def Info: logos/logo_ECS.png  used on input line 50.
 (pdftex.def)             Requested size: 60.22852pt x 31.21844pt.
  [7]
-<images/NN_Jax_PDE8_files_tanh/NN_Jax_PDE8_18_1.png, id=359, 403.5075pt x 285.065pt>
+<images/NN_Jax_PDE8_files_tanh/NN_Jax_PDE8_18_1.png, id=329, 403.5075pt x 285.065pt>
 File: images/NN_Jax_PDE8_files_tanh/NN_Jax_PDE8_18_1.png Graphic file (type png)
 <use images/NN_Jax_PDE8_files_tanh/NN_Jax_PDE8_18_1.png>
 Package pdftex.def Info: images/NN_Jax_PDE8_files_tanh/NN_Jax_PDE8_18_1.png  used on input line 77.
 (pdftex.def)             Requested size: 184.3733pt x 130.25284pt.
-<images/NN_Jax_PDE8_files_tanh/NN_Jax_PDE8_20_0.png, id=360, 356.33125pt x 264.99pt>
+<images/NN_Jax_PDE8_files_tanh/NN_Jax_PDE8_20_0.png, id=330, 356.33125pt x 264.99pt>
 File: images/NN_Jax_PDE8_files_tanh/NN_Jax_PDE8_20_0.png Graphic file (type png)
 <use images/NN_Jax_PDE8_files_tanh/NN_Jax_PDE8_20_0.png>
 Package pdftex.def Info: images/NN_Jax_PDE8_files_tanh/NN_Jax_PDE8_20_0.png  used on input line 83.
 (pdftex.def)             Requested size: 184.3733pt x 137.11224pt.
-<images/NN_Jax_PDE8_files_tanh/NN_Jax_PDE8_22_0.png, id=361, 356.33125pt x 264.99pt>
+<images/NN_Jax_PDE8_files_tanh/NN_Jax_PDE8_22_0.png, id=331, 356.33125pt x 264.99pt>
 File: images/NN_Jax_PDE8_files_tanh/NN_Jax_PDE8_22_0.png Graphic file (type png)
 <use images/NN_Jax_PDE8_files_tanh/NN_Jax_PDE8_22_0.png>
 Package pdftex.def Info: images/NN_Jax_PDE8_files_tanh/NN_Jax_PDE8_22_0.png  used on input line 90.
 (pdftex.def)             Requested size: 184.3733pt x 137.11224pt.
-<images/NN_Jax_PDE8_files_tanh/NN_Jax_PDE8_24_0.png, id=362, 356.33125pt x 264.99pt>
+<images/NN_Jax_PDE8_files_tanh/NN_Jax_PDE8_24_0.png, id=332, 356.33125pt x 264.99pt>
 File: images/NN_Jax_PDE8_files_tanh/NN_Jax_PDE8_24_0.png Graphic file (type png)
 <use images/NN_Jax_PDE8_files_tanh/NN_Jax_PDE8_24_0.png>
 Package pdftex.def Info: images/NN_Jax_PDE8_files_tanh/NN_Jax_PDE8_24_0.png  used on input line 96.
@@ -832,42 +823,42 @@ File: logos/logo_ECS.png Graphic file (type png)
 Package pdftex.def Info: logos/logo_ECS.png  used on input line 104.
 (pdftex.def)             Requested size: 60.22852pt x 31.21844pt.
  [8 <./images/NN_Jax_PDE8_files_tanh/NN_Jax_PDE8_18_1.png> <./images/NN_Jax_PDE8_files_tanh/NN_Jax_PDE8_20_0.png> <./images/NN_Jax_PDE8_files_tanh/NN_Jax_PDE8_22_0.png> <./images/NN_Jax_PDE8_files_tanh/NN_Jax_PDE8_24_0.png>]
-<images/NN_Jax_PDE8_files_sigmoid/NN_Jax_PDE8_18_1.png, id=374, 403.5075pt x 285.065pt>
+<images/NN_Jax_PDE8_files_sigmoid/NN_Jax_PDE8_18_1.png, id=344, 403.5075pt x 285.065pt>
 File: images/NN_Jax_PDE8_files_sigmoid/NN_Jax_PDE8_18_1.png Graphic file (type png)
 <use images/NN_Jax_PDE8_files_sigmoid/NN_Jax_PDE8_18_1.png>
 Package pdftex.def Info: images/NN_Jax_PDE8_files_sigmoid/NN_Jax_PDE8_18_1.png  used on input line 111.
 (pdftex.def)             Requested size: 184.3733pt x 130.25284pt.
-<images/NN_Jax_PDE8_files_sigmoid/NN_Jax_PDE8_20_0.png, id=375, 356.33125pt x 264.99pt>
+<images/NN_Jax_PDE8_files_sigmoid/NN_Jax_PDE8_20_0.png, id=345, 356.33125pt x 264.99pt>
 File: images/NN_Jax_PDE8_files_sigmoid/NN_Jax_PDE8_20_0.png Graphic file (type png)
 <use images/NN_Jax_PDE8_files_sigmoid/NN_Jax_PDE8_20_0.png>
 Package pdftex.def Info: images/NN_Jax_PDE8_files_sigmoid/NN_Jax_PDE8_20_0.png  used on input line 117.
 (pdftex.def)             Requested size: 184.3733pt x 137.11224pt.
-<images/NN_Jax_PDE8_files_sigmoid/NN_Jax_PDE8_22_0.png, id=376, 356.33125pt x 264.99pt>
+<images/NN_Jax_PDE8_files_sigmoid/NN_Jax_PDE8_22_0.png, id=346, 356.33125pt x 264.99pt>
 File: images/NN_Jax_PDE8_files_sigmoid/NN_Jax_PDE8_22_0.png Graphic file (type png)
 <use images/NN_Jax_PDE8_files_sigmoid/NN_Jax_PDE8_22_0.png>
 Package pdftex.def Info: images/NN_Jax_PDE8_files_sigmoid/NN_Jax_PDE8_22_0.png  used on input line 124.
 (pdftex.def)             Requested size: 184.3733pt x 137.11224pt.
-<images/NN_Jax_PDE8_files_sigmoid/NN_Jax_PDE8_24_0.png, id=377, 347.2975pt x 264.99pt>
+<images/NN_Jax_PDE8_files_sigmoid/NN_Jax_PDE8_24_0.png, id=347, 347.2975pt x 264.99pt>
 File: images/NN_Jax_PDE8_files_sigmoid/NN_Jax_PDE8_24_0.png Graphic file (type png)
 <use images/NN_Jax_PDE8_files_sigmoid/NN_Jax_PDE8_24_0.png>
 Package pdftex.def Info: images/NN_Jax_PDE8_files_sigmoid/NN_Jax_PDE8_24_0.png  used on input line 130.
 (pdftex.def)             Requested size: 184.3733pt x 140.68259pt.
-<images/NN_Jax_PDE8_files_elu/NN_Jax_PDE8_18_1.png, id=379, 403.5075pt x 285.065pt>
+<images/NN_Jax_PDE8_files_elu/NN_Jax_PDE8_18_1.png, id=349, 403.5075pt x 285.065pt>
 File: images/NN_Jax_PDE8_files_elu/NN_Jax_PDE8_18_1.png Graphic file (type png)
 <use images/NN_Jax_PDE8_files_elu/NN_Jax_PDE8_18_1.png>
 Package pdftex.def Info: images/NN_Jax_PDE8_files_elu/NN_Jax_PDE8_18_1.png  used on input line 145.
 (pdftex.def)             Requested size: 184.3733pt x 130.25284pt.
-<images/NN_Jax_PDE8_files_elu/NN_Jax_PDE8_20_0.png, id=380, 356.33125pt x 264.99pt>
+<images/NN_Jax_PDE8_files_elu/NN_Jax_PDE8_20_0.png, id=350, 356.33125pt x 264.99pt>
 File: images/NN_Jax_PDE8_files_elu/NN_Jax_PDE8_20_0.png Graphic file (type png)
 <use images/NN_Jax_PDE8_files_elu/NN_Jax_PDE8_20_0.png>
 Package pdftex.def Info: images/NN_Jax_PDE8_files_elu/NN_Jax_PDE8_20_0.png  used on input line 151.
 (pdftex.def)             Requested size: 184.3733pt x 137.11224pt.
-<images/NN_Jax_PDE8_files_elu/NN_Jax_PDE8_22_0.png, id=381, 356.33125pt x 264.99pt>
+<images/NN_Jax_PDE8_files_elu/NN_Jax_PDE8_22_0.png, id=351, 356.33125pt x 264.99pt>
 File: images/NN_Jax_PDE8_files_elu/NN_Jax_PDE8_22_0.png Graphic file (type png)
 <use images/NN_Jax_PDE8_files_elu/NN_Jax_PDE8_22_0.png>
 Package pdftex.def Info: images/NN_Jax_PDE8_files_elu/NN_Jax_PDE8_22_0.png  used on input line 158.
 (pdftex.def)             Requested size: 184.3733pt x 137.11224pt.
-<images/NN_Jax_PDE8_files_elu/NN_Jax_PDE8_24_0.png, id=382, 381.425pt x 264.99pt>
+<images/NN_Jax_PDE8_files_elu/NN_Jax_PDE8_24_0.png, id=352, 381.425pt x 264.99pt>
 File: images/NN_Jax_PDE8_files_elu/NN_Jax_PDE8_24_0.png Graphic file (type png)
 <use images/NN_Jax_PDE8_files_elu/NN_Jax_PDE8_24_0.png>
 Package pdftex.def Info: images/NN_Jax_PDE8_files_elu/NN_Jax_PDE8_24_0.png  used on input line 164.
@@ -883,17 +874,17 @@ Package pdftex.def Info: logos/logo_ECS.png  used on input line 1.
 (pdftex.def)             Requested size: 60.22852pt x 31.21844pt.
  [10]
 Chapter 4.
-<images/Mesh/Mar_data.png, id=402, 433.62pt x 289.08pt>
+<images/Mesh/Mar_data.png, id=372, 433.62pt x 289.08pt>
 File: images/Mesh/Mar_data.png Graphic file (type png)
 <use images/Mesh/Mar_data.png>
 Package pdftex.def Info: images/Mesh/Mar_data.png  used on input line 11.
 (pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
-<images/Mesh/Topo_data.png, id=403, 433.62pt x 289.08pt>
+<images/Mesh/Topo_data.png, id=373, 433.62pt x 289.08pt>
 File: images/Mesh/Topo_data.png Graphic file (type png)
 <use images/Mesh/Topo_data.png>
 Package pdftex.def Info: images/Mesh/Topo_data.png  used on input line 18.
 (pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
-<images/Mesh/Topo_Mar_data.png, id=404, 433.62pt x 289.08pt>
+<images/Mesh/Topo_Mar_data.png, id=374, 433.62pt x 289.08pt>
 File: images/Mesh/Topo_Mar_data.png Graphic file (type png)
 <use images/Mesh/Topo_Mar_data.png>
 Package pdftex.def Info: images/Mesh/Topo_Mar_data.png  used on input line 25.
@@ -903,12 +894,12 @@ Overfull \hbox (67.58247pt too wide) in paragraph at lines 8--29
 []|  $[]$|  $[]$|  $[]$ 
  []
 
-<images/Mesh/mesh_wireframe1.png, id=405, 523.9575pt x 421.575pt>
+<images/Mesh/mesh_wireframe1.png, id=375, 523.9575pt x 421.575pt>
 File: images/Mesh/mesh_wireframe1.png Graphic file (type png)
 <use images/Mesh/mesh_wireframe1.png>
 Package pdftex.def Info: images/Mesh/mesh_wireframe1.png  used on input line 40.
 (pdftex.def)             Requested size: 179.25159pt x 144.22131pt.
-<images/Mesh/mesh_wireframe.png, id=406, 7708.8pt x 4336.2pt>
+<images/Mesh/mesh_wireframe.png, id=376, 7708.8pt x 4336.2pt>
 File: images/Mesh/mesh_wireframe.png Graphic file (type png)
 <use images/Mesh/mesh_wireframe.png>
 Package pdftex.def Info: images/Mesh/mesh_wireframe.png  used on input line 46.
@@ -920,7 +911,7 @@ Overfull \hbox (51.21808pt too wide) in paragraph at lines 38--50
 
 File: logos/logo_ECS.png Graphic file (type png)
 <use logos/logo_ECS.png>
-Package pdftex.def Info: logos/logo_ECS.png  used on input line 73.
+Package pdftex.def Info: logos/logo_ECS.png  used on input line 76.
 (pdftex.def)             Requested size: 60.22852pt x 31.21844pt.
 [11
 
@@ -930,53 +921,39 @@ File: logos/logo_ECS.png Graphic file (type png)
 Package pdftex.def Info: logos/logo_ECS.png  used on input line 1.
 (pdftex.def)             Requested size: 60.22852pt x 31.21844pt.
  [12]
-File: logos/logo_ECS.png Graphic file (type png)
-<use logos/logo_ECS.png>
-Package pdftex.def Info: logos/logo_ECS.png  used on input line 1.
-(pdftex.def)             Requested size: 60.22852pt x 31.21844pt.
- [13]
 Chapter 5.
 ) (./Chapitre6.tex
 File: logos/logo_ECS.png Graphic file (type png)
 <use logos/logo_ECS.png>
 Package pdftex.def Info: logos/logo_ECS.png  used on input line 1.
 (pdftex.def)             Requested size: 60.22852pt x 31.21844pt.
- [14
+ [13
 
 ]
 Chapter 6.
-) (./Chapitre7.tex
+) (./Conclusion.tex
+File: logos/logo_ECS.png Graphic file (type png)
+<use logos/logo_ECS.png>
+Package pdftex.def Info: logos/logo_ECS.png  used on input line 2.
+(pdftex.def)             Requested size: 60.22852pt x 31.21844pt.
+ [14
+
+]
+Chapter 7.
+) (./Bibliographie.tex
 File: logos/logo_ECS.png Graphic file (type png)
 <use logos/logo_ECS.png>
 Package pdftex.def Info: logos/logo_ECS.png  used on input line 1.
 (pdftex.def)             Requested size: 60.22852pt x 31.21844pt.
  [15
 
-]
-Chapter 7.
-) (./Conclusion.tex
-File: logos/logo_ECS.png Graphic file (type png)
-<use logos/logo_ECS.png>
-Package pdftex.def Info: logos/logo_ECS.png  used on input line 2.
-(pdftex.def)             Requested size: 60.22852pt x 31.21844pt.
- [16
-
-]
-Chapter 8.
-) (./Bibliographie.tex
-File: logos/logo_ECS.png Graphic file (type png)
-<use logos/logo_ECS.png>
-Package pdftex.def Info: logos/logo_ECS.png  used on input line 1.
-(pdftex.def)             Requested size: 60.22852pt x 31.21844pt.
- [17
-
 ])
 No file Tsunami_report.bbl.
 File: logos/logo_ECS.png Graphic file (type png)
 <use logos/logo_ECS.png>
-Package pdftex.def Info: logos/logo_ECS.png  used on input line 80.
+Package pdftex.def Info: logos/logo_ECS.png  used on input line 79.
 (pdftex.def)             Requested size: 60.22852pt x 31.21844pt.
-[18
+[16
 
 ] (./Tsunami_report.aux)
 
@@ -986,28 +963,22 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `Tsunami_report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Tsunami_report.out':
-(rerunfilecheck)             Before: 1BBED592B700B835D5DFA61C7A651DF6;7408
-(rerunfilecheck)             After:  E8487F17B5E55258CA9E5844980E041D;7456.
+Package rerunfilecheck Info: File `Tsunami_report.out' has not changed.
+(rerunfilecheck)             Checksum: CC80C101E130710604D76D980D4A4EAD;6669.
  ) 
 Here is how much of TeX's memory you used:
- 19918 strings out of 478287
- 377997 string characters out of 5849289
- 795205 words of memory out of 5000000
- 37669 multiletter control sequences out of 15000+600000
+ 19892 strings out of 478287
+ 377631 string characters out of 5849289
+ 795289 words of memory out of 5000000
+ 37663 multiletter control sequences out of 15000+600000
  489290 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 125i,17n,120p,438b,899s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 125i,17n,120p,438b,924s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbi1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbi2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/stmary8.pfb>
-Output written on Tsunami_report.pdf (21 pages, 25897521 bytes).
+Output written on Tsunami_report.pdf (19 pages, 25893774 bytes).
 PDF statistics:
- 593 PDF objects out of 1000 (max. 8388607)
- 476 compressed objects within 5 object streams
- 104 named destinations out of 1000 (max. 500000)
- 538 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 543 PDF objects out of 1000 (max. 8388607)
+ 428 compressed objects within 5 object streams
+ 87 named destinations out of 1000 (max. 500000)
+ 490 words of extra memory for PDF output out of 10000 (max. 10000000)
 
