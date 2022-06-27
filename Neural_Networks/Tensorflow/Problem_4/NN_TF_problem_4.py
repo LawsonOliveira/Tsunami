@@ -106,8 +106,7 @@ def differentiate(model, X, training=False):
         u = model(tf.stack([x1[:, 0]], axis=1), training=training)
     du_dx = tf.squeeze(tape.batch_jacobian(u, x1))
     del tape
-    if u.shape[-1] == 1:
-        du_dx = tf.expand_dims(du_dx, axis=-1)
+    du_dx = tf.reshape(du_dx, [X.shape[0], u.shape[-1]])
     return u, du_dx
 
 

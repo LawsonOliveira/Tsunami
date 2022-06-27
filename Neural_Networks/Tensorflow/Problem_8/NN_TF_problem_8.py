@@ -1,23 +1,21 @@
 #!/usr/bin/env python
 # coding: utf-8
-
 ################### librairies ###################
-#!/usr/bin/env python
-# coding: utf-8
-
-from re import U
-from tensorflow.python.client import device_lib
-import wandb
-from time import time
-import json
-from matplotlib import cm
-from sympy import Matrix, laplace_transform
-import sympy as sm
-import tensorflow as tf
-import keras
-import matplotlib.pyplot as plt
-import numpy as np
+#
 import os
+import numpy as np
+import matplotlib.pyplot as plt
+import keras
+import tensorflow as tf
+import sympy as sm
+from sympy import Matrix, laplace_transform
+from matplotlib import cm
+import json
+from time import time
+import wandb
+from tensorflow.python.client import device_lib
+from re import U
+print('packages imported')
 
 
 ################### check tensorflow is using GPU ###################
@@ -53,21 +51,45 @@ print('changed to:', os.getcwd(), '\n')
 
 
 ################### Create the model ###################
+def fun_leaky_relu(z):
+    return tf.keras.activations.relu(z, alpha=0.01)
 
-def generate_model(l_units, input_shape=dim, noise=False, dropout_rate=0):
+
+dico_str_activ_fun_activ = {
+    'sigmoid': tf.keras.activations.sigmoid,
+    'tanh': tf.keras.activations.tanh,
+    'relu': tf.keras.activations.relu,
+    'leaky_relu': fun_leaky_relu,
+    'elu': tf.keras.activations.elu,
+}
+
+dico_str_activ_krnl_init = {
+    'sigmoid': 'glorot_normal',
+    'tanh': 'glorot_normal',
+    'relu': 'he_normal',
+    'leaky_relu': 'he_normal',
+    'elu': 'he_normal',
+}
+
+
+def generate_model(l_units, l_activations, input_shape=dim, noise=False, dropout_rate=0):
     # méthode API Sequential
     n_hidden = len(l_units)
+    assert n_hidden == len(
+        l_activations), ('l_units and l_activations have not the same length.')
     model = keras.models.Sequential([
         keras.layers.Input(shape=input_shape)
     ])
     if noise:
         model.add(keras.layers.GaussianNoise(stddev=1e-4))
     for i in range(n_hidden):
+        fun_activation, kernel_initilaizer = dico_str_activ_fun_activ[
+            l_activations[i]], dico_str_activ_krnl_init[l_activations[i]]
         model.add(keras.layers.Dense(
-            l_units[i], activation='relu', kernel_initializer='he_normal'))
-    model.add(keras.layers.Dense(1, use_bias=False))
-    # use_bias=False otherwise returns error after
-    # May be the cause of a stagnation in the validation ? (can circumvent by creating a layer class only adding a bias)
+            l_units[i], kernel_initializer=kernel_initilaizer))
+        model.add(keras.layers.Activation(fun_activation))
+    model.add(keras.layers.Dense(1, use_bias=True))
+    # use_bias=True here (they do are trained and change)
     model.summary()
     return model
 
@@ -157,7 +179,10 @@ def evaluate_F_and_diff(X):
     return F, dF_dx, dF_dxx, dF_dy, dF_dyy
 
 
+print('F set')
 ################### Set A for psi here ###################
+
+
 def expr_A():
     def expr_f_0(y):
         return 0
@@ -177,7 +202,7 @@ def expr_A():
 
 
 expr_A = expr_A()
-print("A set")
+
 dexpr_A_dx = sm.diff(expr_A, x, 1)
 dexpr_A_dxx = sm.diff(dexpr_A_dx, x, 1)
 dexpr_A_dy = sm.diff(expr_A, y, 1)
@@ -207,21 +232,23 @@ def evaluate_A_and_diff(X):
     return A, dA_dx, dA_dxx, dA_dy, dA_dyy
 
 
+print("A set")
 ################### Run a config of model and training ###################
 
 
 def try_config(config, id_add, use_wandb=False):
     '''
-    A run of the full algorithm described in the paper of 1997. 
+    A run of the full algorithm described in the paper of 1997.
     Variables:
     -config (dict): The hyperparameters used to construct the model and set the training loop are in config.
-    -id_add (int): add id_add to the trial_id to avoid overwriting previous trials 
+    -id_add (int): add id_add to the trial_id to avoid overwriting previous trials
     '''
     print('config:\n', config)
     config_model = config['config_model']
     config_training = config['config_training']
 
     l_units = config_model['l_units']
+    l_activations = config_model['l_activations']
     noise = config_model['noise']
     dropout_rate = config_model['dropout_rate']
 
@@ -235,24 +262,21 @@ def try_config(config, id_add, use_wandb=False):
 
     # generate model
     if config_model['save_path'] == '':
-        model = generate_model(l_units, noise=noise, dropout_rate=dropout_rate)
+        model = generate_model(l_units, l_activations,
+                               noise=noise, dropout_rate=dropout_rate)
     else:
-        model = keras.models.load_model(config_model['save_path'])
+        model = keras.models.load_model(config_model['save_path'], custom_objects={
+                                        'fun_leaky_relu': fun_leaky_relu})
 
-    lr_max = config_model['learning_rate']['lr_max']
-    lr_min = config_model['learning_rate']['lr_min']
-    lr_middle = config_model['learning_rate']['lr_middle']
-    step_middle = config_model['learning_rate']['step_middle']
-    step_min = config_model['learning_rate']['step_min']
-    if config_model['optimizer'] == "Adam":
-        if config_model['learning_rate']['scheduler']:
-            lr = tf.keras.optimizers.schedules.PiecewiseConstantDecay(
-                [step_middle, step_min], [lr_max, lr_middle, lr_min])
-        else:
-            lr = lr_max
+    lr_init = config_model['learning_rate']['lr_init']
 
+    if config_model['optimizer']['name'] == "Adam":
+        lr = lr_init
         # Choose the optimizer
-        optimizer = tf.keras.optimizers.Adam(learning_rate=lr)
+        beta_1 = config_model['optimizer']['beta_1']
+        beta_2 = config_model['optimizer']['beta_2']
+        optimizer = tf.keras.optimizers.Adam(
+            learning_rate=lr, beta_1=beta_1, beta_2=beta_2)
         model.compile(optimizer=optimizer, loss='mse', metrics=['mae'])
     else:
         print('optimizer is not known !')
@@ -298,6 +322,28 @@ def try_config(config, id_add, use_wandb=False):
 
         return res
 
+    if config['config_training']['regularizer']['name'] == 'l2':
+        alpha_l_2 = config['config_training']['regularizer']['alpha']
+
+        @tf.function
+        def fun_regularizer(l_weights):
+            l_2_reg = tf.reduce_sum(
+                [tf.reduce_sum(tf.square(weights)) for weights in l_weights])
+            return alpha_l_2*l_2_reg
+
+    elif config['config_training']['regularizer']['name'] == None:
+        @tf.function
+        def fun_regularizer(l_weights):
+            return 0
+    # if config['config_training']['loss']['name'] == 'mae':
+    #     @tf.function
+    #     def fun_loss():
+    #         pass
+    # elif config['config_training']['loss']['name'] == 'mse':
+    #     @tf.function
+    #     def fun_loss():
+    #         pass
+
     def custom_loss(tf_sample_coords):
         # cannot call raw_residual: it seems to raise errors with GradientTape
         x_1_coords = tf.concat(
@@ -333,7 +379,9 @@ def try_config(config, id_add, use_wandb=False):
 
         res = residual(None, psi, None,
                        dpsi_dxx, dpsi_dy, dpsi_dyy, f_ev)
-        return tf.reduce_mean(tf.square(res))
+
+        l_weights = model.get_weights()
+        return tf.reduce_mean(tf.abs(res)) + fun_regularizer(l_weights)
 
     # train:
 
@@ -355,6 +403,14 @@ def try_config(config, id_add, use_wandb=False):
         val_mae = mae_metric(res, tf.zeros(tf.shape(res)))
         return val_mae
 
+    def save_history(history):
+        # print('\nhistory:\n', history, '\n')
+        str_history = {k: [str(x) for x in item]
+                       for k, item in history.items()}
+        with open(folder_dir+f'/history_trial_{trial_id}.json', 'w') as fp:
+            json.dump(str_history, fp, indent=2)
+        print('history saved at:', folder_dir +
+              f'/history_trial_{trial_id}.json', )
     # Training the Model of method 3:
 
     trial_id = config['trial_id']+id_add
@@ -395,20 +451,78 @@ def try_config(config, id_add, use_wandb=False):
 
         # indices = np.random.randint(tf_coords.shape[0], size=batch_size)
         # tf_sample_coords = tf.convert_to_tensor([tf_coords[i] for i in indices])
+        ########## learning rate schedulers #############
+        if config_model['learning_rate']['scheduler']['name'] == 1:
+            lr = lr_init*np.exp(np.log(10**6)/epochs_max)
+            if config_model['optimizer']['name'] == "Adam":
+                # Choose the optimizer
+                beta_1 = config_model['optimizer']['beta_1']
+                beta_2 = config_model['optimizer']['beta_2']
+                optimizer = tf.keras.optimizers.Adam(
+                    learning_rate=lr, beta_1=beta_1, beta_2=beta_2)
+            else:
+                print('optimizer is not known !')
+
+        elif config_model['learning_rate']['scheduler']['name'] == '1cycle':
+            # ref: A disciplinde approach to NN Hyper-Parameters: Part 1, Leaslie N. Smith 2018
+            lr_end = config_model['learning_rate']['scheduler']['lr_end']
+            if epoch <= epochs_max/2:
+                lr = (lr_end-lr_init)*epoch/(epochs_max/2)+lr_init
+            else:
+                lr = -(lr_end-lr_init)*(epoch-epochs_max/2) / \
+                    (epochs_max/2)+lr_end
+            if config_model['optimizer']['name'] == "Adam":
+                # Choose the optimizer
+                beta_init = config_model['learning_rate']['scheduler']['beta_init']
+                beta_end = config_model['learning_rate']['scheduler']['beta_end']
+                beta_2 = config_model['optimizer']['beta_2']
+                if epoch <= epochs_max/2:
+                    beta_1 = (beta_end-beta_init)*epoch / \
+                        (epochs_max/2)+beta_init
+                else:
+                    beta_1 = -(beta_end-beta_init)*(epoch-epochs_max/2) / \
+                        (epochs_max/2)+beta_end
+                optimizer = tf.keras.optimizers.Adam(
+                    learning_rate=lr, beta_1=beta_1, beta_2=beta_2)
+            else:
+                print('optimizer is not known !')
+
+        elif config_model['learning_rate']['scheduler']['name'] == 'pieces':
+            l_lrs = config_model['learning_rate']['scheduler']['l_lrs']
+            l_steps = config_model['learning_rate']['scheduler']['l_steps']
+            if len(l_lrs)-len(l_steps) == 1:
+                config_model['learning_rate']['scheduler']['l_steps'].append(
+                    epochs_max)
+            assert len(l_lrs) == len(
+                l_steps), 'issues with l_lrs and l_steps in learning rate scheduler'
+            at_step = config_model['learning_rate']['scheduler']['at_step']
+            if epoch <= l_steps[at_step]:
+                lr = l_lrs[at_step]
+            else:
+                config_model['learning_rate']['scheduler']['at_step'] += 1
+                lr = l_lrs[at_step+1]
+            if config_model['optimizer']['name'] == "Adam":
+                # Choose the optimizer
+                beta_1 = config_model['optimizer']['beta_1']
+                beta_2 = config_model['optimizer']['beta_2']
+                optimizer = tf.keras.optimizers.Adam(
+                    learning_rate=lr, beta_1=beta_1, beta_2=beta_2)
+            else:
+                print('optimizer is not known !')
 
         tf_sample_coords = tf.random.uniform(
             (batch_size, dim), lower_bounds, upper_bounds)
         for k in range(n_trains):
             loss = train_step(tf_sample_coords)
             losses.append(loss)
-            if k % display_step == 0:
+            if k % display_step == display_step-1:
                 print('epoch:', epoch, 'train step:', k, 'loss:', loss.numpy())
                 if use_wandb:
-                    wandb.log({'train_loss': loss})
+                    wandb.log({'train_loss': loss, 'epoch': epoch})
         mean_loss = np.mean(losses)
 
         if use_wandb:
-            wandb.log({'mean_loss': mean_loss})
+            wandb.log({'mean_loss': mean_loss, 'epoch': epoch})
 
         # create validation_coords
         tf_val_coords = tf.random.uniform(
@@ -416,7 +530,7 @@ def try_config(config, id_add, use_wandb=False):
         val_mae = validate(tf_val_coords).numpy()
 
         if use_wandb:
-            wandb.log({'val_mae': val_mae})
+            wandb.log({'val_mae': val_mae, 'epoch': epoch})
 
         print("mean_loss:", mean_loss, end=' ')
         print('val_mae:', val_mae, end=' ')
@@ -438,8 +552,9 @@ def try_config(config, id_add, use_wandb=False):
             print('\n EarlyStopping activated', end=' ')
             EarlyStopped = True
 
+        # clean the savings folder
         elif (len(history['val_mae']) >= patience+1):
-            # clean the savings folder
+
             r_val_mae_epoch = epoch-patience
             r_val_mae = history['val_mae'][-(patience+1)]
             file_path = folder_dir + \
@@ -462,13 +577,14 @@ def try_config(config, id_add, use_wandb=False):
 
     print('end of the epochs/', end=' ')
     print('total_duration:', total_duration)
+    save_history(history)
 
     # not optimized
-    min_val_mae = np.min(history['val_mae'])
+    min_val_mae = np.min(history['val_mae'][-(patience+1):])
     min_val_mae_epoch = np.argmin(history['val_mae'])+1
 
     model = keras.models.load_model(
-        folder_dir+f'model_trial_{trial_id}_epoch_{min_val_mae_epoch}_val_mae_{min_val_mae:6f}.h5')
+        folder_dir+f'model_trial_{trial_id}_epoch_{min_val_mae_epoch}_val_mae_{min_val_mae:6f}.h5', custom_objects={'fun_leaky_relu': fun_leaky_relu})
     os.rename(folder_dir+f'model_trial_{trial_id}_epoch_{min_val_mae_epoch}_val_mae_{min_val_mae:6f}.h5',
               folder_dir+f'best_model_trial_{trial_id}_epoch_{min_val_mae_epoch}_val_mae_{min_val_mae:6f}.h5')
     print('best model loaded and renamed')
@@ -493,7 +609,8 @@ def try_config(config, id_add, use_wandb=False):
 ################### Compare to true solution ###################
 def compare_truth(model_save_path):
     from matplotlib import cm
-    model = keras.models.load_model(model_save_path)
+    model = keras.models.load_model(model_save_path, custom_objects={
+                                    'fun_leaky_relu': fun_leaky_relu})
 
     grid_length = 100
     X = np.linspace(lb_0, ub_0, grid_length, endpoint=True)
@@ -508,7 +625,7 @@ def compare_truth(model_save_path):
     def fun_psi(X, training=False):
         N = model(X, training=training)
         x_1_coords = tf.concat(
-            [X[:, 0], tf.ones((X.shape[0], 1), dtype=DTYPE)], axis=-1)
+            [X[:, 0:1], tf.ones((X.shape[0], 1), dtype=DTYPE)], axis=-1)
         N_x_1 = model(x_1_coords, training=training)
         Ns_x_1, _, _, _, _ = differentiate(
             model, x_1_coords, training=True, shift={'dim': 1, 'degree': 1})  # Ns = dN_dy
@@ -526,10 +643,12 @@ def compare_truth(model_save_path):
     noise = (tf.random.uniform((grid_length**2, 2))-0.5)/grid_length
 
     tf_noisy_coords = tf_coords+noise
+    print(tf_noisy_coords.shape)
     true_values = tf.reshape(true_function(
         tf_noisy_coords), [100, 100]).numpy()
+    appro_values = fun_psi(tf_noisy_coords)
     appro_values = tf.reshape(
-        fun_psi(tf_noisy_coords), [100, 100]).numpy()
+        appro_values, [100, 100]).numpy()
     # change g according to the method applied
     # no @tf.function above g_3...
     error = np.abs(true_values-appro_values)
@@ -561,25 +680,31 @@ def compare_truth(model_save_path):
 
     cbar = fig.colorbar(im, ax=axes.ravel().tolist(), shrink=0.95)
 
-    cbar.set_ticks(np.arange(_min, _max+1e-10, 0.5e-2))
+    cbar.set_ticks(np.arange(_min, _max+1e-10, 0.5e-1))
+
+    plt.show()
 
 
 ################### Set a config and try it ###################
 config_model = {
     'l_units': [30, 30],
+    'l_activations': ['elu']*2,
     'noise': 0,
-    'dropout_rate': 0.2,
-    'learning_rate': {'scheduler': 0, "lr_max": 1e-5, "lr_middle": 1e-7, "lr_min": 1e-9, 'step_middle': 1300, 'step_min': 3000},
-    'optimizer': "Adam",  # only Adam implemeneted
-    'save_path': ''  # serves to keep tuning the parameters of a model
+    'dropout_rate': 0,
+    'learning_rate': {'scheduler': {'name': 0}, "lr_init": 1e-2},
+    # only Adam implemeneted
+    'optimizer': {'name': "Adam", 'beta_1': 0.9, 'beta_2': 0.999},
+    'save_path': ''  # serves to keep tuning the parameters of a pervious model
 }
 
 
 config_training = {
-    "epochs_max": 1,
+    "epochs_max": 5000,
     "n_trains": 1,
-    "batch_size": 8192,
-    "val_size": 8192,
+    "batch_size": 16384,
+    "val_size": 16384,
+    # has to be set by hand in cutom_loss to avoid 'if' conditions
+    "regularizer": {'name': None},
     "display_step": 1,
     "tol": 1e-6,
     "patience": 100
@@ -596,7 +721,45 @@ config = {
 
 
 if __name__ == '__main__':
-    try_config(config, id_add=0, use_wandb=False)
+
+    try_different_activation_fun = False
+    if try_different_activation_fun:
+        config['remark'] = 'compare activation functions'
+        for str_act_fun in list(dico_str_activ_fun_activ.keys())[:2]:
+            print('\n\nbegin trial with '+str_act_fun +
+                  ' as activation function...\n\n')
+            config['config_model']['l_activations'] = [
+                str_act_fun]*len(config['config_model']['l_units'])
+            try_config(config, id_add=100, use_wandb=True)
+            config['trial_id'] += 1
+
+    try_minimize_val_mae = True
+    if try_minimize_val_mae:
+        config['remark'] = 'find best lr for tanh'
+        config['config_model']['save_path'] = 'Neural_Networks/Tensorflow/Problem_8/NN_saves/trial_1009/model_trial_1009_epoch_5563_val_mae_0.253228.h5'
+
+        config['config_model']['learning_rate']['lr_init'] = 1e-2
+        config['config_model']['learning_rate']['scheduler'] = {
+            'name': 'pieces',
+            'l_lrs': [1e-6, 1e-7, 1e-8],
+            'l_steps': [1000, 2000],
+            'at_step': 0,
+        }
+
+        # config['config_model']['learning_rate']['beta_init'] = 0.95
+        # config['config_model']['learning_rate']['beta_init'] = 0.85
+
+        config['config_model']['l_activations'] = [
+            'tanh']*len(config['config_model']['l_units'])
+        config['config_training']['epochs_max'] = 5000
+        config['config_training']['n_trains'] = 10
+        config['config_training']['patience'] = 100
+        config['config_training']['regularizer'] = {
+            'name': 'l2',
+            'alpha': 1,
+        }
+
+        try_config(config, id_add=1010, use_wandb=True)
     # compare_truth(
-    #     'Neural_Networks/Tensorflow/Problem_3/NN_saves/trial_100/best_model_trial_100_epoch_1_val_mae_0.774451.h5')
+    #     'Neural_Networks/Tensorflow/Problem_8/NN_saves/trial_0/best_model_trial_0_epoch_1_val_mae_4.779019.h5')
     pass

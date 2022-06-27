@@ -217,7 +217,7 @@ def try_config(config, id_add, use_wandb=False):
 
     # train:
 
-    def train_step(tf_sample_coords, lr):
+    def train_step(tf_sample_coords):
         with tf.GradientTape() as tape:
             loss = custom_loss(tf_sample_coords)
         trainable_variables = model.trainable_variables
@@ -281,7 +281,7 @@ def try_config(config, id_add, use_wandb=False):
 
         tf_sample_coords = tf.random.uniform((batch_size, dim), lb, ub)
         for k in range(n_trains):
-            loss = train_step(tf_sample_coords, lr)
+            loss = train_step(tf_sample_coords)
             losses.append(loss)
             if k % display_step == 0:
                 print('epoch:', epoch, 'train step:', k, 'loss:', loss.numpy())
@@ -487,6 +487,7 @@ config_training = {
 
 config = {
     "trial_id": 0,
+    'problem_id': 2,
     'remark': '',
     'over_folder_dir': 'Neural_Networks/Tensorflow/Problem_2/NN_saves/',
     "config_training": config_training,
@@ -495,7 +496,7 @@ config = {
 
 
 if __name__ == '__main__':
-    try_config(config, id_add=100, use_wandb=False)
+    try_config(config, id_add=0, use_wandb=False)
     # compare_truth(
     #     'Neural_Networks/Tensorflow/Problem_2/NN_saves/trial_100/best_model_trial_100_epoch_1_val_mae_2.071824.h5')
     pass

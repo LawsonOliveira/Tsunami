@@ -499,7 +499,7 @@ def compare_truth(model_save_path):
     def fun_psi(X, training=False):
         N = model(X, training=training)
         x_1_coords = tf.concat(
-            [X[:, 0], tf.ones((X.shape[0], 1), dtype=DTYPE)], axis=-1)
+            [X[:, 0:1], tf.ones((X.shape[0], 1), dtype=DTYPE)], axis=-1)
         N_x_1 = model(x_1_coords, training=training)
         Ns_x_1, _, _, _, _ = differentiate(
             model, x_1_coords, training=True, shift={'dim': 1, 'degree': 1})  # Ns = dN_dy

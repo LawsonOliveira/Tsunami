@@ -1,0 +1,38 @@
+{
+    "trial_id": 4,
+    "problem_id": 8,
+    "remark": "",
+    "over_folder_dir": "Neural_Networks/Tensorflow/Problem_8/NN_saves/",
+    "config_training": {
+        "epochs_max": 5000,
+        "n_trains": 1,
+        "batch_size": 8192,
+        "val_size": 8192,
+        "regularizer": null,
+        "display_step": 1,
+        "tol": 1e-06,
+        "patience": 20
+    },
+    "config_model": {
+        "l_units": [
+            30,
+            30
+        ],
+        "l_activations": [
+            "elu",
+            "elu"
+        ],
+        "noise": 0,
+        "dropout_rate": 0,
+        "learning_rate": {
+            "scheduler": 0,
+            "lr_max": 0.01,
+            "lr_middle": 1e-07,
+            "lr_min": 1e-09,
+            "step_middle": 1300,
+            "step_min": 3000
+        },
+        "optimizer": "Adam",
+        "save_path": ""
+    }
+}

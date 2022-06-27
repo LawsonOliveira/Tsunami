@@ -1,0 +1,44 @@
+{
+    "trial_id": 0,
+    "problem_id": 8,
+    "remark": "find best lr for tanh",
+    "over_folder_dir": "Neural_Networks/Tensorflow/Problem_8/NN_saves/",
+    "config_training": {
+        "epochs_max": 500,
+        "n_trains": 1,
+        "batch_size": 8192,
+        "val_size": 8192,
+        "regularizer": null,
+        "display_step": 1,
+        "tol": 1e-06,
+        "patience": 100
+    },
+    "config_model": {
+        "l_units": [
+            30,
+            30
+        ],
+        "l_activations": [
+            "tanh",
+            "tanh"
+        ],
+        "noise": 0,
+        "dropout_rate": 0,
+        "learning_rate": {
+            "scheduler": "1cycle",
+            "lr_init": 0.001,
+            "lr_middle": 0.0001,
+            "lr_end": 0.01,
+            "step_middle": 300,
+            "step_end": 3000,
+            "beta_init": 0.85,
+            "beta_end": 0
+        },
+        "optimizer": {
+            "name": "Adam",
+            "beta_1": 0.9,
+            "beta_2": 0.999
+        },
+        "save_path": ""
+    }
+}

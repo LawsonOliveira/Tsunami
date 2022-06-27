@@ -498,7 +498,7 @@ config = {
 
 
 if __name__ == '__main__':
-    try_config(config, id_add=100, use_wandb=False)
+    try_config(config, id_add=0, use_wandb=False)
     # compare_truth(
     #     'Neural_Networks/Tensorflow/Problem_1/NN_saves/trial_100/best_model_trial_100_epoch_1_val_mae_1.976981.h5')
     pass
