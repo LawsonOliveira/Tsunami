@@ -136,6 +136,41 @@ On the image below we can see the results obtained for the PDE of the section \r
 \end{figure}
 
 \vspace{-0.5cm}
+\subsection{Solving with gelu}
+On the image below we can see the results obtained for the PDE of the section \ref{pde_example} using gelu.
+\vspace{-0.45cm}
+\begin{figure}[H]
+\begin{subfigure}{.45\textwidth}
+    \centering
+    \includegraphics[width=.8\linewidth]{images/NN_Jax_PDE8_files_gelu/NN_Jax_PDE8_18_1.png}
+    %\caption{A subfigure}
+    \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/NN_Jax_PDE8_files_gelu/NN_Jax_PDE8_20_0.png}
+    %\caption{A subfigure}
+    \label{fig:sub2}
+\end{subfigure}
+\newline
+\begin{subfigure}{.45\textwidth}
+    \centering
+    \includegraphics[width=.8\linewidth]{images/NN_Jax_PDE8_files_gelu/NN_Jax_PDE8_22_0.png}
+    %\caption{A subfigure}
+    \label{fig:sub3}
+    \end{subfigure}
+\begin{subfigure}{.45\textwidth}
+    \centering
+    \includegraphics[width=.8\linewidth]{images/NN_Jax_PDE8_files_gelu/NN_Jax_PDE8_24_0.png}
+    %\caption{A subfigure}
+    \label{fig:sub4}
+\end{subfigure}
+\caption{Results using Jax and gelu}
+\label{fig:test}
+\end{figure}
+
+\newpage
+\vspace{-0.5cm}
 \subsection{Solving with elu}
 On the image below we can see the results obtained for the PDE of the section \ref{pde_example} using elu.
 \vspace{-0.45cm}
@@ -170,8 +205,43 @@ On the image below we can see the results obtained for the PDE of the section \r
 \end{figure}
 
 \vspace{-0.5cm}
+\subsection{Solving with relu}
+On the image below we can see the results obtained for the PDE of the section \ref{pde_example} using relu.
+\vspace{-0.45cm}
+\begin{figure}[H]
+\begin{subfigure}{.45\textwidth}
+    \centering
+    \includegraphics[width=.8\linewidth]{images/NN_Jax_PDE8_files_relu/NN_Jax_PDE8_18_1.png}
+    %\caption{A subfigure}
+    \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/NN_Jax_PDE8_files_relu/NN_Jax_PDE8_20_0.png}
+    %\caption{A subfigure}
+    \label{fig:sub2}
+\end{subfigure}
+\newline
+\begin{subfigure}{.45\textwidth}
+    \centering
+    \includegraphics[width=.8\linewidth]{images/NN_Jax_PDE8_files_relu/NN_Jax_PDE8_22_0.png}
+    %\caption{A subfigure}
+    \label{fig:sub3}
+    \end{subfigure}
+\begin{subfigure}{.45\textwidth}
+    \centering
+    \includegraphics[width=.8\linewidth]{images/NN_Jax_PDE8_files_relu/NN_Jax_PDE8_24_0.png}
+    %\caption{A subfigure}
+    \label{fig:sub4}
+\end{subfigure}
+\caption{Results using Jax and relu}
+\label{fig:test}
+\end{figure}
+
+
+\vspace{-0.5cm}
 \subsection{Analysis}
-According to the results obtained, the elu activation function takes longer to converge using the same parameters. Also, it is observed that the hyperbolic tangent provided a smaller absolute error for the same number of iterations.
+According to the results obtained, the elu and relu activation functions takes longer to converge using the same parameters. Also, it is observed that the hyperbolic tangent, gelu and sygmoid provided a smaller absolute error for the same number of iterations.
 \newpage
 
 \section{TensorFlow approach}
@@ -182,10 +252,11 @@ According to the results obtained, the elu activation function takes longer to c
 
 \subsection{Solving with sigmoid}
 
-
+\subsection{Solving with gelu}
 
 \subsection{Solving with elu}
 
+\subsection{Solving with relu}
 
 \subsection{Analysis}
 
@@ -202,8 +273,11 @@ According to the results obtained, the elu activation function takes longer to c
 \subsection{Solving with sigmoid}
 
 
+\subsection{Solving with gelu}
 
 \subsection{Solving with elu}
+
+\subsection{Solving with relu}
 
 
 

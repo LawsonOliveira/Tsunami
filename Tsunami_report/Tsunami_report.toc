@@ -31,28 +31,34 @@
 \contentsline {subsection}{\numberline {3.5.1}Jax library}{8}{subsection.3.5.1}%
 \contentsline {subsection}{\numberline {3.5.2}Solving with hyperbolic tangent}{8}{subsection.3.5.2}%
 \contentsline {subsection}{\numberline {3.5.3}Solving with sigmoid}{9}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}Solving with elu}{9}{subsection.3.5.4}%
-\contentsline {subsection}{\numberline {3.5.5}Analysis}{9}{subsection.3.5.5}%
-\contentsline {section}{\numberline {3.6}TensorFlow approach}{10}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}TensorFlow library}{10}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Solving with hyperbolic tangent}{10}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}Solving with sigmoid}{10}{subsection.3.6.3}%
-\contentsline {subsection}{\numberline {3.6.4}Solving with elu}{10}{subsection.3.6.4}%
-\contentsline {subsection}{\numberline {3.6.5}Analysis}{10}{subsection.3.6.5}%
-\contentsline {section}{\numberline {3.7}PyTorch approach}{10}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}PyTorch library}{10}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Solving with hyperbolic tangent}{10}{subsection.3.7.2}%
-\contentsline {subsection}{\numberline {3.7.3}Solving with sigmoid}{10}{subsection.3.7.3}%
-\contentsline {subsection}{\numberline {3.7.4}Solving with elu}{10}{subsection.3.7.4}%
-\contentsline {subsection}{\numberline {3.7.5}Analysis}{10}{subsection.3.7.5}%
-\contentsline {chapter}{\numberline {4}Model}{11}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Arcachon basin}{11}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Our approach}{11}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Parallel processing}{11}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Mild slope equation}{12}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Simulation}{13}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Discussion of the results}{14}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusion}{15}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Conclusion}{15}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Perspectives for new works and future improvements}{15}{section.7.2}%
-\contentsline {part}{Bibliography}{16}{chapter*.8}%
+\contentsline {subsection}{\numberline {3.5.4}Solving with gelu}{9}{subsection.3.5.4}%
+\contentsline {subsection}{\numberline {3.5.5}Solving with elu}{10}{subsection.3.5.5}%
+\contentsline {subsection}{\numberline {3.5.6}Solving with relu}{10}{subsection.3.5.6}%
+\contentsline {subsection}{\numberline {3.5.7}Analysis}{10}{subsection.3.5.7}%
+\contentsline {section}{\numberline {3.6}TensorFlow approach}{11}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}TensorFlow library}{11}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Solving with hyperbolic tangent}{11}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Solving with sigmoid}{11}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Solving with gelu}{11}{subsection.3.6.4}%
+\contentsline {subsection}{\numberline {3.6.5}Solving with elu}{11}{subsection.3.6.5}%
+\contentsline {subsection}{\numberline {3.6.6}Solving with relu}{11}{subsection.3.6.6}%
+\contentsline {subsection}{\numberline {3.6.7}Analysis}{11}{subsection.3.6.7}%
+\contentsline {section}{\numberline {3.7}PyTorch approach}{11}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}PyTorch library}{11}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Solving with hyperbolic tangent}{11}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Solving with sigmoid}{11}{subsection.3.7.3}%
+\contentsline {subsection}{\numberline {3.7.4}Solving with gelu}{11}{subsection.3.7.4}%
+\contentsline {subsection}{\numberline {3.7.5}Solving with elu}{11}{subsection.3.7.5}%
+\contentsline {subsection}{\numberline {3.7.6}Solving with relu}{11}{subsection.3.7.6}%
+\contentsline {subsection}{\numberline {3.7.7}Analysis}{11}{subsection.3.7.7}%
+\contentsline {chapter}{\numberline {4}Model}{12}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Arcachon basin}{12}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Our approach}{12}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Parallel processing}{12}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Mild slope equation}{13}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Simulation}{14}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Discussion of the results}{15}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Conclusion}{16}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Conclusion}{16}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Perspectives for new works and future improvements}{16}{section.7.2}%
+\contentsline {part}{Bibliography}{17}{chapter*.10}%
