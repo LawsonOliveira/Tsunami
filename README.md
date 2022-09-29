@@ -26,6 +26,8 @@ CentraleSupélec : Pôle 005 projet formation à la recherche
 │   ├───arcachon_plus_bathymetry  -> High resolution dataset
 │   └───Atlantic_bathymetry       -> Low resolution dataset  
 ├───manuscript
+├───processed_data
+│   └───Mesh                      -> Mesh for Arcachon basin
 └───src
     ├───Deprecated                -> Old code using polynomials for boundary conditions
     ├───Neural_Networks           -> First tests using PINN with Tf, Torch and Jax (time independent)
