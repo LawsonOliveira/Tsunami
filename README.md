@@ -18,10 +18,9 @@ CentraleSupélec : Pôle 005 projet formation à la recherche
 
 # Structure du repository
 ```
-├───biblio                        -> Ensemble bibliographique et fichiers .bib  
-│   ├───latex                     -> Tests pour les citations via .bib  
-│   ├───mild-slope                -> Recherches sur les équations de Mild-Slope  
-│   └───méthode IA                -> Recherches sur les méthodes d'IA à la résolution d'EDP  
+├───doc                           -> Documentation on the project  
+│   ├───Bibliography              -> Reference articles
+│   └───polynomails_doc           -> Research on polynomials for certain AI methods  
 ├───data_set  
 │   ├───arcachon_bathymetry       -> Dataset moyenne résolution  
 │   ├───arcachon_plus_bathymetry  -> Dataset haute résolution  
