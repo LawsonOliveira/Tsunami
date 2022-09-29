@@ -1,8 +1,0 @@
-Try to overfit 
-=> if impossible : bug in the model or method
-=> else : try to accelerate this overfitting ? or next step
-
-Try to get validation <=10^{6}
-- right now with the model and the loop made, it seems impossible. The system stops around a validation of 0.25. 
-=> See the difference with jax NN
-=> Solve issue with bias at the output layer of the model

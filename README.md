@@ -18,18 +18,16 @@ CentraleSupélec : Pôle 005 projet formation à la recherche
 
 # Structure du repository
 ```
-├───doc                           -> Documentation on the project  
+├───doc  
 │   ├───Bibliography              -> Reference articles
 │   └───polynomails_doc           -> Research on polynomials for certain AI methods  
-├───data_set  
-│   ├───arcachon_bathymetry       -> Dataset moyenne résolution  
-│   ├───arcachon_plus_bathymetry  -> Dataset haute résolution  
-│   └───Atlantic_bathymetry       -> Dataset basse résolution  
-├───differentiate                 -> Premiers tests de RN pour la résolution d'équa diff pour benchmark les polynomes  
-├───Display                       -> Affichage des polynomes  
-├───Gradient_descent  
-├───Polynomials                   -> Définition des polynomes A et F (papier de 97)  
-│   └───A_not_used                -> Fonction A non utilisées  
-├───rapports                      -> Rapports en latex des séances  
-└───ScreenShot  
+├───data
+│   ├───arcachon_bathymetry       -> Medium resolution dataset
+│   ├───arcachon_plus_bathymetry  -> High resolution dataset
+│   └───Atlantic_bathymetry       -> Low resolution dataset  
+├───manuscript
+└───src
+    ├───Deprecated                -> Old code using polynomials for boundary conditions
+    ├───Neural_Networks           -> First tests using PINN with Tf, Torch and Jax (time independent)
+    └───PINN_V2                   -> Solving Time dependent PDE with Jax
 ```
