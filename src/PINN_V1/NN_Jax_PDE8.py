@@ -381,7 +381,7 @@ layers = [n_features,30,n_targets]      # Layers structure
 num_batches = 20000
 report_steps = 1
 learning_rate = 0.000320408173
-h_list = jax.numpy.linspace(0.01, 0.1, 50)
+h_list = jax.numpy.linspace(0.05, 0.1, 50)
 load = False
 
 
@@ -465,7 +465,7 @@ fig.savefig("./images/MAE_with_mesh_spacing",bbox_inches = 'tight')
 lin_reg_res = scipy.stats.linregress(jax.numpy.log(h_list), jax.numpy.log(mean_absolute_error_list))
 print('Linear regression results :')
 print(r'with $MAE = C h^{\alpha}$')
-print('C = ', lin_reg_res.intercept)
+print('C = ', numpy.exp(lin_reg_res.intercept))
 print(r'$\alpha$ =', lin_reg_res.slope)
 
 
