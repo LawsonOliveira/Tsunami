@@ -375,14 +375,14 @@ def analytical_solution(inputs):
 # Neural network parameters
 SEED = 351
 n_features, n_targets = 2, 1            # Input and output dimension
-layers = [n_features,30,n_targets]      # Layers structure
+layers = [n_features,50,n_targets]      # Layers structure
 
 # Train parameters
-num_batches = 20000
+num_batches = 50000
 report_steps = 1
 learning_rate = 0.000320408173
-h_list = jax.numpy.linspace(0.01, 0.1, 50)
-options = 1         # 0 -> Start, 1-> Continue the last training, 2 -> Just plot
+h_list = jax.numpy.linspace(0.01, 0.1, 100)
+options = 0        # 0 -> Start, 1-> Continue the last training, 2 -> Just plot
 
 
 
