@@ -39,7 +39,7 @@ import scipy
 import pickle
 
 # Set and verify device
-jax.config.update('jax_platform_name', 'gpu')
+jax.config.update('jax_platform_name', 'cpu')
 jax.config.update("jax_enable_x64", True)
 #jax.config.update('jax_disable_jit', True) # Desactive the compilation for better debugging
 print(jax.lib.xla_bridge.get_backend().platform)
@@ -375,22 +375,17 @@ def analytical_solution(inputs):
 # Neural network parameters
 SEED = 351
 n_features, n_targets = 2, 1            # Input and output dimension
-layers = [n_features,30,n_targets]      # Layers structure
+layers = [n_features,50,n_targets]      # Layers structure
 
 # Train parameters
-num_batches = 20000
+num_batches = 50000
 report_steps = 1
 learning_rate = 0.000320408173
-h_list = jax.numpy.linspace(0.05, 0.1, 50)
-load = False
+h_list = jax.numpy.linspace(0.01, 0.1, 100)
+options = 0        # 0 -> Start, 1-> Continue the last training, 2 -> Just plot
 
 
 
-
-    
-    
-    
-    
 
 ###########################################################################################################################
 ################################################### Initialization ########################################################
@@ -409,11 +404,13 @@ mean_absolute_error_list = []
 
 
 
+
 ########################################################################################################
 ################################################## Training ############################################
 ########################################################################################################
-if not load:
+if options == 0:
     count = 0
+    pickle.dump(h_list,open("./NN_saves/h_list", "wb"))
     for h_param in h_list:
         X =  jax.numpy.arange(0, 1, h_param)
         Y = jax.numpy.arange(0, 1, h_param)
@@ -441,10 +438,47 @@ if not load:
         if count%report_steps==report_steps-1:
             print("Step n°{}: ".format(count+1),' of ',len(h_list))
         count += 1 
-    pickle.dump(mean_absolute_error_list,open("./NN_saves/mean_absolute_error_list", "wb"))
-else:
-    mean_absolute_error_list = pickle.load(open("./NN_saves/mean_absolute_error_list", "rb"))
+        pickle.dump(mean_absolute_error_list,open("./NN_saves/mean_absolute_error_list", "wb"))
 
+if options == 1:
+    mean_absolute_error_list = pickle.load(open("./NN_saves/mean_absolute_error_list", "rb"))
+    h_list = pickle.load(open("./NN_saves/h_list", "rb"))
+    count = len(mean_absolute_error_list)
+    for h_param in  h_list[count:]:
+        X =  jax.numpy.arange(0, 1, h_param)
+        Y = jax.numpy.arange(0, 1, h_param)
+        X, Y = jax.numpy.meshgrid(X, Y)
+        XY_train = jax.numpy.column_stack((X.flatten(),Y.flatten()))
+        error_at_step = jax.numpy.inf
+        for ibatch in range(0, num_batches):
+
+            loss, params, opt_state = solver.train_step(params,opt_state, XY_train)
+            loss_history.append(float(loss))
+
+            if loss<=numpy.min(loss_history): # save if the current state is the best 
+                pickle.dump(params,open("./NN_saves/params", "wb"))
+    
+        # get error
+        params = pickle.load(open("./NN_saves/params", "rb"))
+        n_points = 100000
+        ran_key, batch_key = jax.random.split(key)
+        XY_test = jax.random.uniform(batch_key, shape = (n_points, n_features), minval = 0, maxval = 1)
+        predictions = solver.solution(params,XY_test[:,0],XY_test[:,1])[:,0]
+        true_sol = analytical_solution(XY_test)
+        error_at_step = jax.numpy.mean(abs(predictions-true_sol))
+        mean_absolute_error_list.append(error_at_step)
+
+        if count%report_steps==report_steps-1:
+            print("Step n°{}: ".format(count+1),' of ',len(h_list))
+        count += 1 
+        pickle.dump(mean_absolute_error_list,open("./NN_saves/mean_absolute_error_list", "wb"))
+
+
+
+else:
+    h_list = pickle.load(open("./NN_saves/h_list", "rb"))
+    mean_absolute_error_list = pickle.load(open("./NN_saves/mean_absolute_error_list", "rb"))
+    h_list = h_list[:len(mean_absolute_error_list)]
 
 
 
@@ -457,6 +491,7 @@ fig, ax = matplotlib.pyplot.subplots(2)
 ax[0].plot(h_list, mean_absolute_error_list)
 ax[0].set_title('MAE with respect to point spacing')
 ax[0].set(xlabel='h', ylabel='MAE')
+
 ax[1].loglog(h_list, mean_absolute_error_list)
 ax[1].set_title('MAE with respect to point spacing, loglog graph')
 ax[1].set(xlabel='h', ylabel='MAE')
@@ -468,36 +503,3 @@ print(r'with $MAE = C h^{\alpha}$')
 print('C = ', numpy.exp(lin_reg_res.intercept))
 print(r'$\alpha$ =', lin_reg_res.slope)
 
-
-
-
-###########################################################################################################################
-################################################### Uniform Mesh performance ##############################################
-###########################################################################################################################
-
-"""
-h_list = jax.numpy.linspace(0.01, 0.1)
-mean_absolute_error_list = jax.numpy.array([])
-for h_param in h_list:
-    x =  jax.numpy.arange(0, 1, h_param)
-    y = jax.numpy.arange(0, 1, h_param)
-    xx, yy = jax.numpy.meshgrid(x, y)
-
-    # Training du PINN
-    
-    mean_absolute_error_list.append(jax.numpy.mean(error))
-
-fig, ax = matplotlib.pyplot.subplot(2)
-ax[0].plot(h_list, mean_absolute_error_list)
-ax[0].set_title('MAE with respect to point spacing')
-ax[0].set(xlabel='h', ylabel='MAE')
-ax[1].loglog(h_list, mean_absolute_error_list)
-ax[1].set_title('MAE with respect to point spacing, loglog graph')
-ax[1].set(xlabel='h', ylabel='MAE')
-
-lin_reg_res = scipy.stats.linregress(jax.numpy.log(h_list), jax.numpy.log(mean_absolute_error_list))
-print('Linear regression results :')
-print(r'with $MAE = C h^{\alpha}$')
-print('C = ', lin_reg_res.intercept)
-print(r'$\alpha$ =', lin_reg_res.slope)
-"""
