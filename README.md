@@ -32,15 +32,11 @@ $R(\psi, \Delta \psi, Hess \ \psi, . . . )(x_1,x_2,...,x_n,t) = f(x_1,x_2,...,x_
 # First approach - Time independent <a name="first_approach"></a>
 In that case the solution is constructed such that:
 
-$
-\psi=F \cdot NN+A
-$
+$\psi=F \cdot NN+A$
 
 where NN is the neural output, F is any function that is non-zero inside the domain and zero at the boundary and A is a function satisfying the boundary conditions. Thus, the loss function is defined using the L2 norm and the residual of the PDE:
 
-$
-L = {\lVert Q(\psi, \Delta \psi, Hess \ \psi, . . . ) \rVert}_2
-$ 
+$L = {\lVert Q(\psi, \Delta \psi, Hess \ \psi, . . . ) \rVert}_2$ 
 
 ## Problem 6 in the paper Lagaris 1998
 
@@ -55,20 +51,15 @@ PINN solution             |  Absolut error
 # Second approach - Time dependent <a name="second_approach"></a>
 In that case the solution is the output of the neural network and the loss function is defined as:
 
-$
-L = L_{in}+L_{bound}+L_{initial}
-$ 
+$L = L_{in}+L_{bound}+L_{initial}$ 
 
 Where
 
-$
-L_{in} = \frac{1}{N_{in}}{\lVert Q(\psi, \Delta \psi, Hess \ \psi, . . . ) \rVert}_1$, inside $\partial \Omega$
+$L_{in} = \frac{1}{N_{in}}{\lVert Q(\psi, \Delta \psi, Hess \ \psi, . . . ) \rVert}_1$, inside $\partial \Omega$
 
-$
-L_{bound} = \frac{1}{N_{bound}}{\lVert Q(\psi, \Delta \psi, Hess \ \psi, . . . ) \rVert}_1$, in $\partial \Omega$
+$L_{bound} = \frac{1}{N_{bound}}{\lVert Q(\psi, \Delta \psi, Hess \ \psi, . . . ) \rVert}_1$, in $\partial \Omega$
 
-$
-L_{initial} = \frac{1}{N_{initial}}{\lVert Q(\psi, \Delta \psi, Hess \ \psi, . . . ) \rVert}_1$, in $t=0$
+$L_{initial} = \frac{1}{N_{initial}}{\lVert Q(\psi, \Delta \psi, Hess \ \psi, . . . ) \rVert}_1$, in $t=0$
 
 ## Taylor Green Vortex
 
