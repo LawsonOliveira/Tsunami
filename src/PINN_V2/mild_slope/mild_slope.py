@@ -88,7 +88,8 @@ class PDE_operators1d:
         @functools.partial(jax.jit)    
         def action(params,x,t):         # function to vectorize the laplacian
             u_xx = jax.jacfwd(jax.jacfwd(fun, 1), 1)(params, x, t)
-            return u_xx
+            u_yy = jax.jacfwd(jax.jacfwd(fun, 2), 2)(params, x, t)
+            return u_xx + u_yy
 
         vec_fun = jax.vmap(action, in_axes = (None, 0, 0))
         lapu = vec_fun(params, inputs[:,0], inputs[:,1])
@@ -212,7 +213,7 @@ class PINN:
         params : list of parameters[[w1,b1],...,[wn,bn]]
             -- weights and bias
         bound : jax.numpy.ndarray[[batch_size, batch_size]]
-            -- (x,y,t) points from boundary
+            -- (x,y) points from boundary
         Returns
         -------
         loss_bound : a float.64
@@ -327,8 +328,8 @@ options = 1 # If 1 we start a new training
 
 # Data parameters
 N_inside = 64                # number of points inside the mesh
-N_bound = 16                   # number of points at the boundary
-domain_bounds = jax.numpy.column_stack(([-1,-1], [1,1]))      # minimal and maximal value of each axis (x,t)
+N_bound = 32                   # number of points at the boundary
+domain_bounds = jax.numpy.vstack(([0,11], [0,25]))      # minimal and maximal value of each axis (x,y)
 
 
 
@@ -353,14 +354,47 @@ opt_state = optimizer.init(params)
 #################################################### Data ##############################################
 ########################################################################################################
 #### Boundary data
-X_bound = jax.numpy.array(numpy.concatenate((domain_bounds[0,0]*numpy.ones(N_bound//2), domain_bounds[0,1]*numpy.ones(N_bound//2))))
+## Free boundary top/bottom
+X, Y = jax.numpy.meshgrid(jax.numpy.linspace(domain_bounds[0,0],domain_bounds[0,1],N_bound//4),jax.numpy.linspace(domain_bounds[1,0],domain_bounds[1,1],2))
+X, Y = X.flatten(), Y.flatten()
+top_bottom = jax.numpy.column_stack((X,Y))
+
+## Free boundary right
+X, Y = jax.numpy.meshgrid(jax.numpy.array(domain_bounds[0,1]),jax.numpy.linspace(domain_bounds[1,0],domain_bounds[1,1],N_bound//4))
+X, Y = X.flatten(), Y.flatten()
+right = jax.numpy.column_stack((X,Y))
+
+## Breakwater left
+X, Y = jax.numpy.meshgrid(jax.numpy.array(domain_bounds[0,0]),jax.numpy.concatenate(jax.numpy.linspace(0,10,N_bound//10), jax.numpy.linspace(15,25,N_bound//10)))
+X, Y = X.flatten(), Y.flatten()
+XY_left = jax.numpy.column_stack((X,Y))
+
+## Breakwater opening
+X, Y = jax.numpy.meshgrid(jax.numpy.array(domain_bounds[0,0]),jax.numpy.linspace(10,15,N_bound//20))
+X, Y = X.flatten(), Y.flatten()
+XY_left_open = jax.numpy.column_stack((X,Y))
+
+XY_bound_absorbing = jax.numpy.concatenate((right, top_bottom))
 
 #### Inside data
-ran_key, batch_key = jax.random.split(jax.random.PRNGKey(1))
-X_inside = jax.random.uniform(batch_key, shape=(N_inside, ), minval = domain_bounds[0,0], maxval = domain_bounds[0,1])
+ran_key, batch_key = jax.random.split(jax.random.PRNGKey(0))
+XY_inside = jax.random.uniform(batch_key, shape=(N_inside, n_features-1), minval=domain_bounds[:2,0], maxval=domain_bounds[:2,1])
 
 
 
+fig, ax = matplotlib.pyplot.subplots()
+fig.set_size_inches(18.5, 10.5)
+title = ax.set_title('Spatial domain - 2d')
+graph = matplotlib.pyplot.scatter(XY_bound_absorbing[:,0],XY_bound_absorbing[:,1],color='red',s=5)
+graph = matplotlib.pyplot.scatter(XY_left_open[:,0],XY_left_open[:,1],color='green',s=5)
+graph = matplotlib.pyplot.scatter(XY_left[:,0],XY_left[:,1],color='black',s=5)
+graph = matplotlib.pyplot.scatter(XY_inside[:,0],XY_inside[:,1], color='gray', s=5)
+__ = ax.legend(['Reflective','Flow-in','Flow-out','Inside'])
+print('Number of points on the boundary:', XY_bound_absorbing.shape[0]+XY_left_open.shape[0]+XY_left.shape[0])
+print('Number of points inside the domain:', XY_inside.shape[0])
+
+matplotlib.pyplot.savefig('./images/domain2d.png', facecolor='white', bbox_inches = 'tight')
+matplotlib.pyplot.show()  
 
 ########################################################################################################
 ############################################ Train #####################################################
@@ -373,10 +407,7 @@ if options == 1:            # begin a new training
 
     # Main loop to solve the PDE
     for ibatch in range(maximum_num_epochs+1):
-        XT_bound = jax.numpy.column_stack((X_bound,numpy.random.uniform(domain_bounds[1,0],domain_bounds[1,1],size=(N_bound,))))
-        XT_inside = jax.numpy.column_stack((X_inside,numpy.random.uniform(domain_bounds[1,0],domain_bounds[1,1],size=(N_inside,))))
-
-        loss, params, opt_state, losses = solver.train_step(params,opt_state, XT_inside, XT_bound)
+        loss, params, opt_state, losses = solver.train_step(params,opt_state, XY_inside, XY_bound)
 
         loss_i.append(float(losses[0]))
         loss_b.append(float(losses[1]))
@@ -403,10 +434,7 @@ elif options == 2:   # continue the last training
 
     # Main loop to solve the PDE
     for ibatch in range(iepoch, maximum_num_epochs+1):
-        XT_bound = jax.numpy.column_stack((X_bound,numpy.random.uniform(domain_bounds[1,0],domain_bounds[1,1],size=(N_bound,))))
-        XT_inside = jax.numpy.column_stack((X_inside,numpy.random.uniform(domain_bounds[1,0],domain_bounds[1,1],size=(N_inside,))))
-
-        loss, params, opt_state, losses = solver.train_step(params,opt_state, XT_inside, XT_bound)
+        loss, params, opt_state, losses = solver.train_step(params,opt_state, XY_inside, XY_bound)
 
         loss_i.append(float(losses[0]))
         loss_b.append(float(losses[1]))
