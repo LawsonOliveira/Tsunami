@@ -1,4 +1,4 @@
-# Research project - Tsunami
+# Research project
 
 # Solving the propagation equations of a tsunami using neural networks.
 
@@ -55,7 +55,7 @@ $L = L_{in}+L_{bound}+L_{initial}$
 
 Where
 
-$L_{in} = \frac{1}{N_{in}}{\lVert Q(\psi, \Delta \psi, Hess \ \psi, . . . ) \rVert}_1$, inside $\partial \Omega$
+$L_{in} = \frac{1}{N_{in}}{\lVert Q(\psi, \Delta \psi, Hess \ \psi, . . . ) \rVert}_1$, inside $\Omega$
 
 $L_{bound} = \frac{1}{N_{bound}}{\lVert Q(\psi, \Delta \psi, Hess \ \psi, . . . ) \rVert}_1$, in $\partial \Omega$
 
@@ -73,22 +73,6 @@ PINN solution 2d            |  PINN solution 3d
 ![Alt text](./Images_readme/mild_slope_animation.gif?raw=true "Title")  |  ![Alt text](./Images_readme/mild_slope_animation3d.gif?raw=true "Title") 
 
 # Third approach (In progress) <a name="third_approach"></a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # Repository structure  <a name="repo_structure"></a>
 ```
