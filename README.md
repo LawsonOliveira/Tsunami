@@ -55,11 +55,11 @@ $L = L_{in}+L_{bound}+L_{initial}$
 
 Where
 
-$L_{in} = \frac{1}{N_{in}}{\lVert Q(\psi, \Delta \psi, Hess \ \psi, . . . ) \rVert}_1$, inside $\Omega$
+$L_{in} = \frac{1}{N_{in}}{\lVert Q(\psi, \Delta \psi, Hess \ \psi, . . . ) \rVert}^{2}_2$, inside $\Omega$
 
-$L_{bound} = \frac{1}{N_{bound}}{\lVert Q(\psi, \Delta \psi, Hess \ \psi, . . . ) \rVert}_1$, in $\partial \Omega$
+$L_{bound} = \frac{1}{N_{bound}}{\lVert Q(\psi, \Delta \psi, Hess \ \psi, . . . ) \rVert}^{2}_2$, in $\partial \Omega$
 
-$L_{initial} = \frac{1}{N_{initial}}{\lVert Q(\psi, \Delta \psi, Hess \ \psi, . . . ) \rVert}_1$, in $t=0$
+$L_{initial} = \frac{1}{N_{initial}}{\lVert Q(\psi, \Delta \psi, Hess \ \psi, . . . ) \rVert}^{2}_2$, in $t=0$
 
 ## Taylor Green Vortex
 
@@ -94,4 +94,4 @@ PINN solution 2d            |  PINN solution 3d
 
 # Requirements  <a name="requirements"></a>
 - Jax, Optax, Flax, TensorFlow, PyTorch
-- NumPy, Pandas, Pickle, Matplotlib, PyVista
+- PyVista, VTK, Pandas, Pickle, Matplotlib
