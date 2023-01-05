@@ -4,9 +4,27 @@ import matplotlib.pyplot as plt
 ######################################## 2D RENDER #################################################
 
 def dist(x1,y1,x2,y2):
+    """
+    returns the distance between the two points (x1,y1) and (x2,y1)
+        Input:
+            x1 : real
+            y1 : real
+            x2 : real
+            y2 : real
+    """
     return np.sqrt((x2-x1)**2+(y2-y1)**2)
 
 def linseg(x,y,x1,y1,x2,y2):
+    """
+    compute the distance function, evaluated in (x,y) to the segment defined by (x1,y1), (x2,y2)
+        Input:
+            x : real
+            y : real
+            x1 : real
+            y1 : real
+            x2 : real
+            y2 : real
+    """
     L = dist(x1,y1,x2,y2)
     xc = (x1+x2)/2.
     yc = (y1+y2)/2.
@@ -17,6 +35,13 @@ def linseg(x,y,x1,y1,x2,y2):
     return phi
 
 def phi(x,y,segments):
+    """
+    compute the distance function evaluated in (x,y) to the set of segments listed in segments
+        Input:
+            x : real
+            y : real
+            segments : list of segments (x1,y1,x2,y2)
+    """
     m = 1.
     R = 0.
     for i in range(len(segments[:,0])):
@@ -26,6 +51,11 @@ def phi(x,y,segments):
     return R
 
 def segment_gen(points) :
+    """
+    returns a list of segments (x1,y1,x2,y2) joining the points given
+    Input:
+        points : a list of points (x1,y1)
+    """
     segments=[]
     Xdraw=[]
     Ydraw=[]

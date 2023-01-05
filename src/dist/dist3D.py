@@ -3,6 +3,14 @@ import sympy as sm
 from dist import dist,linseg,phi,segment_gen
 
 def plan(A,B,C) :
+    """
+    Returns f(x,y,z), a C1 function whose kernel is the plane defined by A, B, C.
+    Also returns (U,V) two vectors in this plane.
+        Input:
+            A : a 3-dimensional array
+            B : a 3-dimensional array
+            C : a 3-dimensional array
+    """
     x, y, z = sm.symbols("x, y, z")
     X=np.array([x,y,z])
     AB=B-A
@@ -16,20 +24,48 @@ def plan(A,B,C) :
     return (f,U,V)
 
 def dist(A,B) :
+    """
+    Compute the norm L1 of the vectore B-A
+        Input:
+            A : a 3-dimensional array
+            B : a 3-dimensional array
+    """
     return np.linalg.norm(B-A)
 
 def eval_function(func, xi, yi, zi):
+    """
+    returns func(xi,yi,zi)
+        Input:
+            func : a scimpy function
+            xi : the x-coordinate (real)
+            yi : the y-coordinate (real)
+            zi : the y-coordinate (real)
+    """
     x, y, z = sm.symbols("x, y, z")
     temp = func.evalf(subs={x: xi, y: yi, z:zi})
     return temp
 
 def get_xy(A,U,V,X) :
+    """
+    Returns the coordinates (x,y) on the plane (A,U,V) of the projection of the point X on the plane (A,U,V) 
+        Input:
+            A : a 3-dimensional array (a point in the space)
+            U : a 3-dimensional array (a vector)
+            V : a 3-dimensional array (a vector)
+            X : a 3-dimensional array (a point in the space)
+    """
     AX = X-A
     x=np.dot(AX,U)
     y=np.dot(AX,V)
     return (x,y)
 
 def phi3D(f,t) :
+    """
+    compute the funcion distance with the value of f(X) and t(X)
+        Input :
+            f : the value of f(X) (real)
+            t : the value of t(X) (real)
+    """
     f=float(f)
     t=float(t)
     varphi = np.sqrt(t**2+f**4)
