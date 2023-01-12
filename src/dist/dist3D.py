@@ -91,9 +91,11 @@ def phi3D(f,t) :
     varphi = np.sqrt(t**2+f**4)
     return np.sqrt(f**2 + (1/4.)*(varphi - t)**2)
 
-def dist(triangles,X) :
+def finaldist(triangles,X) :
     D=0
     for i in range(len(triangles)) :
+        if i%1000 == 0 :
+            print('progress :',i,'/',len(triangles) )
         A,B,C = triangles[i]
         f,U,V = plan(A,B,C)
         xa,ya =get_xy(A,U,V,A)
@@ -195,25 +197,25 @@ z = np.random.uniform(min,max,n)
 
 ######### VISUALISER LA FONCTION DIST 
 
-c=[]
+# c=[]
 
-for i in range(n) :
-    if (i%100==0) :
-        print('progress : ',i,'/',n)
-    c.append(dist(triangles,np.array([x[i],y[i],z[i]])))
+# for i in range(n) :
+#     if (i%100==0) :
+#         print('progress : ',i,'/',n)
+#     c.append(finaldist(triangles,np.array([x[i],y[i],z[i]])))
 
 
 
-c=np.array(c)
-img = ax.scatter(x, y, z, c=c*100, cmap=plt.hot())
+# c=np.array(c)
+# img = ax.scatter(x, y, z, c=c*100, cmap=plt.hot())
 
-ax.scatter(A[0], A[1], A[2], c='blue', marker='*', s=200)
-ax.scatter(B[0], B[1], B[2], c='blue', marker='*', s=200)
-ax.scatter(C[0], C[1], C[2], c='blue', marker='*', s=200)
-ax.scatter(D[0], D[1], D[2], c='r', marker='*', s=200)
+# ax.scatter(A[0], A[1], A[2], c='blue', marker='*', s=200)
+# ax.scatter(B[0], B[1], B[2], c='blue', marker='*', s=200)
+# ax.scatter(C[0], C[1], C[2], c='blue', marker='*', s=200)
+# ax.scatter(D[0], D[1], D[2], c='r', marker='*', s=200)
 
-ax.plot([A[0],B[0],C[0],A[0]],[A[1],B[1],C[1],A[1]],[A[2],B[2],C[2],A[2]])
+# ax.plot([A[0],B[0],C[0],A[0]],[A[1],B[1],C[1],A[1]],[A[2],B[2],C[2],A[2]])
 
-ax.plot([D[0],B[0],C[0],D[0]],[D[1],B[1],C[1],D[1]],[D[2],B[2],C[2],D[2]],color='r')
-fig.colorbar(img)
-plt.show()
+# ax.plot([D[0],B[0],C[0],D[0]],[D[1],B[1],C[1],D[1]],[D[2],B[2],C[2],D[2]],color='r')
+# fig.colorbar(img)
+# plt.show()
