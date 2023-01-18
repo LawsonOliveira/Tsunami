@@ -112,14 +112,14 @@ def plot_2d_colormesh(params, function, domain_bounds, img_path, title, npoints=
 
 
 
-def plot_squared_error(params, approximated_solution, analytical, domain_bounds, img_path, title, npoints=200):
+def plot_squared_error(params, approximated_solution, analytical, domain_bounds, img_path, title, npoints=200, color = 'rainbow'):
 
     values = numpy.zeros((npoints, npoints))
 
     x, y = numpy.meshgrid(numpy.linspace(domain_bounds[0,0], domain_bounds[0,1], npoints), numpy.linspace(domain_bounds[1,0], domain_bounds[1,1], npoints))
 
     fig, ax = matplotlib.pyplot.subplots()
-    fig.set_size_inches(18, 8.0)
+    fig.set_size_inches(18, 7.2)
     title = ax.set_title(title)
 
     for i in range(npoints):
@@ -128,7 +128,7 @@ def plot_squared_error(params, approximated_solution, analytical, domain_bounds,
         imag_squared_error = (jax.numpy.imag(functools.partial(approximated_solution, params)(x[i,:], y[i,:])) - jax.numpy.imag(functools.partial(analytical, params)(x[i,:], y[i,:])))**2
         values[i,:] = real_squared_error + imag_squared_error
         
-    graph = matplotlib.pyplot.pcolormesh(x, y, values, cmap = 'rainbow')
+    graph = matplotlib.pyplot.pcolormesh(x, y, values, cmap = color)
     matplotlib.pyplot.colorbar()
     matplotlib.pyplot.savefig(img_path, facecolor = 'white', bbox_inches = 'tight')
     matplotlib.pyplot.show()  

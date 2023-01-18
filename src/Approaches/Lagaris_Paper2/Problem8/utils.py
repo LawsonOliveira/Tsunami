@@ -80,13 +80,13 @@ def plot_loss_history(losses, path, legend = ['loss_sum','residual','boundary'])
     return 
 
 
-def plot_2d_colormesh(params, domain_bound, function, frames, img_path, title_name, color='rainbow', npoints = 300):
+def plot_2d_colormesh(params, domain_bound, function, img_path, title_name, color='rainbow', npoints = 300):
 
     x, y = numpy.meshgrid(numpy.linspace(domain_bound[0,0], domain_bound[0,1], npoints),numpy.linspace(domain_bound[1,0], domain_bound[1,1], npoints))
     values = numpy.zeros((npoints, npoints))
 
     fig, ax = matplotlib.pyplot.subplots(facecolor='white')
-    fig.set_size_inches(18, 8.0)
+    fig.set_size_inches(18, 7.2)
     fig.tight_layout(h_pad=3)
     title = ax.set_title(title_name)
 
@@ -95,6 +95,7 @@ def plot_2d_colormesh(params, domain_bound, function, frames, img_path, title_na
 
     graph = matplotlib.pyplot.pcolormesh(x, y, values, cmap = color)
     matplotlib.pyplot.colorbar()
+    matplotlib.pyplot.savefig(img_path, facecolor='white', bbox_inches = 'tight')
     matplotlib.pyplot.show()  
-    
+
     return numpy.mean(values)
