@@ -19,8 +19,7 @@ domain_bounds = np.column_stack(([np.min(data_ocean[:,0]),np.min(data_ocean[:,1]
 delta = set(map(tuple, data_frontier))
 data_ocean = np.array([x for x in data_ocean if tuple(x) not in delta])
 
-'''ATTENTION ATTENTION ATTENTION ATTENTION ATTENTION ATTENTION ATTENTION ATTENTION'''
-'''Corrigir, pois tem que preservar as proporções de largura e comprimento iniciais'''
+
 # Normalize inside domain
 min_value, max_value = domain_bounds[:,0], domain_bounds[:,1]
 XYZ_shoal = (data_ocean-min_value)/(max_value-min_value)        # Normalize
@@ -28,6 +27,7 @@ XYZ_shoal = np.column_stack((XYZ_shoal[:,0], XYZ_shoal[:,1], XYZ_shoal[:,2]))
 np.savetxt("./normalized_domain.csv", XYZ_shoal, delimiter=",")
 
 
+print(f'scale:{max_value-min_value}')
 
 # Smooth boundary
 def smooth_boundary(points,k_neigh=7):
@@ -61,9 +61,8 @@ def smooth_boundary(points,k_neigh=7):
 
 xy_right = smooth_boundary(data_frontier, k_neigh=50)
 
-'''ATTENTION ATTENTION ATTENTION ATTENTION ATTENTION ATTENTION ATTENTION ATTENTION'''
-'''Corrigir, pois tem que preservar as proporções de largura e comprimento iniciais'''
+
 # Normalize boundary
-min_value, max_value = domain_bounds[:,0], domain_bounds[:,1]
+#min_value, max_value = domain_bounds[:,0], domain_bounds[:,1]
 xy_right = (xy_right - min_value)/(max_value - min_value)
 np.savetxt("./normalized_frontier.csv", xy_right, delimiter=",")
