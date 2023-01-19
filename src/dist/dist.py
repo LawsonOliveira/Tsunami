@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
+from tqdm import tqdm
 ######################################## 2D RENDER #################################################
 
 def dist(x1,y1,x2,y2):
@@ -44,7 +44,7 @@ def phi(x,y,segments):
     """
     m = 1.
     R = 0.
-    for i in range(len(segments[:,0])):
+    for i in tqdm(range(len(segments[:,0]))):
         phi = linseg(x,y,segments[i,0],segments[i,1],segments[i,2],segments[i,3])
         R = R + 1./phi**m
     R = 1/R**(1/m)
@@ -67,18 +67,36 @@ def segment_gen(points) :
     Ydraw.append(points[0][1])
     return np.array(segments),Xdraw,Ydraw
 
+def segment_gen2(points) :
+    """
+    returns a list of segments [A,B] joining the points
+    Input:
+        points : a list of points A (2D array)
+    """
+    segments=[]
+    Xdraw=[]
+    Ydraw=[]
+    for i in range(points.shape[0]) :
+        segments.append(np.concatenate((points[i-1],points[i])))
+        Xdraw.append(points[i][0])
+        Ydraw.append(points[i][1])
+    Xdraw.append(points[0][0])
+    Ydraw.append(points[0][1])
+    return np.array(segments),Xdraw,Ydraw
+
+
 ######################################## 2D RENDER ##################################################
 import random as rd
 
 
-# chose dimention of the window :
+# # chose dimention of the window :
 
-# xmin=-1
-# xmax=3
-# ymin=-1
-# ymax=3
+# xmin=-1.5
+# xmax=3.5
+# ymin=-1.5
+# ymax=3.5
 
-# # choose points :
+# # # choose points :
 
 # a=[0,0]
 # b=[-1,2]
@@ -87,7 +105,7 @@ import random as rd
 # e=[1.5,1]
 # f=[0.5,-1]
 
-# points=[a,b,c,d,e,f]
+# points=np.array([a,b,c,d,e,f])
 
 # # different segments & the distance function :
 
@@ -95,7 +113,7 @@ import random as rd
 # y=np.linspace(ymin,ymax)[::-1]
 # X,Y = np.meshgrid(x, y)
 
-# segments,Xdraw,Ydraw = segment_gen(points)
+# segments,Xdraw,Ydraw = segment_gen2(points)
 # plt.plot(Xdraw,Ydraw,linewidth=3)
 # Z = phi(X,Y,segments)
 
