@@ -48,14 +48,20 @@ def plot_normals_2d(points, normals, img_path):
     
     return 
 
-def plot_2d_domain(inside, boundaries, img_path):
+def plot_2d_domain(inside, boundaries, img_path, colors = None, legend = None):
 
     fig, ax = matplotlib.pyplot.subplots()
     fig.set_size_inches(14.0, 14.0)
     ax.set_title('Spatial domain - 2d')
-    matplotlib.pyplot.scatter(boundaries[:,0], boundaries[:,1], color='red', s=1)
-    matplotlib.pyplot.scatter(inside[:,0], inside[:,1], color='green', s=0.01)
-    __ = ax.legend(['Boundary', 'Inside'])
+    if isinstance(boundaries, list):
+        for i in range(len(boundaries)):
+            matplotlib.pyplot.scatter(boundaries[i][:,0], boundaries[i][:,1], color=colors[i], s=1)
+        matplotlib.pyplot.scatter(inside[:,0], inside[:,1], color='green', s=0.01)
+        __ = ax.legend(legend)
+    else:
+        matplotlib.pyplot.scatter(boundaries[:,0], boundaries[:,1], color='red', s=1)
+        matplotlib.pyplot.scatter(inside[:,0], inside[:,1], color='green', s=0.01)
+        __ = ax.legend(['Boundary', 'Inside'])
     matplotlib.pyplot.savefig(img_path, facecolor='white', bbox_inches = 'tight')
     matplotlib.pyplot.show()  
 
