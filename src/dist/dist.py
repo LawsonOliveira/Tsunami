@@ -89,41 +89,42 @@ def segment_gen2(points) :
 import random as rd
 
 
-# # chose dimention of the window :
+# chose dimention of the window :
 
-# xmin=-1.5
-# xmax=3.5
-# ymin=-1.5
-# ymax=3.5
+xmin=-1
+xmax=1
+ymin=-0.5
+ymax=1.5
 
-# # # choose points :
+# # choose points :
 
-# a=[0,0]
-# b=[-1,2]
-# c=[2,3]
-# d=[2,0]
-# e=[1.5,1]
-# f=[0.5,-1]
+a=[0,0]
+b=[-1,2]
+c=[2,3]
+d=[2,0]
+e=[1.5,1]
+f=[0.5,-1]
 
-# points=np.array([a,b,c,d,e,f])
+points=np.array([a,[0,1]])
 
-# # different segments & the distance function :
+# different segments & the distance function :
 
 # x=np.linspace(xmin,xmax)
 # y=np.linspace(ymin,ymax)[::-1]
 # X,Y = np.meshgrid(x, y)
 
 # segments,Xdraw,Ydraw = segment_gen2(points)
-# plt.plot(Xdraw,Ydraw,linewidth=3)
+# plt.plot(Xdraw,Ydraw,'r',linewidth=3)
 # Z = phi(X,Y,segments)
 
 
 # # drawing the function :
 
 # im = plt.imshow(Z,interpolation='none', extent=[xmin,xmax,ymin,ymax]) 
-# levels = np.arange(0,1,0.1)
-# cset = plt.contour(X,Y,Z,levels=levels)
-# plt.colorbar(im)
+# levels = np.arange(0,1.2,0.07)
+# cset = plt.contourf(X,Y,Z,levels=levels,cmap='hot')
+# cset2 = plt.contour(X,Y,Z,levels=levels,colors='k')
+# plt.colorbar(cset)
 
 # plt.show()
 
