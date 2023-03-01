@@ -23,11 +23,14 @@ CentraleSupélec : Pôle 005 projet formation à la recherche
 │   ├───arcachon_bathymetry       -> Medium resolution dataset
 │   ├───arcachon_plus_bathymetry  -> High resolution dataset
 │   └───Atlantic_bathymetry       -> Low resolution dataset  
-├───manuscript
+├───manuscript                    -> Reports
 ├───processed_data
-│   └───Mesh                      -> Mesh for Arcachon basin
+│   ├───Mesh                      -> Mesh for Arcachon basin
+│   └───Boundary                  -> Mesh for the boundary
 └───src
+    ├───Approaches                -> Tests based on Lagaris' studies
     ├───Deprecated                -> Old code using polynomials for boundary conditions
     ├───Neural_Networks           -> First tests using PINN with Tf, Torch and Jax (time independent)
+    ├───dist                      -> Distance functions
     └───Simulations               -> Solving PDEs with Jax
 ```

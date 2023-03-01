@@ -2,9 +2,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from pathlib import Path
+from dist import phi
+
+
 mainpath = Path(__file__).parents[0]
-Z = np.load(mainpath/'arcachon_points.npy')
-print(Z.shape)
+Z = np.load(mainpath/'saves/arcachon_points.npy')
+seg=np.load(mainpath/'saves/arcachon_segment.npy')
 
 mainpath = Path(__file__).parents[2]
 data = pd.read_csv(mainpath/"processed_data/normalized_domain.csv").to_numpy()
@@ -14,12 +17,20 @@ long = data[:,1]
 
 # drawing the function :
 
-# levels = np.arange(0,0.005,0.0003)
-# cset = plt.tricontourf(lat,long,Z,levels=levels,cmap='hot')
-# cset2 = plt.tricontour(lat,long,Z,levels=levels,colors='k')
-# plt.colorbar(cset)
+n=500
 
-# plt.show()
+x=np.linspace(0,1.4,n)
+y=np.linspace(0,1,n)[::-1]
+X,Y = np.meshgrid(x, y)
+
+Z = phi(X,Y,seg)
+
+levels = np.arange(0,0.01,0.0008)
+cset = plt.contourf(X,Y,Z,levels=levels,cmap='hot')
+cset2 = plt.contour(X,Y,Z,levels=levels,colors='k',linewidths=0.5)
+plt.colorbar(cset)
+
+plt.show()
 
 
 # drawing the function 2 :
@@ -33,16 +44,16 @@ long = data[:,1]
 
 # 3D render :
 
-Zmax = 0.005
+# Zmax = 0.005
 
-index = []
+# index = []
 
-for i in range(Z.shape[0]) :
-    if Z[i] < Zmax :
-        index.append(i)
+# for i in range(Z.shape[0]) :
+#     if Z[i] < Zmax :
+#         index.append(i)
 
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
-ax.scatter(lat[index],long[index],Z[index],c=Z[index], cmap=plt.hot())
+# fig = plt.figure()
+# ax = fig.add_subplot(111, projection='3d')
+# ax.scatter(lat[index],long[index],Z[index],c=Z[index], cmap=plt.hot())
 
-plt.show()
+# plt.show()
