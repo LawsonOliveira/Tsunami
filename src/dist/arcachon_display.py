@@ -27,7 +27,7 @@ Z = phi(X,Y,seg)
 
 levels = np.arange(0,0.01,0.0008)
 cset = plt.contourf(X,Y,Z,levels=levels,cmap='hot')
-cset2 = plt.contour(X,Y,Z,levels=levels,colors='k')
+cset2 = plt.contour(X,Y,Z,levels=levels,colors='k',linewidths=0.5)
 plt.colorbar(cset)
 
 plt.show()
