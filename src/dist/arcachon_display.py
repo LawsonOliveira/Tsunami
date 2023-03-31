@@ -6,8 +6,8 @@ from dist import phi
 
 
 mainpath = Path(__file__).parents[0]
-Z = np.load(mainpath/'saves/arcachon_points.npy')
-seg=np.load(mainpath/'saves/arcachon_segment.npy')
+# Z = np.load(mainpath/'saves/arcachon_points.npy')
+seg=np.load(mainpath/'saves/arcachon_segment_TEMP.npy')
 
 mainpath = Path(__file__).parents[2]
 data = pd.read_csv(mainpath/"processed_data/normalized_domain.csv").to_numpy()
