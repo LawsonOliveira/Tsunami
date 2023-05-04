@@ -41,8 +41,18 @@ points3=[[1,1],[0.8,1],[0.8,0.8],[1,0.8]]
 
 polygons=[points1,points2,points3]
 
+
+## noise generation :
+
+# seed number :
+seed=0
+
+# maximum deviation from value :
+epsilon=0.1
+
 #################################################################################################
 
+np.random.seed(seed)
 data=SE([xmin,ymin,xmax,ymax])
 x=np.linspace(xmin,xmax,int(np.sqrt(n)))
 y=np.linspace(ymin,ymax,int(np.sqrt(n)))
@@ -70,6 +80,12 @@ for i in range(len(polygons)) :
     X=X[inside]
     Y=Y[inside]
     Z=Z[inside]
+
+X=X.flatten()
+Y=Y.flatten()
+Z=Z.flatten()
+
+Z+=np.random.rand(Z.shape[0])*epsilon
 
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
