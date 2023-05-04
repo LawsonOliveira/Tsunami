@@ -232,7 +232,7 @@ def orga_final_bis(X,Y,margin,marginseg) :
 
     return XF,YF,DIST
 
-def cleaning_points(points,X,Y,margin) :
+def cleaning_points(points,X,Y,margin,marginseg) :
     Xs=[]
     Ys=[]
     Xd=points[:,0]
@@ -244,6 +244,11 @@ def cleaning_points(points,X,Y,margin) :
             Vd=np.array([Xd[i],Yd[i]])
             if np.linalg.norm(Vd-V) < margin :
                 Inside=True
+        for j in range(Xd.shape[0]) :
+            Vdj=np.array([Xd[j],Yd[j]])
+            Vdi=np.array([Xd[i],Yd[i]])
+            if np.linalg.norm(Vdi-Vdj) < marginseg and i!=j :
+                Inside=False
         if Inside :
             Xs.append(Xd[i])
             Ys.append(Yd[i])
@@ -269,37 +274,44 @@ C=[0.9,0.8]
 D=[0.9,0.75]
 points3=np.array([A,B,C,D])
 
-A=[0.15,0.75]
-B=[0.15,0.8]
-C=[0.1,0.8]
-D=[0.1,0.75]
-points4=np.array([A,B,C,D])
+# A=[0.15,0.75]
+# B=[0.15,0.8]
+# C=[0.1,0.8]
+# D=[0.1,0.75]
+# points4=np.array([A,B,C,D])
+
+A=[0,-0.005]
+B=[0.5,-0.005]
+C=[0.5,0.005]
+D=[0,0.005]
+points5=np.array([A,B,C,D])
 
 N_point=500
 print('generating points...')
 X1,Y1=gen_test(points1,N_point)
 X2,Y2=gen_test(points2,N_point)
 X3,Y3=gen_test(points3,N_point)
-X4,Y4=gen_test(points4,N_point)
-X=np.concatenate((X1,X2,X3,X4))
+# X4,Y4=gen_test(points4,N_point)
+X5,Y5=gen_test(points5,N_point)
+X=np.concatenate((X1,X2,X3,X5))
 print(X.shape)
-Y=np.concatenate((Y1,Y2,Y3,Y4))
+Y=np.concatenate((Y1,Y2,Y3,Y5))
 print('done')
 
-mainpath = Path(__file__).parents[2]
+mainpath = Path(__file__).parents[3]
 data_frontier = pd.read_csv(mainpath/"processed_data/Domain_height_2/normalized_frontier.csv").to_numpy()
 X=data_frontier[:,0]
 Y=data_frontier[:,1]
 
 plt.scatter(X,Y)
 plt.show()
-margin=0.01
+margin=0.05
 print('organizing the points...')
 # Xd,Yd,dist=orga_point(X,Y,margin)
 # plt.scatter(Xd,Yd,c='y')
 
 
-XD,YD,DIST=orga_final_bis(X,Y,margin,margin/10)
+XD,YD,DIST=orga_final_bis(X,Y,margin,margin/5)
 print('done')
 
 
@@ -339,7 +351,7 @@ for i in range(len(XD)) :
     points_fitted = np.vstack( list(spl(alpha) for spl in splines) ).T
 
     print('cleaning points...')
-    Xs,Ys=cleaning_points(points_fitted,X,Y,margin)
+    Xs,Ys=cleaning_points(points_fitted,X,Y,margin,margin/20)
     print('done')
 
 
@@ -357,19 +369,54 @@ for i in range(len(XD)) :
     Seg_coords.append(points_seg)
 plt.show()
 
-seg_final=[]
-for L in Seg_coords :
-    seg=segment_gen2(np.array(L))[0]
-    seg_final.append(np.array(seg))
+
+def seg_gen(listofcoords) :
+    seg=[]
+    for i in range(len(listofcoords)-1) :
+        seg.append([listofcoords[i][0],listofcoords[i][1],listofcoords[i+1][0],listofcoords[i+1][1]])
+    return np.array(seg)
+
+Seg_final=[]
+for i1 in tqdm(range(len(Seg_coords))) :
+    listofcoords=Seg_coords[i1]
+    seg=seg_gen(listofcoords)
+    for e in seg :
+        Seg_final.append(e)
+    for j in range(len(Seg_coords)) :
+        if i!=j :
+            pointsi=Seg_coords[i]
+            pointsj=Seg_coords[j]
+            V0i=np.array(pointsi[0])
+            Vni=np.array(pointsi[-1])
+            V0j=np.array(pointsi[0])
+            Vnj=np.array(pointsi[-1])
+            if np.linalg.norm(V0i-V0j)<margin*2 :
+                Seg_final.append(np.array([V0i[0],V0i[1],V0j[0],V0j[1]]))
+            if np.linalg.norm(V0i-Vnj)<margin*2 :
+                Seg_final.append(np.array([V0i[0],V0i[1],Vnj[0],Vnj[1]]))
+            if np.linalg.norm(Vni-V0j)<margin*2 :
+                Seg_final.append(np.array([Vni[0],Vni[1],V0j[0],V0j[1]]))
+            if np.linalg.norm(Vni-Vnj)<margin*2 :
+                Seg_final.append(np.array([Vni[0],Vni[1],Vnj[0],Vnj[1]]))
+
+for i in range(len(Seg_final)) :
+    segment=Seg_final[i]
+    x1=segment[0]
+    y1=segment[1]
+    x2=segment[2]
+    y2=segment[3]
+    plt.plot([x1,x2],[y1,y2],c='b')
+plt.show()
+
 n=500
 
-x=np.linspace(0,1.4,n)
+x=np.linspace(0,1,n)
 y=np.linspace(0,1,n)[::-1]
 X,Y = np.meshgrid(x, y)
 
-Z=1/phi(X,Y,seg_final[0])
-for index in range(1,len(seg_final)) :
-    seg=seg_final[index]
+Z=1/phi(X,Y,Seg_final[0])
+for index in range(1,len(Seg_final)) :
+    seg=Seg_final[index]
     Z += 1/phi(X,Y,seg)
 
 Z=1/Z
