@@ -6,7 +6,7 @@ from copy import deepcopy
 class SimpleEnvironment():
     def __init__(self, env_bounds, resolution_plot=100):
         self.objects = {}
-        self.complete_map = None
+        self.map = None
         self.env_bounds = env_bounds  # xmin,ymin,xmax,ymax
         self.resolution_plot = resolution_plot
 
@@ -124,7 +124,7 @@ class SimpleEnvironment():
         distance_to_center = np.linalg.norm(diff, axis=-1)
         return distance_to_center <= radius
 
-    def is_in_this_object(self, object_id, X, Y):
+    def _is_in_this_object(self, object_id, X, Y):
         '''
         Check whether the given coordinates touch a specific object of the environment or not
 
@@ -159,7 +159,7 @@ class SimpleEnvironment():
 
         res = None
         for object_id in self.objects.keys():
-            is_in_this_object = self.is_in_this_object(object_id, X, Y)
+            is_in_this_object = self._is_in_this_object(object_id, X, Y)
             res = is_in_this_object if res is None else is_in_this_object+res
         return res
 
@@ -187,7 +187,6 @@ class SimpleEnvironment():
         plt.legend()
         plt.show()
 
-    # depuis une seule coordonnée ou depuis l'id de l'objet ?
     def remove_objects(self, object_ids: set):
         """
         Remove the objects referred to in object_ids
@@ -200,7 +199,7 @@ class SimpleEnvironment():
                 new_objects[object_k-shift] = deepcopy(self.objects[object_k])
         self.objects = new_objects
 
-    def _update_map(self):
+    def update_map(self):
         map = None
         for object_id in self.objects.keys():
             map_object = self.objects[object_id]["map"]
@@ -217,8 +216,9 @@ class SimpleEnvironment():
             self.env_bounds[1], self.env_bounds[3], self.resolution_plot)
 
         xv, yv = np.meshgrid(X, Y)
-        self._update_map()
-        plt.scatter(xv, yv, c=self.map, cmap="winter")
+        self.update_map()
+        processed_map = self.map.T if self.map is not None else None
+        plt.scatter(xv, yv, c=processed_map, cmap="winter")
         plt.show()
 
     def plot_map_object(self, object_id):
