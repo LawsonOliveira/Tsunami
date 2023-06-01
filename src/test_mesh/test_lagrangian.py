@@ -96,16 +96,25 @@ def laplacian_F_function(x,y,seg):
 
     return f_dist**2, 2*f_dist*PHI_dx(f_dist,phi_list,phi_dx_list)+2*f_dist*PHI_dy(f_dist,phi_list,phi_dy_list), 2*f_dist*PHI_dxx(f_dist,phi_list,phi_dx_list,phi_dxx_list)+2*PHI_dx(f_dist,phi_list,phi_dx_list)**2+2*f_dist*PHI_dyy(f_dist,phi_list,phi_dy_list,phi_dyy_list)+2*PHI_dy(f_dist,phi_list,phi_dy_list)**2, np.array([2*f_dist*PHI_dx(f_dist,phi_list,phi_dx_list),2*f_dist*PHI_dy(f_dist,phi_list,phi_dy_list)])
 
-seg=[[0,0,0,1],[0,1,1,1],[1,1,1,0],[1,0,0,0]]
-seg=[[0,0,0,1],[0,1,1,1],[1,1,0.6,0],[0.6,0,0.5,0.5],[0.5,0.5,0.4,0],[0.4,0,0,0]]
 
-graph=0
+a=[0,0]
+b=[0,0.75]
+c=[1,1]
+d=[0.6,0.5]
+e=[0.5,0.5]
+f=[1,0]
+
+seg=[a+b,b+c,c+d,d+f,f+a]
+
+
+
+graph=2
 # F : 0
 # divF : 1
 # lapF : 2
 
-x=np.linspace(0,1,50)
-y=np.linspace(0,1,50)[::-1]
+x=np.linspace(0,1,500)
+y=np.linspace(0,1,500)[::-1]
 X,Y = np.meshgrid(x, y)
 Z = laplacian_F_function(X,Y,seg)[graph]
 
@@ -114,31 +123,35 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import MaxNLocator
 from matplotlib import cm
 from mpl_toolkits.mplot3d import Axes3D
+from shapely.geometry import Polygon, Point
+from tqdm import tqdm
+
+poly = Polygon([a,b,c,d,f])
+
+Xcut=X.copy()
+Ycut=Y.copy()
+Zcut=Z.copy()
+for i in tqdm(range(X.shape[0])) :
+    for j in range(X.shape[1]) :
+        x=X[i,j]
+        y=Y[i,j]
+        if (Point(x,y).within(poly)) :
+            Xcut[i,j]=X[i,j]
+            Ycut[i,j]=Y[i,j]
+            Zcut[i,j]=Z[i,j]
+        else :
+            Xcut[i,j]=None
+            Ycut[i,j]=None
+            Zcut[i,j]=None
 
 
-im = plt.imshow(Z,interpolation='none', extent=[0.01,0.99,0.01,0.99]) 
-
+im = plt.imshow(Zcut,interpolation='none', extent=[0,1,0,1],cmap='hot') 
+plt.colorbar()
 plt.show()
-
-
 
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
-
-
-
-# sample=np.random.randint(0,X.flatten().shape[0],2000)
-# print(sample)
-
-# surf = ax.plot_trisurf(X.flatten()[sample], Y.flatten()[sample], Z.flatten()[sample], cmap=cm.jet, linewidth=0)
-surf = ax.plot_trisurf(X.flatten(), Y.flatten(), Z.flatten(), cmap=cm.jet, linewidth=0)
-fig.colorbar(surf)
-
-ax.xaxis.set_major_locator(MaxNLocator(5))
-ax.yaxis.set_major_locator(MaxNLocator(6))
-ax.zaxis.set_major_locator(MaxNLocator(5))
-
-fig.tight_layout()
-
+# ax.plot_surface(X.flatten()[cond], Y.flatten()[cond], Z.flatten()[cond], cmap='hot', linewidth=0.1)
+ax.plot_surface(Xcut, Ycut, Zcut,rstride=4,cstride=4, cmap='hot', linewidth=0)
 plt.show()
 
