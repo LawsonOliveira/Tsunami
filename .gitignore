@@ -2,3 +2,5 @@ venv*
 wandb
 biblio
 __pycache__/
+Others
+manuscript2
