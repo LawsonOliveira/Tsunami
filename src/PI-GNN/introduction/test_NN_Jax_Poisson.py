@@ -197,7 +197,7 @@ key=NN_MLP.get_key()
 
 ############################### Train parameters ###############################
 batch_size = 50
-num_batches = 100000
+num_batches = 100
 report_steps=1000
 loss_history = []
 
@@ -234,63 +234,42 @@ for ibatch in range(0,num_batches):
     '''
 
 
-############################### Plot loss function ###############################
-fig, ax = plt.subplots(1, 1)
-__=ax.plot(np.log10(loss_history))
-xlabel = ax.set_xlabel(r'${\rm Step}$')
-ylabel = ax.set_ylabel(r'$\log_{10}{\rm (loss_function)}$')
-title = ax.set_title(r'${\rm Training}$')
-plt.show
-
 ############################### Approximated solution ###############################
 # We plot the solution obtained with our NN
-plt.figure()
+
 params=get_params(opt_state)
-n_points=100000
+n_points=1000
 ran_key, batch_key = jran.split(key)
 XY_test = jran.uniform(batch_key, shape=(n_points, n_features), minval=0, maxval=1)
 
 predictions = solver.solution(params,XY_test[:,0],XY_test[:,1])
-plt.scatter(XY_test[:,0],XY_test[:,1], c=predictions, cmap="hot",s=10)
-plt.clim(vmin=jnp.min(predictions),vmax=jnp.max(predictions))
-plt.colorbar()
-plt.title("NN solution")
-plt.show()
 
 ############################### True solution ###############################
 # We plot the true solution, its form was mentioned above
 def true_solution(inputs):
     return jnp.sin(jnp.pi*inputs[:,0])*jnp.sin(jnp.pi*inputs[:,1])
 
-plt.figure()
 n_points=100000
 ran_key, batch_key = jran.split(key)
 XY_test = jran.uniform(batch_key, shape=(n_points, n_features), minval=0, maxval=1)
 
 true_sol = true_solution(XY_test)
-plt.scatter(XY_test[:,0],XY_test[:,1], c=true_sol, cmap="hot",s=10)
-plt.clim(vmin=jnp.min(true_sol),vmax=jnp.max(true_sol))
-plt.colorbar()
-plt.title("True solution")
-plt.show()
+
 
 ############################### Absolut error ###############################
 # We plot the absolut error, it's |true solution - neural network output|
-plt.figure()
+
 params=get_params(opt_state)
-n_points=100000
+n_points=100
 ran_key, batch_key = jran.split(key)
 XY_test = jran.uniform(batch_key, shape=(n_points, n_features), minval=0, maxval=1)
 
-predictions = solver.solution(params,XY_test[:,0],XY_test[:,1])[:,0]
+print("vmap(partial(jit(solver.NN_evaluation), params))(XY_test)\n",vmap(partial(jit(solver.NN_evaluation), params))(XY_test).shape)
+F=solver.F_function(XY_test[:,0],XY_test[:,1])
+print(F.shape)
+
 true_sol = true_solution(XY_test)
 error=abs(true_sol-predictions)
-
-plt.scatter(XY_test[:,0],XY_test[:,1], c=error, cmap="viridis",s=10)
-plt.clim(vmin=0,vmax=jnp.max(error))
-plt.colorbar()
-plt.title("Absolut error")
-plt.show()
 
 ############################### Save NN parameters ###############################
 '''

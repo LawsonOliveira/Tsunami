@@ -1,0 +1,90 @@
+##OUTPUT for a model MLP [2,30,1]
+
+--begin--
+study error for h=0.05
+build_toy_graph with n_subdivision = 20
+graph.n_node: [441]
+
+2023-01-24 20:27:58.003824: W external/org_tensorflow/tensorflow/tsl/framework/bfc_allocator.cc:296] Allocator (GPU_0_bfc) ran out of memory trying to allocate 3.21GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+Traceback (most recent call last):
+  File "/home/julien-rsbrg/MLprojects/Tsunami/src/PI-GNN/Poisson/GCN_solving_Poisson.py", line 75, in <module>
+    utils.get_alpha_error(h_values,get_errors_PIGNN_L1_L2_poisson_dddd,"PIGCN","Poisson")
+  File "/home/julien-rsbrg/MLprojects/Tsunami/src/PI-GNN/Poisson/utils.py", line 108, in get_alpha_error
+    solerr_normalized_L1, solerr_normalized_L2 = fn_get_errors_L1_L2(h)
+  File "/home/julien-rsbrg/MLprojects/Tsunami/src/PI-GNN/Poisson/GCN_solving_Poisson.py", line 62, in get_errors_PIGNN_L1_L2_poisson_dddd
+    solver.train(graph,int(n_train_steps/50), n_train_steps)
+  File "/home/julien-rsbrg/MLprojects/Tsunami/src/PI-GNN/Poisson/GCN_solver/GCN_model.py", line 309, in train
+    loss, self.params, opt_state = self.train_step(
+  File "/home/julien-rsbrg/MLprojects/Tsunami/src/PI-GNN/Poisson/GCN_solver/GCN_model.py", line 282, in train_step
+    loss, grad = value_and_grad(self.loss_function)(
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/_src/traceback_util.py", line 162, in reraise_with_filtered_traceback
+    return fun(*args, **kwargs)
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/_src/api.py", line 1165, in value_and_grad_f
+    ans, vjp_py = _vjp(f_partial, *dyn_args, reduce_axes=reduce_axes)
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/_src/api.py", line 2654, in _vjp
+    out_primal, out_vjp = ad.vjp(
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/interpreters/ad.py", line 135, in vjp
+    out_primals, pvals, jaxpr, consts = linearize(traceable, *primals)
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/interpreters/ad.py", line 124, in linearize
+    jaxpr, out_pvals, consts = pe.trace_to_jaxpr_nounits(jvpfun_flat, in_pvals)
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/_src/profiler.py", line 314, in wrapper
+    return func(*args, **kwargs)
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/interpreters/partial_eval.py", line 767, in trace_to_jaxpr_nounits
+    jaxpr, (out_pvals, consts, env) = fun.call_wrapped(pvals)
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/linear_util.py", line 167, in call_wrapped
+    ans = self.f(*args, **dict(self.params, **kwargs))
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/_src/traceback_util.py", line 162, in reraise_with_filtered_traceback
+    return fun(*args, **kwargs)
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/_src/api.py", line 626, in cache_miss
+    top_trace.process_call(primitive, fun_, tracers, params))
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/interpreters/ad.py", line 339, in process_call
+    result = call_primitive.bind(_update_annotation(f_jvp, f.in_type, which_nz),
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/core.py", line 2024, in bind
+    outs = top_trace.process_call(self, fun_, tracers, params)
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/interpreters/partial_eval.py", line 265, in process_call
+    out = primitive.bind(_update_annotation_known(f_, f.in_type, in_knowns),
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/core.py", line 2024, in bind
+    outs = top_trace.process_call(self, fun_, tracers, params)
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/core.py", line 715, in process_call
+    return primitive.impl(f, *tracers, **params)
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/_src/dispatch.py", line 247, in _xla_call_impl
+    compiled_fun = _xla_call_impl_lazy(
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/_src/dispatch.py", line 241, in _xla_call_impl_lazy
+    return xla_callable(fun, device, backend, name, donated_invars, keep_unused,
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/linear_util.py", line 303, in memoized_fun
+    ans = call(fun, *args)
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/_src/dispatch.py", line 359, in _xla_callable_uncached
+    return computation.compile(_allow_propagation_to_outputs=True).unsafe_call
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/interpreters/pxla.py", line 3202, in compile
+    executable = self._compile_unloaded(
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/interpreters/pxla.py", line 3170, in _compile_unloaded
+    return UnloadedMeshExecutable.from_hlo(
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/interpreters/pxla.py", line 3439, in from_hlo
+    xla_executable = dispatch.compile_or_get_cached(
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/_src/dispatch.py", line 1079, in compile_or_get_cached
+    return backend_compile(backend, serialized_computation, compile_options,
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/_src/profiler.py", line 314, in wrapper
+    return func(*args, **kwargs)
+  File "/home/julien-rsbrg/MLprojects/Tsunami/venv_tsunami/lib/python3.10/site-packages/jax/_src/dispatch.py", line 1014, in backend_compile
+    return backend.compile(built_c, compile_options=options)
+jax._src.traceback_util.UnfilteredStackTrace: jaxlib.xla_extension.XlaRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 3447422056 bytes.
+
+The stack trace below excludes JAX-internal frames.
+The preceding is the original exception that occurred, unmodified.
+
+--------------------
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/julien-rsbrg/MLprojects/Tsunami/src/PI-GNN/Poisson/GCN_solving_Poisson.py", line 75, in <module>
+    utils.get_alpha_error(h_values,get_errors_PIGNN_L1_L2_poisson_dddd,"PIGCN","Poisson")
+  File "/home/julien-rsbrg/MLprojects/Tsunami/src/PI-GNN/Poisson/utils.py", line 108, in get_alpha_error
+    solerr_normalized_L1, solerr_normalized_L2 = fn_get_errors_L1_L2(h)
+  File "/home/julien-rsbrg/MLprojects/Tsunami/src/PI-GNN/Poisson/GCN_solving_Poisson.py", line 62, in get_errors_PIGNN_L1_L2_poisson_dddd
+    solver.train(graph,int(n_train_steps/50), n_train_steps)
+  File "/home/julien-rsbrg/MLprojects/Tsunami/src/PI-GNN/Poisson/GCN_solver/GCN_model.py", line 309, in train
+    loss, self.params, opt_state = self.train_step(
+  File "/home/julien-rsbrg/MLprojects/Tsunami/src/PI-GNN/Poisson/GCN_solver/GCN_model.py", line 282, in train_step
+    loss, grad = value_and_grad(self.loss_function)(
+jaxlib.xla_extension.XlaRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 3447422056 bytes.
