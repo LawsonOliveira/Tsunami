@@ -1136,6 +1136,7 @@ class Mild_slope_functions():
         self.spatial_2dsolution = spatial_2dsolution
         self.shoal_coordinates = shoal_coordinates
         self.incident_height = config['incident_height_normalized']
+        self.angle_direction = config['angle_direction']
         self.operators = PDE_operators(self.solution, self.c_times_cg_coeff)
         self.df_dt_3d = self.operators.df_dt_3d
 
@@ -1388,10 +1389,9 @@ class Mild_slope_functions():
             -- incident_wave applied to inputs
         """
         j_number = jax.lax.complex(0.0, 1.0)
-        angle_direction = 0.0
         reflection_coefficient = 0.0
-        exp_incident = jax.numpy.exp(j_number*self.k_coeff(inputs[:,0],inputs[:,1])   *   (inputs[:,0]*jax.numpy.cos(angle_direction) + inputs[:,1]*jax.numpy.sin(angle_direction)).reshape((-1, 1)))
-        exp_reflected = reflection_coefficient  *   jax.numpy.exp(j_number*self.k_coeff(inputs[:,0],inputs[:,1])   *   (-inputs[:,0]*jax.numpy.cos(angle_direction) + inputs[:,1]*jax.numpy.sin(angle_direction)).reshape((-1, 1)))
+        exp_incident = jax.numpy.exp(j_number*self.k_coeff(inputs[:,0],inputs[:,1])   *   (inputs[:,0]*jax.numpy.cos(self.angle_direction) + inputs[:,1]*jax.numpy.sin(self.angle_direction)).reshape((-1, 1)))
+        exp_reflected = reflection_coefficient  *   jax.numpy.exp(j_number*self.k_coeff(inputs[:,0],inputs[:,1])   *   (-inputs[:,0]*jax.numpy.cos(self.angle_direction) + inputs[:,1]*jax.numpy.sin(self.angle_direction)).reshape((-1, 1)))
         incident_wave = self.incident_height*(exp_incident + exp_reflected)
         #incident_wave = (2*self.incident_height*9.81/self.c_coeff(inputs[:,0], inputs[:,1])*jax.numpy.exp(-self.k_coeff(inputs[:,0],inputs[:,1])*(inputs[:,0].reshape((-1,1))-0.5)*2*jax.numpy.pi))
 
@@ -1609,10 +1609,9 @@ class PINN_Helmholtz_Trimesh:
             -- incident_wave applied to inputs
         """
         j_number = jax.lax.complex(0.0, 1.0)
-        angle_direction = 0.0
         reflection_coefficient = 0.0
-        exp_incident = jax.numpy.exp(j_number*self.k_coeff   *   (inputs[:,0]*jax.numpy.cos(angle_direction) + inputs[:,1]*jax.numpy.sin(angle_direction)).reshape((-1, 1)))
-        exp_reflected = reflection_coefficient  *   jax.numpy.exp(j_number*self.k_coeff   *   (-inputs[:,0]*jax.numpy.cos(angle_direction) + inputs[:,1]*jax.numpy.sin(angle_direction)).reshape((-1, 1)))
+        exp_incident = jax.numpy.exp(j_number*self.k_coeff   *   (inputs[:,0]*jax.numpy.cos(self.angle_direction) + inputs[:,1]*jax.numpy.sin(self.angle_direction)).reshape((-1, 1)))
+        exp_reflected = reflection_coefficient  *   jax.numpy.exp(j_number*self.k_coeff   *   (-inputs[:,0]*jax.numpy.cos(self.angle_direction) + inputs[:,1]*jax.numpy.sin(self.angle_direction)).reshape((-1, 1)))
         incident_wave = self.incident_height*(exp_incident + exp_reflected)
         #incident_wave = (2*self.incident_height*9.81/self.c_coeff(inputs[:,0], inputs[:,1])*jax.numpy.exp(-self.k_coeff(inputs[:,0],inputs[:,1])*(inputs[:,0].reshape((-1,1))-0.5)*2*jax.numpy.pi))
 
