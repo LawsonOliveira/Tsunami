@@ -57,7 +57,7 @@ def run_mild_slope_k(incident_height=0.5,angle_direction=0.0,checkpoint_path='Ch
     config['checkpoint_path'] = checkpoint_path
     config['maximum_num_epochs'] = 25000
     config['report_steps'] = 1000
-    config['options'] = 3           # 1: we start a new training. 2: We continue the last training. 
+    config['options'] = 1           # 1: we start a new training. 2: We continue the last training. 
                                         # Other cases: We just load the last training
 
     # Data parameters
@@ -94,7 +94,9 @@ def run_mild_slope_k(incident_height=0.5,angle_direction=0.0,checkpoint_path='Ch
         params = NN_MLP.initialize_params()            # Create the MLP
     else:
         assert os.path.exists(load_params_path), "Params to load not found"
-        params = pickle.load(load_params_path, "rb")
+        with open(load_params_path, 'rb') as fp:
+            params = pickle.load(fp)
+
     NN_eval = NN_MLP.evaluation            # Evaluation function
     solver = pinns.PINN_Mild_slope_second_approach(config, NN_eval, XYZ_shoal)
     opt_state = config['optimizer'].init(params)
@@ -208,3 +210,7 @@ def run_transitions():
         angle_direction=jax.numpy.pi/4,
         checkpoint_path=checkpoint_path_conf_1_to_3,
         load_params_path=checkpoint_path_conf_1+'params')
+
+
+if __name__ =="__main__":
+    run_transitions()
